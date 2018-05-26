@@ -14,13 +14,13 @@ header {
 }
 header h1 {
     font-family: "PT Serif";
-    font-size: 30px;
+    font-size: 25px;
     color: #4253BA;
     }
 header img {
     float: left;
     margin: 15px;
-    width: 150px;
+    width: 100px;
     border-radius: 10px;
 }
 header h2 {
@@ -41,7 +41,7 @@ nav ul li a:hover {}
 main {}
 main h1 {
     font-family: "PT Serif";
-    font-size: 30px;
+    font-size: 25px;
     color: #4253BA;
 }
 main h2 {
@@ -51,14 +51,14 @@ main h2 {
 }
 main figure { margin: 0 0 .2rem 2%; width:96%; }
 main figure img {
+    width: 400px;
 }
 
-#table {
+section.forecast {
     display: none;
 }
 
 article img {
-    float: right;
     border-radius: 10px;
 }
 
@@ -66,12 +66,8 @@ footer {
     background-color: #efedef;
 }
 
-footer section {
-    margin-top: 10px;
-}
-
 footer h3 {
-    margin-top: 15px;
+    padding-top: 10px;
     margin-left: 6px;
     margin-bottom: 5px;
 }
@@ -80,7 +76,8 @@ footer p {
     margin: 5px;
 }
 
-footer div {
+#footer {
+    clear: left;
     line-height: 30px;
     background-color: #D1C4CF;
     text-align: center;
