@@ -21,7 +21,7 @@ header img {
     float: left;
     margin: 15px;
     width: 150px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 header h2 {
     font-family: "PT Serif";
@@ -39,9 +39,49 @@ nav ul li.active a {}
 nav ul li a:hover {}
 
 main {}
-main h2 {}
+main h1 {
+    font-family: "PT Serif";
+    font-size: 30px;
+    color: #4253BA;
+}
+main h2 {
+    font-family: "PT Serif";
+    font-size: 20px;
+    color: #4253BA;
+}
 main figure { margin: 0 0 .2rem 2%; width:96%; }
 main figure img {
 }
 
-footer {}
+#table {
+    dispaly: none;
+}
+
+article img {
+    float: right;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #efedef;
+}
+
+footer section {
+    margin-top: 10px;
+}
+
+footer h3 {
+    margin-top: 15px;
+    margin-left: 6px;
+    margin-bottom: 5px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer div {
+    line-height: 30px;
+    background-color: #D1C4CF;
+    text-align: center;
+}
