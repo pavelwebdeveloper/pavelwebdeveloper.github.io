@@ -1,4 +1,48 @@
 @media only screen and (min-width: 64em) {
+    header {
+    }
+    header h1 {
+        font-family: "PT Serif";
+        font-size: 45px;
+        color: #4253BA;
+    }
+    header img {
+        float: left;
+        margin: 15px;
+        width: 150px;
+        border-radius: 20px;
+    }
+    header h2 {
+        font-family: "PT Serif";
+        font-size: 25px;
+        color: #4253BA;
+    }
+    header .subheading { }
 
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #4253BA;
+    }
+
+    nav li {
+        float: left;
+    }
+
+    nav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px 12px;
+        text-decoration: none;
+    }
+
+    /*Change the link color when hovered over*/
+    nav li a:hover {
+        background-color: #428cba;
+    }
 
 }

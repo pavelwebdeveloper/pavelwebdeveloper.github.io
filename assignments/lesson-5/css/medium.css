@@ -1,7 +1,30 @@
 @media only screen and (min-width: 37.5em) {
 
     /* Only CSS write declarations that need to be changed. Do not duplicated declarations that are already established in the main.css */
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #4253BA;
+    }
 
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px 12px;
+        text-decoration: none;
+    }
+
+    /*Change the link color when hovered over*/
+    li a:hover {
+        background-color: #428cba;
+    }
     nav button { display:none; }  /* hamburger button does not need to be shown in the medium on up views */
 
     section.forecast { ______ }  /* show the 10-day forecast with the medium view and up */

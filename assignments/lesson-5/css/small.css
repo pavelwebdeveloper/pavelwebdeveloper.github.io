@@ -2,19 +2,35 @@
 
 body {
     font-size: 16px;
-    ____________  /* Declare the base font-family */
+    font-family: sans-serif; /* Declare the base font-family */
 }
 
 header, nav, main, footer { /* the comma between the selectors means apply the following CSS declarations to all of the listed elements */
-    max-width: ______; /* Declare the maximum width and other main element rules to limit the stretch on larger/wider views */
+    max-width: 1200px; /* Declare the maximum width and other main element rules to limit the stretch on larger/wider views */
+    margin: auto;
 }
 
-header {}
-header h1 {}
-header img {}
-header .subheading {}
+header {
+}
+header h1 {
+    font-family: "PT Serif";
+    font-size: 30px;
+    color: #4253BA;
+    }
+header img {
+    float: left;
+    margin: 15px;
+    width: 150px;
+    border-radius: 20px;
+}
+header h2 {
+    font-family: "PT Serif";
+    font-size: 20px;
+    color: #4253BA;
+}
+header .subheading { }
 
-nav {}
+nav { clear: left; }
 nav button {}
 nav ul {}
 nav ul li {}
@@ -25,6 +41,7 @@ nav ul li a:hover {}
 main {}
 main h2 {}
 main figure { margin: 0 0 .2rem 2%; width:96%; }
-main figure img { }
+main figure img {
+}
 
 footer {}
