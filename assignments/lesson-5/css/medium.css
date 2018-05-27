@@ -11,6 +11,14 @@
         font-size: 20px;
     }
 
+    nav {
+        display: block;
+    }
+
+    #small {
+        display: none;
+    }
+
     nav ul {
         list-style-type: none;
         margin: 0;
@@ -51,6 +59,7 @@
     }
     main figure img {
         width: 104.2%;
+        margin: 0;
     }
 
     section.left {
@@ -75,9 +84,15 @@
         border-collapse: collapse;
     }
 
+    .clearfix {
+        overflow: auto;
+    }
+
     article img {
         float: right;
         border-radius: 10px;
+        width: 250px;
+        margin: 10px;
     }
 
     footer h3 {

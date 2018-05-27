@@ -31,6 +31,28 @@ header h2 {
 header .subheading { }
 
 nav { clear: left; }
+nav {
+    display: none;
+}
+#small {
+    display: block;
+    margin-bottom: -20px;
+    line-height: 40px;
+    background-color: #4253BA;
+    color: white;
+    padding-left: 10px;
+}
+div.left {
+    float: left;
+    width: 10%;
+    padding-right: 50px;
+}
+div.left div {
+    width: 35px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+}
 nav button {}
 nav ul {}
 nav ul li {}
@@ -38,20 +60,25 @@ nav ul li a {}
 nav ul li.active a {}
 nav ul li a:hover {}
 
-main {}
+main {
+}
 main h1 {
     font-family: "PT Serif";
     font-size: 25px;
     color: #4253BA;
+    margin-left: 5px;
 }
 main h2 {
     font-family: "PT Serif";
     font-size: 20px;
     color: #4253BA;
+    margin-left: 5px;
 }
 main figure { margin: 0 0 .2rem 2%; width:96%; }
 main figure img {
-    width: 400px;
+    width: 600px;
+    margin-left: -10px;
+    margin-right: -20px;
 }
 
 section.forecast {
@@ -60,6 +87,11 @@ section.forecast {
 
 article img {
     border-radius: 10px;
+    width: 100%;
+}
+main article p {
+    margin: 5px;
+    text-align: justify;
 }
 
 footer {
