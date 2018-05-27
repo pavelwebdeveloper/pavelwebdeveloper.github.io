@@ -101,6 +101,12 @@
         margin-bottom: 5px;
     }
 
+    div.footerleft {
+        float: left;
+        width: 50%;
+    }
+
+
 }
 
 
