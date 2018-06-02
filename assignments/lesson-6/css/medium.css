@@ -15,11 +15,15 @@
         display: block;
     }
 
-    #small {
+    .small {
         display: none;
     }
 
-    nav ul {
+    .bigger {
+        display: block;
+    }
+
+    nav.bigger ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -27,11 +31,11 @@
         background-color: #4253BA;
     }
 
-    nav li {
+    nav.bigger li {
         float: left;
     }
 
-    nav li a {
+    nav.bigger li a {
         display: block;
         color: white;
         text-align: center;
@@ -40,7 +44,7 @@
     }
 
     /*Change the link color when hovered over*/
-    nav li a:hover {
+    nav.bigger li a:hover {
         background-color: #428cba;
     }
 

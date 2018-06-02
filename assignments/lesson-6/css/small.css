@@ -37,7 +37,51 @@ header .subheading { }
 /*MAIN NAVIGATION LAYOUT*/
 
 nav { clear: left; }
-nav {
+
+.bigger {
+    display: none;
+}
+
+nav.small button {
+    margin: .2rem 2%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+nav.small {
+    background-color: #4253BA;
+    font-family: "PT Serif", serif;
+}
+
+nav.small ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.small ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: .8rem 2%;
+    border-top: 1px solid rgba(255, 255, 255, 0.8)
+}
+
+nav.small ul li.active a {
+    background-color: rgba(22,74,22,1);
+}
+
+nav.small ul li a:hover {
+    background-color: rgba(26,55,73,0.7);
+}
+
+nav.small ul.hide {
+    display: none;
+}
+
+/*nav {
     display: none;
 }
 
@@ -61,7 +105,7 @@ div.left div {
     height: 4px;
     background-color: white;
     margin: 6px 0;
-}
+}*/
 
 nav button {}
 nav ul {}

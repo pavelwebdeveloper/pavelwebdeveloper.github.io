@@ -10,6 +10,10 @@
     <link href="css/medium.css" rel="stylesheet">
     <link href="css/large.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+    <script>
+        function toggleMenu() { document.getElementById("primaryNav").classList.toggle("hide");
+        }
+    </script>
 </head>
 <body>
 
@@ -19,7 +23,19 @@
         <h2>Always be ready for the weather</h2>
     </header>
 
-    <nav>
+    <nav class="small">
+        <button onclick="toggleMenu()">&#9776; MENU</button>
+        <ul id="primaryNav" class="hide">
+            <li><a href="#">Home</a></li>
+            <li class="active"><a href="#">Franklin</a></li>
+            <li><a href="#">Greenville</a></li>
+            <li><a href="#">Springfield</a></li>
+            <li><a href="#">Storm Center</a></li>
+            <li><a href="#">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <nav class="bigger">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Franklin</a></li>
@@ -30,7 +46,7 @@
         </ul>
     </nav>
 
-    <nav id="small">
+   <!-- <nav id="small">
         <div class="left">
             <a href="#">
             <div></div>
@@ -41,7 +57,7 @@
         <div>
             <h2 id="right">MENU</h2>
         </div>
-    </nav>
+    </nav>-->
 
 <main>
     <figure>
