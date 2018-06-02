@@ -1,0 +1,110 @@
+@media only screen and (min-width: 37.5em) {
+
+    /* Only CSS write declarations that need to be changed. Do not duplicated declarations that are already established in the main.css */
+    header h1 {
+        font-size: 30px;
+    }
+    header img {
+        width: 150px;
+    }
+    header h2 {
+        font-size: 20px;
+    }
+
+    nav {
+        display: block;
+    }
+
+    #small {
+        display: none;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #4253BA;
+    }
+
+    nav li {
+        float: left;
+    }
+
+    nav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px 12px;
+        text-decoration: none;
+    }
+
+    /*Change the link color when hovered over*/
+    nav li a:hover {
+        background-color: #428cba;
+    }
+
+    nav button { display:none; }  /* hamburger button does not need to be shown in the medium on up views */
+
+    main {
+    }
+    main h1 {
+        font-size: 30px;
+    }
+    main h2 {
+        font-size: 20px;
+    }
+    main figure {
+        margin: 0;
+    }
+    main figure img {
+        width: 104.2%;
+        margin: 0;
+    }
+
+    section.left {
+        float: left;
+        width: 50%;
+    }
+
+    section.forecast {
+        clear: left;
+        display: block;
+    }  /* show the 10-day forecast with the medium view and up */
+
+    table {
+        width: 100%;
+    }
+
+    table th, td {
+        text-align: center;
+    }
+    table, tr, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    .clearfix {
+        overflow: auto;
+    }
+
+    article img {
+        float: right;
+        border-radius: 10px;
+        width: 250px;
+        margin: 10px;
+    }
+
+    footer h3 {
+        margin-top: 0;
+        margin-left: 6px;
+        margin-bottom: 5px;
+    }
+
+    div.footerleft {
+        float: left;
+        width: 50%;
+    }
+}
+
+
