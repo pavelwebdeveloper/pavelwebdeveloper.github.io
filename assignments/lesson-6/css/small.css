@@ -48,7 +48,7 @@ nav {
     background-color: #4253BA;
     color: white;
     padding-left: 10px;
-    margin-right: 15px;
+   /* margin-right: 0;*/
 }
 
 div.left {
