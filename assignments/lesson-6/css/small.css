@@ -48,7 +48,9 @@ nav {
     background-color: #4253BA;
     color: white;
     padding-left: 10px;
+    width: 103.9%;
 }
+
 div.left {
     float: left;
     width: 10%;
@@ -60,6 +62,7 @@ div.left div {
     background-color: white;
     margin: 6px 0;
 }
+
 nav button {}
 nav ul {}
 nav ul li {}
@@ -86,7 +89,6 @@ main h2 {
 main figure { margin: 0 0 .2rem 2%; width:96%; }
 main figure img {
     margin-left: -10px;
-    margin-right: -20px;
 }
 
 section.forecast {
