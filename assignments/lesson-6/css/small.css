@@ -40,9 +40,6 @@ nav { clear: left; }
 nav {
     display: none;
 }
-nav {
-    width: 100%;
-}
 
 #small {
     display: block;
