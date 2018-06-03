@@ -11,6 +11,52 @@
         font-size: 20px;
     }
 
+    nav {
+        display: block;
+    }
+
+    .small {
+        display: none;
+    }
+
+    .bigger {
+        display: block;
+    }
+
+    nav.bigger ul {/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2744c6+0,28d2fc+100,7db9e8+100 */
+        background: #2744c6; /* Old browsers */
+        background: -moz-linear-gradient(top, #2744c6 0%, #28d2fc 100%, #7db9e8 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #2744c6 0%,#28d2fc 100%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #2744c6 0%,#28d2fc 100%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2744c6', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */}
+
+    nav.bigger ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #4253BA;
+    }
+
+    nav.bigger li {
+        float: left;
+    }
+
+    nav.bigger li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px 12px;
+        text-decoration: none;
+    }
+
+    /*Change the link color when hovered over*/
+    nav.bigger li a:hover {
+        background-color: #428cba;
+    }
+
+    nav button { display:none; }  /* hamburger button does not need to be shown in the medium on up views */
+
     main {
     }
     main h1 {

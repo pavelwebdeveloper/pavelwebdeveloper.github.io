@@ -19,7 +19,7 @@ header h1 {
 }
 header img {
     float: left;
-    margin: 15px;
+    margin: 10px 15px 5px 10px;
     width: 100px;
     border-radius: 10px;
 }
@@ -27,6 +27,7 @@ header h2 {
     font-family: "PT Serif";
     font-size: 20px;
     color: #4253BA;
+    margin-left: 130px;
 }
 header .subheading { }
 
