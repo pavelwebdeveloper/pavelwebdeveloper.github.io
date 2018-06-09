@@ -23,12 +23,6 @@ header img {
     height: 100px;
     border-radius: 10px;
 
-header h1 {
-    font-family: "PT Serif";
-    font-size: 25px;
-    color: #4253BA;
-}
-
 }
 header h2 {
     font-family: "PT Serif";
@@ -38,7 +32,9 @@ header h2 {
 header .subheading { }
 
 #websiteheading {
-    font-family: 'Bowlby One SC', cursive;
+    font-family: 'Bowlby One SC', cursive, "PT Serif";
+    font-size: 25px;
+    color: #4253BA;
 }
 
 /*MAIN NAVIGATION LAYOUT*/
