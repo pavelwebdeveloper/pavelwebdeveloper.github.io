@@ -1,0 +1,154 @@
+@media only screen and (min-width: 37.5em) {
+
+    /* Only CSS write declarations that need to be changed. Do not duplicated declarations that are already established in the main.css */
+
+    /*HEADER LAYOUT*/
+
+    header h1 {
+        font-size: 30px;
+    }
+    header img {
+        width: 150px;
+        height: 150px;
+    }
+    header h2 {
+        font-size: 20px;
+    }
+
+    /*MAIN NAVIGATION LAYOUT*/
+
+    nav {
+        /*display: block;*/
+    }
+
+    .small {
+        display: none;
+    }
+
+    .bigger {
+        display: block;
+    }
+
+    nav.bigger ul {/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2744c6+0,28d2fc+100,7db9e8+100 */
+        background: #2744c6; /* Old browsers */
+        background: -moz-linear-gradient(top, #2744c6 0%, #28d2fc 100%, #7db9e8 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #2744c6 0%,#28d2fc 100%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #2744c6 0%,#28d2fc 100%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2744c6', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */}
+
+    nav.bigger ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #4253BA;
+    }
+
+    nav.bigger li {
+    }
+
+    nav.bigger li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px 12px;
+        text-decoration: none;
+    }
+
+    /*Change the link color when hovered over*/
+    nav.bigger li a:hover {
+        background-color: #428cba;
+    }
+
+    nav button { display:none; }  /* hamburger button does not need to be shown in the medium on up views */
+
+    main {
+    }
+    main h1 {
+        font-size: 30px;
+    }
+    main h2 {
+        font-size: 20px;
+    }
+    main figure {
+        margin: 0;
+    }
+    main figure img {
+        width: 104.2%;
+        margin: 0;
+    }
+
+    #flex {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .middlesection {
+        margin: 10px;
+    }
+
+    section.forecast {
+        display: block;
+    }  /* show the 10-day forecast with the medium view and up */
+
+    table {
+        width: 100%;
+    }
+
+    table th, td {
+        text-align: center;
+    }
+    table, tr, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    /*.clearfix {
+        overflow: auto;
+    }*/
+
+    #article {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    main article img {
+        align-self: center;
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+        margin: 10px;
+    }
+
+    /*GRID LAYOUT*/
+
+    #grid {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+        padding: 0 0 20px 10px;
+    }
+
+    #grid img { width:90%; }
+
+    #grid figcaption {
+        text-align: center;
+    }
+
+    footer h3 {
+        margin-top: 0;
+        margin-left: 6px;
+        margin-bottom: 5px;
+    }
+    #upperfooter {
+        display: flex;
+    }
+
+    .footer {
+        flex: 1;
+    }
+}
+
+
