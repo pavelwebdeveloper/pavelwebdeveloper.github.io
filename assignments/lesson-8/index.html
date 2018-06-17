@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Franklin Weather Page">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Franklin Weather Page</title>
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/small.css" rel="stylesheet">
+        <link href="css/medium.css" rel="stylesheet">
+        <link href="css/large.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <header>
+            <img src="images/logoimage.jpg" alt="cloud with a sun sticking from behind the cloud">
+            <div>
+                <h1 id="websiteheading"><br>Franklin, Springfield and Greenville Weather</h1>
+                <h2>Always be ready for the weather</h2>
+            </div>
+        </header>
+
+        <nav class="small">
+            <button onclick="toggleMenu()">&#9776; MENU</button>
+            <ul id="primaryNav" class="hide">
+                <li><a href="#">Home</a></li>
+                <li class="active"><a href="#">Franklin</a></li>
+                <li><a href="#">Greenville</a></li>
+                <li><a href="#">Springfield</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <nav class="bigger">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="active"><a href="#">Franklin</a></li>
+                <li><a href="#">Greenville</a></li>
+                <li><a href="#">Springfield</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <!-- <nav id="small">
+<div class="left">
+<a href="#">
+<div></div>
+<div></div>
+<div></div>
+</a>
+</div>
+<div>
+<h2 id="right">MENU</h2>
+</div>
+</nav>-->
+
+        <main>
+            <figure>
+                <img src="images/franklin-original.jpg" alt="Mountaines with the sky and the Sun above them" sizes="100vw" srcset="images/franklin-original400.jpg 400w, images/franklin-original600.jpg 600w, images/franklin-original800.jpg 800w, images/franklin-original1028.jpg 1028w">
+            </figure>
+
+            <h1>Franklin town</h1>
+
+            <div id="flex">
+                <section class="middlesection">
+                    <h2>Today's Weather</h2>
+                    <ul>
+                        <li>Summary: 90&deg;</li>
+                        <li>High: <span id="hightemperature"></span>&deg;</li>
+                        <li>Low: <span id="lowtemperature"></span>&deg;</li>
+                        <li>Chance of Precipitation: 0%</li>
+                        <li>Wind: <span id="wind"></span>mph from the South West</li>
+                        <li>Wind chill: <span id="windchill"></span>&deg;</li>
+                    </ul>
+                </section>
+
+                <section class="middlesection">
+                    <h2>Weather Icon</h2>
+                    <img src="images/weatherimage.png" alt="The Sun">
+                </section>
+            </div>
+
+            <section class="forecast">
+                <h2>Forecast Details</h2>
+                <table>
+                    <tr>
+                        <th colspan="10">10-Day Forecast</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>89&deg;F</td>
+                        <td>87&deg;F</td>
+                        <td>78&deg;F</td>
+                        <td>75&deg;F</td>
+                        <td>72&deg;F</td>
+                        <td>72&deg;F</td>
+                        <td>79&deg;F</td>
+                        <td>83&deg;F</td>
+                        <td>85&deg;F</td>
+                        <td>89&deg;F</td>
+                    </tr>
+                </table>
+            </section>
+
+            <article>
+                <h2>This day in History</h2>
+                <div id="article">
+                    <img src="images/historyphoto.jpg" alt="Shuttle docking the ISS">
+
+                    <p>On this day in history in 1999, the STS-96 crew aboard space shuttle Discovery became the first to dock with the International Space Station. Using the Integrated Cargo Carrier, Discovery delivered the Russian cargo crane, STRELA; the SPACEHAB Oceaneering Space System Box; and the American crane, ORU Transfer Device, to the space station. STS-96 was the Space Shuttle Program’s second ISS mission. The first, STS-88, delivered the first American module, Unity, in December 1998. In total, 34 shuttle missions were flown during construction of the space station. The International Space Station serves as the world’s leading laboratory where researchers conduct cutting-edge research and technology development that will enable human and robotic exploration of destinations beyond low-Earth orbit, including asteroids and Mars. NASA Marshall Space Flight Center’s Payload Operations and Integrations Center serves as the agency’s command center for all science operations on the space station. The NASA History Program documents and preserves NASA’s remarkable history through a variety of products -- photos, press kits, press releases, mission transcripts and administrators' speeches.</p>
+                </div>
+            </article>
+        </main>
+
+        <footer>
+            <div id="upperfooter">
+                <section class="footer">
+                    <h3>Address:</h3>
+                    <p>The Weather Center</p>
+                    <p>123 Main Street.</p>
+                    <p>Franklin, MI 87654</p>
+                </section>
+
+                <div class="footer">
+                    <section>
+                        <h3>Phone:</h3>
+                        <p>(801)555-1234</p>
+                    </section>
+
+                    <section>
+                        <h3>Email:</h3>
+                        <p>contact@yoururl.com</p>
+                    </section>
+                </div>
+            </div>
+
+            <div id="footer">
+                &copy; 2018 &middot; All rights reserved &middot; <span id="currentDate"></span> &middot; Wind chill <span id="windchillfooter"></span>&deg;
+            </div>
+        </footer>
+
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/currentdate.js"></script>
+        <script src="scripts/windchill.js"></script>
+    </body>
+</html>
