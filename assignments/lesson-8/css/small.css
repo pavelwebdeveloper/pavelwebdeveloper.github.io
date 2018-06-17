@@ -160,8 +160,7 @@ form fieldset {
 
 form legend {
     color: #4253BA;
-    margin: 0 2rem;
-    padding: 0 .5rem;
+    padding: 0 .4rem;
 }
 
 form label.top, form div {
