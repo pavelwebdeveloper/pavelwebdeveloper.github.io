@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Franklin Weather Page">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Franklin Weather Page</title>
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/small.css" rel="stylesheet">
+        <link href="css/medium.css" rel="stylesheet">
+        <link href="css/large.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <header>
+            <img src="images/logoimage.jpg" alt="cloud with a sun sticking from behind the cloud">
+            <div>
+                <h1 id="websiteheading"><br>Franklin, Springfield and Greenville Weather</h1>
+                <h2>Always be ready for the weather</h2>
+            </div>
+        </header>
+
+        <nav class="small">
+            <button onclick="toggleMenu()">&#9776; MENU</button>
+            <ul id="primaryNav" class="hide">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Franklin</a></li>
+                <li><a href="#">Greenville</a></li>
+                <li><a href="#">Springfield</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <nav class="bigger">
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Franklin</a></li>
+                <li><a href="#">Greenville</a></li>
+                <li><a href="#">Springfield</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <!-- <nav id="small">
+<div class="left">
+<a href="#">
+<div></div>
+<div></div>
+<div></div>
+</a>
+</div>
+<div>
+<h2 id="right">MENU</h2>
+</div>
+</nav>-->
+
+        <main>
+            <section>
+                <article>
+                    <h2>Weather Story</h2>
+                    <p></p>
+                </article>
+                <img >
+            </section>
+            <section>
+                <article></article>
+                <article></article>
+                <article></article>
+            </section>
+        </main>
+
+        <footer>
+            <div id="upperfooter">
+                <section class="footer">
+                    <h3>Address:</h3>
+                    <p>The Weather Center</p>
+                    <p>123 Main Street.</p>
+                    <p>Franklin, MI 87654</p>
+                </section>
+
+                <div class="footer">
+                    <section>
+                        <h3>Phone:</h3>
+                        <p>(801)555-1234</p>
+                    </section>
+
+                    <section>
+                        <h3>Email:</h3>
+                        <p>contact@yoururl.com</p>
+                    </section>
+                </div>
+            </div>
+
+            <div id="footer">
+                &copy; 2018 &middot; All rights reserved &middot; <span id="currentDate"></span> &middot; Wind chill <span id="windchillfooter"></span>&deg;
+            </div>
+        </footer>
+
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/currentdate.js"></script>
+        <script src="scripts/windchill.js"></script>
+        <script>
+            var section = document.querySelector('section');
+            var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+            var request = new XMLHttpRequest();
+            request.open('GET', requestURL);
+            request.responseType = 'json';
+            request.send();
+            request.onload = function() {
+                var townData = request.response;
+                console.log(townData);
+                showTowns(townData);
+            }
+            function showTowns(jsonObj) {
+                var towns = jsonObj['towns']
+            }
+
+        </script>
+    </body>
+</html>
