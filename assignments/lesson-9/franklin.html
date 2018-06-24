@@ -25,7 +25,7 @@
         <nav class="small">
             <button onclick="toggleMenu()">&#9776; MENU</button>
             <ul id="primaryNav" class="hide">
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li class="active"><a href="#">Franklin</a></li>
                 <li><a href="#">Greenville</a></li>
                 <li><a href="#">Springfield</a></li>
@@ -36,7 +36,7 @@
 
         <nav class="bigger">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li class="active"><a href="#">Franklin</a></li>
                 <li><a href="#">Greenville</a></li>
                 <li><a href="#">Springfield</a></li>
@@ -69,12 +69,14 @@
                 <section class="middlesection">
                     <h2>Today's Weather</h2>
                     <ul>
-                        <li>Summary: <span id="maintemp"></span>&deg; F</li>
-                        <li>High: <span id="hightemperature"></span>&deg;</li>
-                        <li>Low: <span id="lowtemperature"></span>&deg;</li>
+                        <li>Current temperature: <span id="maintemp"></span>&deg; F</li>
+                        <li>Current weather description: <span id="currentweatherdescription"></span></li>
+                        <li>High temp: <span id="hightemp"></span>&deg; F</li>
+                        <li>Low temp: <span id="lowtemp"></span>&deg; F</li>
                         <li>Chance of Precipitation: 0%</li>
-                        <li>Wind: <span id="wind"></span>mph from the South West</li>
+                        <li>Wind Speed: <span id="wind"></span> mph</li>
                         <li>Wind chill: <span id="windchill"></span>&deg;</li>
+                        <img src="images/placeholder.png" alt="current weather" id="weather_icon">
                     </ul>
                 </section>
 
@@ -149,14 +151,14 @@
             </div>
 
             <div id="footer">
-                &copy; 2018 &middot; All rights reserved &middot; <span id="currentDate"></span> &middot; Wind chill <span id="windchillfooter"></span>&deg;
+                &copy; 2018 &middot; All rights reserved &middot; <span id="currentDate"></span> &middot; Wind chill <span id="windchillfooter"></span>&deg; &middot; <a href="https://openweathermap.org">The weather data is provided by OpenWeatherMap.org</a>
             </div>
         </footer>
 
         <script src="scripts/hamburger.js"></script>
         <script src="scripts/currentdate.js"></script>
         <script src="scripts/windchill.js"></script>
-        <script src="/assignments/lesson-9/scripts/weather.js"></script>
+        <script src="scripts/weather.js"></script>
         <script>
             var section = document.getElementById('section');
             var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
@@ -172,45 +174,45 @@
             function showTowns(jsonObj) {
                 var towns = jsonObj['towns'];
 
-                    var myArticle = document.createElement('article');
-                    var myH2 = document.createElement('h2');
-                    var myPara1 = document.createElement('p');
-                    var myPara2 = document.createElement('p');
-                    var myPara3 = document.createElement('p');
-                    var myPara4 = document.createElement('p');
-                    var myPara5 = document.createElement('p');
-                    var myList = document.createElement('ul');
+                var myArticle = document.createElement('article');
+                var myH2 = document.createElement('h2');
+                var myPara1 = document.createElement('p');
+                var myPara2 = document.createElement('p');
+                var myPara3 = document.createElement('p');
+                var myPara4 = document.createElement('p');
+                var myPara5 = document.createElement('p');
+                var myList = document.createElement('ul');
 
-                    myH2.textContent = towns[0].name;
-                    myPara1.textContent = 'Motto: ' + towns[0].motto;
-                    myPara2.textContent = 'Year founded: ' + towns[0].yearFounded;
-                    myPara3.textContent = 'Population: ' + towns[0].currentPopulation;
-                    myPara4.textContent = 'Annual Rainfall: ' + towns[0].averageRainfall;
-                    myPara5.textContent = 'Town Events:';
+                myH2.textContent = towns[0].name;
+                myPara1.textContent = 'Motto: ' + towns[0].motto;
+                myPara2.textContent = 'Year founded: ' + towns[0].yearFounded;
+                myPara3.textContent = 'Population: ' + towns[0].currentPopulation;
+                myPara4.textContent = 'Annual Rainfall: ' + towns[0].averageRainfall;
+                myPara5.textContent = 'Town Events:';
 
-                    var townEvents = towns[0].events;
-                    for (var i = 0; i < townEvents.length; i++) {
-                        var listItem = document.createElement('li');
-                        listItem.textContent = townEvents[i];
+                var townEvents = towns[0].events;
+                for (var i = 0; i < townEvents.length; i++) {
+                    var listItem = document.createElement('li');
+                    listItem.textContent = townEvents[i];
 
-                        myList.appendChild(listItem);
-                    }
+                    myList.appendChild(listItem);
+                }
 
-                    myArticle.appendChild(myH2);
+                myArticle.appendChild(myH2);
 
-                    myArticle.appendChild(myPara1);
+                myArticle.appendChild(myPara1);
 
-                    myArticle.appendChild(myPara2);
+                myArticle.appendChild(myPara2);
 
-                    myArticle.appendChild(myPara3);
+                myArticle.appendChild(myPara3);
 
-                    myArticle.appendChild(myPara4);
+                myArticle.appendChild(myPara4);
 
-                    myArticle.appendChild(myPara5);
+                myArticle.appendChild(myPara5);
 
-                    myArticle.appendChild(myList);
+                myArticle.appendChild(myList);
 
-                    section.appendChild(myArticle);
+                section.appendChild(myArticle);
 
             }
         </script>

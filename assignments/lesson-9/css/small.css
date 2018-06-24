@@ -100,6 +100,39 @@ nav ul li a:hover {}
 /*MAIN PART LAYOUT*/
 
 main {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+
+main img {
+    width: 100%;
+}
+
+main h2 {
+    font-family: "PT Serif";
+    font-size: 25px;
+    color: #4253BA;
+    margin-left: 5px;
+}
+
+main article {
+    border: 1px solid #4253BA;
+    box-shadow: 5px 5px 5px #4253BA;
+    text-align: center;
+}
+
+main article p {
+    text-align: center;
+}
+
+main article li {
+    text-align: left;
+}
+
+/*--------------------LAYOUT FOR FRANKLIN PAGE-------------------------*/
+
+main {
 }
 main h1 {
     font-family: "PT Serif";
@@ -132,7 +165,7 @@ main article p {
 }
 
 #grid {
-   display: grid;
+    display: grid;
 }
 
 #grid img {
@@ -145,6 +178,7 @@ main article p {
     color: #4253BA;
     padding: 0 15px;
 }
+
 
 /*-------------FORM LAYOUT-----------------*/
 

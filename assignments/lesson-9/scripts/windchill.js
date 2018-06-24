@@ -5,15 +5,12 @@
 
 // hightemperature value and displaying it
 var ht = 90;
-document.getElementById("hightemperature").innerHTML = ht;
 
 // lowtemperature value and displaying it
 var lt = 66;
-document.getElementById("lowtemperature").innerHTML = lt;
 
 // the value of wind speed in miles per hour and displaying it
 var s = 5;
-document.getElementById("wind").innerHTML = s;
 
 /* colculating the average temperature between the high and the low predictions */
 var t = (ht + lt) / 2;

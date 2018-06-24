@@ -26,7 +26,7 @@
             <button onclick="toggleMenu()">&#9776; MENU</button>
             <ul id="primaryNav" class="hide">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Franklin</a></li>
+                <li><a href="franklin.html" Franklin</a></li>
                 <li><a href="#">Greenville</a></li>
                 <li><a href="#">Springfield</a></li>
                 <li><a href="stormcenter.html">Storm Center</a></li>
@@ -37,7 +37,7 @@
         <nav class="bigger">
             <ul>
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Franklin</a></li>
+                <li><a href="franklin.html">Franklin</a></li>
                 <li><a href="#">Greenville</a></li>
                 <li><a href="#">Springfield</a></li>
                 <li><a href="stormcenter.html">Storm Center</a></li>
@@ -59,17 +59,15 @@
 </nav>-->
 
         <main>
-            <section>
+            <section id="uppersection">
                 <article>
                     <h2>Weather Story</h2>
-                    <p></p>
+                    <p>Weather is the state of the atmosphere, describing for example the degree to which it is hot or cold, wet or dry, calm or stormy, clear or cloudy. Most weather phenomena occur in the lowest level of the atmosphere, the troposphere, just below the stratosphere. Weather refers to day-to-day temperature and precipitation activity, whereas climate is the term for the averaging of atmospheric conditions over longer periods of time. When used without qualification, "weather" is generally understood to mean the weather of Earth.</p>
                 </article>
-                <img >
+                <img src="images/homepageimage.jpeg" alt='mountain'>
             </section>
-            <section>
-                <article></article>
-                <article></article>
-                <article></article>
+            <section id="lowersection">
+
             </section>
         </main>
 
@@ -83,12 +81,12 @@
                 </section>
 
                 <div class="footer">
-                    <section>
+                    <section class="footersection">
                         <h3>Phone:</h3>
                         <p>(801)555-1234</p>
                     </section>
 
-                    <section>
+                    <section class="footersection">
                         <h3>Email:</h3>
                         <p>contact@yoururl.com</p>
                     </section>
@@ -96,15 +94,16 @@
             </div>
 
             <div id="footer">
-                &copy; 2018 &middot; All rights reserved &middot; <span id="currentDate"></span> &middot; Wind chill <span id="windchillfooter"></span>&deg;
+                &copy; 2018 &middot; All rights reserved &middot; <span id="currentDate"></span> &middot; <a href="https://openweathermap.org">The weather data is provided by OpenWeatherMap.org</a>
             </div>
         </footer>
 
         <script src="scripts/hamburger.js"></script>
         <script src="scripts/currentdate.js"></script>
         <script src="scripts/windchill.js"></script>
+        <script src="scripts/franklin.js"></script>
         <script>
-            var section = document.querySelector('section');
+            var section = document.getElementById('lowersection');
             var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
             var request = new XMLHttpRequest();
             request.open('GET', requestURL);
@@ -116,9 +115,44 @@
                 showTowns(townData);
             }
             function showTowns(jsonObj) {
-                var towns = jsonObj['towns']
-            }
+                var towns = jsonObj['towns'];
 
+                for (var i = 0; i < towns.length; i++) {
+                    var img = ['images/', '', '']
+                    if (i === 2) { continue; }
+                    var myArticle = document.createElement('article');
+                    var myH2 = document.createElement('h2');
+                    var myPara1 = document.createElement('p');
+                    var myPara2 = document.createElement('p');
+                    var myPara3 = document.createElement('p');
+                    var myPara4 = document.createElement('p');
+                    var myImg = document.createElement('img');
+
+                    myH2.textContent = towns[i].name;
+                    myPara1.textContent = 'Motto: ' + towns[i].motto;
+                    myPara2.textContent = 'Year founded: ' + towns[i].yearFounded;
+                    myPara3.textContent = 'Population: ' + towns[i].currentPopulation;
+                    myPara4.textContent = 'Annual Rainfall: ' + towns[i].averageRainfall;
+                    myImg.textContent = i;
+
+                    myArticle.appendChild(myH2);
+
+                    myArticle.appendChild(myPara1);
+
+                    myArticle.appendChild(myPara2);
+
+                    myArticle.appendChild(myPara3);
+
+                    myArticle.appendChild(myPara4);
+
+                    myArticle.appendChild(myImg);
+
+                    section.appendChild(myArticle);
+
+                }
+            }
         </script>
+
+
     </body>
 </html>
