@@ -1,5 +1,5 @@
 let weatherRequest = new XMLHttpRequest();
-var apiURL = 'https://api.openweathermap.org/data/2.5/weather?id=4156210&APPID=2876382801a396dd5a17e61eabd083ff&units=imperial';
+var apiURL = '//api.openweathermap.org/data/2.5/weather?id=4156210&APPID=2876382801a396dd5a17e61eabd083ff&units=imperial';
 weatherRequest.open('GET', apiURL, true);
 weatherRequest.send();
 weatherRequest.onload =  function () {
@@ -12,6 +12,6 @@ weatherRequest.onload =  function () {
     document.getElementById('wind').innerHTML = weatherData.wind.speed;
 
     var iconcode = weatherData.weather[0].icon;
-    var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
+    var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
     document.getElementById('weather_icon').src = icon_path;
 }
