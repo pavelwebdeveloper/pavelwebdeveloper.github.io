@@ -131,6 +131,7 @@ main #lowersection div {
 }
 
 main #lowersection div img {
+    width: 100%;
     padding: 20px 20px;
     text-align: center;
 }
