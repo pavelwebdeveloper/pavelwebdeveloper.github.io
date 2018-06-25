@@ -100,9 +100,57 @@ nav ul li a:hover {}
 /*MAIN PART LAYOUT*/
 
 main {
+}
+main h1 {
+    font-family: "PT Serif";
+    font-size: 25px;
+    color: #4253BA;
+    margin-left: 5px;
+}
+main h2 {
+    font-family: "PT Serif";
+    font-size: 20px;
+    color: #4253BA;
+    margin-left: 5px;
+}
+main figure { margin: 0 0 .2rem 2%; width:96%; }
+main figure img {
+    margin-left: -10px;
+}
+
+section.forecast {
+    display: none;
+}
+
+article img {
+    border-radius: 10px;
+    width: 100%;
+}
+main article p {
+    margin: 5px;
+    text-align: justify;
+}
+
+#grid {
+    display: grid;
+}
+
+#grid img {
+    width:90%;
+    margin: 20px;
+}
+
+#grid figcaption {
+    text-align: center;
+    color: #4253BA;
+    padding: 0 15px;
+}
+
+
+main {
     display: flex;
     flex-direction: column;
-    margin: 20px auto;
+    margin: auto;
 }
 
 main #uppersection article {
@@ -110,7 +158,7 @@ main #uppersection article {
     text-align: center;
 }
 
-main img {
+main #homeimg {
     width: 100%;
 }
 
