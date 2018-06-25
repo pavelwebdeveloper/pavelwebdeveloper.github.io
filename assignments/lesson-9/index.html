@@ -102,7 +102,7 @@
         <script src="scripts/currentdate.js"></script>
         <script src="scripts/windchill.js"></script>
         <script>
-            var section = document.getElementById('lowersection');
+           var section = document.getElementById('lowersection');
             var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
             var request = new XMLHttpRequest();
             request.open('GET', requestURL);
@@ -115,9 +115,9 @@
             }
             function showTowns(jsonObj) {
                 var towns = jsonObj['towns'];
+                var img = ["images/franklin.jpg", "images/greenville.jpg", "image", "images/springfield.jpg"];
 
                 for (var i = 0; i < towns.length; i++) {
-                    var img = ['images/', '', '']
                     if (i === 2) { continue; }
                     var myArticle = document.createElement('article');
                     var myH2 = document.createElement('h2');
@@ -125,14 +125,14 @@
                     var myPara2 = document.createElement('p');
                     var myPara3 = document.createElement('p');
                     var myPara4 = document.createElement('p');
-                    var myImg = document.createElement('img');
+
 
                     myH2.textContent = towns[i].name;
                     myPara1.textContent = 'Motto: ' + towns[i].motto;
                     myPara2.textContent = 'Year founded: ' + towns[i].yearFounded;
                     myPara3.textContent = 'Population: ' + towns[i].currentPopulation;
                     myPara4.textContent = 'Annual Rainfall: ' + towns[i].averageRainfall;
-                    myImg.textContent = i;
+                   /* myImg.textContent = i;*/
 
                     myArticle.appendChild(myH2);
 
@@ -144,11 +144,20 @@
 
                     myArticle.appendChild(myPara4);
 
-                    myArticle.appendChild(myImg);
+                    /*myArticle.appendChild(myImg);*/
+
+
+                    var x = document.createElement("IMG");
+                    x.setAttribute("src", "https://www.pexels.com/photo/city-landscape-sky-houses-111963/");
+                    x.setAttribute("height", "200");
+                    x.setAttribute("width", "400");
+                    x.setAttribute("alt", "picture");
+                    myArticle.appendChild(x);
 
                     section.appendChild(myArticle);
 
                 }
+
             }
         </script>
 
