@@ -4,13 +4,27 @@
         margin: 20px auto;
     }
 
+
     main #lowersection {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
 
-    main #lowersection section {
-        flex-grow: 1;
+    main #lowersection div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main #lowersection div {
+        border: 1px solid #4253BA;
+        box-shadow: 5px 5px 5px #4253BA;
+        text-align: center;
+    }
+
+    main article {
+        border: none;
+        box-shadow: none;
+        text-align: center;
     }
 }

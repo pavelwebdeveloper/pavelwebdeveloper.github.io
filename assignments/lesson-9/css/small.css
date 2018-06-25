@@ -105,6 +105,11 @@ main {
     margin: 20px auto;
 }
 
+main #uppersection article {
+    border: 1px solid #4253BA;
+    text-align: center;
+}
+
 main img {
     width: 100%;
 }
@@ -116,9 +121,17 @@ main h2 {
     margin-left: 5px;
 }
 
-main article {
+main #lowersection div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px 0;
     border: 1px solid #4253BA;
-    box-shadow: 5px 5px 5px #4253BA;
+    text-align: center;
+}
+
+main #lowersection div img {
+    padding: 20px 20px;
     text-align: center;
 }
 

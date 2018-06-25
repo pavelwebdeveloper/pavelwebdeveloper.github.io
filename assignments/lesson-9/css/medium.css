@@ -69,10 +69,23 @@
         margin: 20px auto;
     }
 
+    main #uppersection article {
+        border: 1px solid #4253BA;
+        box-shadow: 5px 5px 5px #4253BA;
+        text-align: center;
+    }
+
+    main #uppersection img {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
     main #uppersection img {
         max-width: 50%;
-        max-height: auto;
-        margin: 30px;
+        max-height: 30%;
+        margin: 0 10px;
+        padding: 5px 0;
     }
 
     main #uppersection article {
@@ -90,6 +103,27 @@
     main #lowersection {
         display: flex;
         flex-direction: column;
+    }
+
+    main #lowersection div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 10px 0;
+        border: none;
+        text-align: center;
+    }
+
+
+    main article {
+        border: 1px solid #4253BA;
+        box-shadow: 5px 5px 5px #4253BA;
+        margin: 20px 10px;
+        text-align: center;
+    }
+
+    main #lowersection img {
+        width: 30%;
     }
 
     /*-----------------LAYOUT FOR FRANKLIN AND GRID PAGES-----------------*/

@@ -119,6 +119,7 @@
 
                 for (var i = 0; i < towns.length; i++) {
                     if (i === 2) { continue; }
+                    var myDiv = document.createElement('div');
                     var myArticle = document.createElement('article');
                     var myH2 = document.createElement('h2');
                     var myPara1 = document.createElement('p');
@@ -144,15 +145,16 @@
 
                     myArticle.appendChild(myPara4);
 
+                    myDiv.appendChild(myArticle);
+
                     var x = document.createElement("IMG");
                     x.setAttribute("src", "https://www.pexels.com/photo/city-landscape-sky-houses-111963/");
                     x.setAttribute("height", "200");
                     x.setAttribute("width", "400");
                     x.setAttribute("alt", "picture");
-                    myArticle.appendChild(x);
+                    myDiv.appendChild(x);
 
-                    section.appendChild(myArticle);
-
+                    section.appendChild(myDiv);
                 }
 
             }
