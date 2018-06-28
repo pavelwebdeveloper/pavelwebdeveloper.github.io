@@ -1,0 +1,102 @@
+@media only screen and (min-width: 64em) {
+
+    /*------------Franklinmainlayout--------------*/
+
+    main {
+        margin: auto;
+    }
+
+    main #uppersection img {
+        max-width: 50%;
+        max-height: auto;
+        margin: auto;
+        padding: 5px 0;
+    }
+
+    main #lowersection {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    main #lowersection div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main #lowersection div {
+        border: 1px solid #4253BA;
+        box-shadow: 5px 5px 5px #4253BA;
+        margin: 20px 20px;
+        text-align: center;
+    }
+
+    main #lowersection #divleft {
+        flex-direction: column;
+    }
+
+    main #lowersection div img {
+        width: 100%;
+        padding: 20px 20px;
+        text-align: center;
+    }
+
+    main #lowersection div article {
+        border: none;
+        box-shadow: none;
+        text-align: center;
+    }
+
+    /*GRID LAYOUT*/
+
+    #grid {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: auto;
+        padding-left: 12px;
+    }
+
+    #grid img { width: 90%; }
+
+    #grid figcaption {
+        text-align: center;
+    }
+
+    #grid img:hover {
+        box-shadow: 10px 10px 5px grey;
+    }
+
+    #grid figcaption:hover {
+        text-shadow: 5px 5px 3px grey;
+    }
+
+    /*-------------FORM LAYOUT-----------------*/
+
+    #storm {
+        display: block;
+    }
+
+    #formflex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    main div#formflex h1 {
+        margin: auto;
+    }
+
+    main div#formflex img {
+        width: 30%;
+    }
+
+    form label.sbs {
+        padding: .4rem 0;
+    }
+
+    #thanks {
+        margin: 150px 20px;
+        text-align: center;
+    }
+}
