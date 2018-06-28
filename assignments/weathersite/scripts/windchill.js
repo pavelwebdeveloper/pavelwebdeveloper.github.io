@@ -18,5 +18,4 @@ var t = (ht + lt) / 2;
 /* compute and display the wind chill temperature */
 var f = 35.74 + 0.6215 * t - 35.75 * Math.pow(s, 0.16) + 0.4275 * t *  Math.pow(s, 0.16);
 f = Math.round(f);
-document.getElementById("windchill").innerHTML = f;
 document.getElementById("windchillfooter").innerHTML = f;

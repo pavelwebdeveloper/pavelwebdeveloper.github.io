@@ -14,36 +14,32 @@
 
     <body>
 
-        <header>
-            <img src="images/logoimage.jpg" alt="cloud with a sun sticking from behind the cloud">
-            <div>
-                <h1 id="websiteheading"><br>Franklin, Springfield and Greenville Weather</h1>
-                <h2>Always be ready for the weather</h2>
-            </div>
+        <header includefile="header.html">
         </header>
 
-        <nav class="small">
-            <button onclick="toggleMenu()">&#9776; MENU</button>
-            <ul id="primaryNav" class="hide">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="franklin.html"> Franklin</a></li>
-                <li><a href="greenville.html">Greenville</a></li>
-                <li><a href="springfield.html">Springfield</a></li>
-                <li><a href="stormcenter.html">Storm Center</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-            </ul>
-        </nav>
+            <nav class="small">
+                <button onclick="toggleMenu()">&#9776; MENU</button>
+                <ul id="primaryNav" class="hide">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="franklin.html"> Franklin</a></li>
+                    <li><a href="greenville.html">Greenville</a></li>
+                    <li><a href="springfield.html">Springfield</a></li>
+                    <li><a href="stormcenter.html">Storm Center</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
 
-        <nav class="bigger">
-            <ul>
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="franklin.html">Franklin</a></li>
-                <li><a href="greenville.html">Greenville</a></li>
-                <li><a href="springfield.html">Springfield</a></li>
-                <li><a href="stormcenter.html">Storm Center</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-            </ul>
-        </nav>
+            <nav class="bigger">
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="franklin.html">Franklin</a></li>
+                    <li><a href="greenville.html">Greenville</a></li>
+                    <li><a href="springfield.html">Springfield</a></li>
+                    <li><a href="stormcenter.html">Storm Center</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+
 
         <!-- <nav id="small">
 <div class="left">
@@ -72,35 +68,18 @@
         </main>
 
         <footer>
-            <div id="upperfooter">
-                <section class="footer">
-                    <h3>Address:</h3>
-                    <p>The Weather Center</p>
-                    <p>123 Main Street.</p>
-                    <p>Franklin, MI 87654</p>
-                </section>
-
-                <div class="footer">
-                    <section class="footersection">
-                        <h3>Phone:</h3>
-                        <p>(801)555-1234</p>
-                    </section>
-
-                    <section class="footersection">
-                        <h3>Email:</h3>
-                        <p>contact@yoururl.com</p>
-                    </section>
-                </div>
+            <div includefile="upperfooter.html">
             </div>
-
             <div id="footer">
-                &copy; 2018 &middot; All rights reserved &middot; <span id="currentDate"></span> &middot; <a href="https://openweathermap.org">The weather data is provided by OpenWeatherMap.org</a>
+                <span includefile="lowerfooter.html">
+                    </span><span id="currentDate"></span>
             </div>
         </footer>
 
+
         <script src="scripts/hamburger.js"></script>
+        <script src="scripts/include.js"></script>
         <script src="scripts/currentdate.js"></script>
-        <script src="scripts/windchill.js"></script>
         <script>
            var section = document.getElementById('lowersection');
             var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
@@ -188,4 +167,5 @@
         </script>
 
     </body>
+    <script src="scripts/changeactive.js"></script>
 </html>

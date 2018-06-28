@@ -14,12 +14,7 @@
 
     <body>
 
-        <header>
-            <img src="images/logoimage.jpg" alt="cloud with a sun sticking from behind the cloud">
-            <div>
-                <h1 id="websiteheading"><br>Franklin, Springfield and Greenville Weather</h1>
-                <h2>Always be ready for the weather</h2>
-            </div>
+        <header includefile="header.html">
         </header>
 
         <nav class="small">
@@ -65,34 +60,17 @@
         </main>
 
         <footer>
-            <div id="upperfooter">
-                <section class="footer">
-                    <h3>Address:</h3>
-                    <p>The Weather Center</p>
-                    <p>123 Main Street.</p>
-                    <p>Franklin, MI 87654</p>
-                </section>
-
-                <div class="footer">
-                    <section>
-                        <h3>Phone:</h3>
-                        <p>(801)555-1234</p>
-                    </section>
-
-                    <section>
-                        <h3>Email:</h3>
-                        <p>contact@yoururl.com</p>
-                    </section>
-                </div>
+            <div includefile="upperfooter.html">
             </div>
 
             <div id="footer">
-                &copy; 2018 &middot; All rights reserved &middot; <span id="currentDate"></span>
+                <span includefile="lowerfooter.html"></span>
+                <span id="currentDate"></span>
             </div>
         </footer>
 
         <script src="scripts/hamburger.js"></script>
+        <script src="scripts/include.js"></script>
         <script src="scripts/currentdate.js"></script>
-        <script src="scripts/stormrange.js"></script>
     </body>
 </html>
