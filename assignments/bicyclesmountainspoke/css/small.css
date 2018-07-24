@@ -2,7 +2,13 @@
 
 body {
     font-size: 16px;
-    font-family: sans-serif; /* Declare the base font-family */
+    font-family: 'Noto Sans', sans-serif; /* Declare the base font-family */
+}
+
+body p {
+    font-family: 'Noto Sans', cursive, "PT Serif";
+    font-size: 16px;
+    color: #0A0604;
 }
 
 body h1, h2, h3 {
@@ -31,13 +37,14 @@ header, nav, main, footer { /* the comma between the selectors means apply the f
 
 /*-----------FOOTER LAYOUT-------------------------*/
 
-body {
+body p, h3, a {
     font-family: 'Hind', cursive, "PT Serif";
-    color: #4253BA;
+    color: #0A0604;
 }
 
 footer {
     background-color: #D4DBDB;
+    margin-top: 25px;
 }
 
 footer h3 {
@@ -71,11 +78,7 @@ footer p {
 
 /*--------------HEADER LAYOUT------------------*/
 
-body p {
-    font-family: 'Noto Sans', cursive, "PT Serif";
-    font-size: 16px;
-    color: #4253BA;
-}
+
 
 #header {
     font-family: 'Carter One', cursive, "PT Serif";
@@ -120,7 +123,7 @@ nav li a:hover {
     background-color: gray;
 }
 
-nav ul li.active a {
+nav ul li.active {
     background-color: green;
 }
 
@@ -184,6 +187,11 @@ main figure img {
     margin: auto;
     width: 100%;
     max-width: 19rem;
+}
+
+#registerBtn a {
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -383,4 +391,10 @@ form label.top input:required:valid {
 #tour2 img {
     width: 325px;
     height: 324px;
+}
+
+/*-------------OVERVIEW PAGE LAYOUT-------------*/
+
+video {
+    margin: auto;
 }
