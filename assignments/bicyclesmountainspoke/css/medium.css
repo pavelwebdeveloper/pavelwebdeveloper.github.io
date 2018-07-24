@@ -1,0 +1,186 @@
+@media only screen and (min-width: 37.5em) {
+
+
+
+    /*-------------HEADER SECTION LAYOUT-------------*/
+
+    header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+
+    #header {
+        font-size: 35px;
+    }
+
+    #header1 div {
+        margin: 15px;
+    }
+
+    header nav ul {
+        display: flex;
+    }
+
+    .hide {
+        display: flex;
+    }
+
+    header button {
+        display: none;
+    }
+
+    /*---------------FOOTER LAYOUT______________*/
+
+    footer h3 {
+        margin-top: 0;
+        margin-left: 6px;
+        margin-bottom: 5px;
+    }
+    #upperfooter {
+        display: flex;
+    }
+
+    .footer {
+        flex: 1;
+    }
+
+    /*=============HOME PAGE LAYOUT================*/
+
+    /*-------------MAIN SECTION LAYOUT-------------*/
+
+
+    #homepagearticles, #homepageregistrationimages {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+
+    #homepageimages {
+        margin-top: 5px;
+    }
+
+    #homepageadventuretours {
+        justify-content: space-around;
+    }
+
+    #homepageimages1, #homepageimages2, #homepageimages3 {
+        flex: 1;
+        max-width: 400px;
+        max-height: 300px;
+    }
+
+
+    /*=============SALES PAGE LAYOUT================*/
+
+    /*-------------MAIN SECTION LAYOUT-------------*/
+
+
+    #homepagesales, #homepageservices {
+        border: 1px black solid;
+        margin: 10px;
+        width: 50%;
+    }
+
+    #homepageadventuretours {
+        border: 1px black solid;
+    }
+
+    #mainsales {
+        position: relative;
+        height: 1400px;
+    }
+
+    #table table {
+        width: 400px;
+    }
+
+    .flex div, p {
+        margin: 20px;
+    }
+
+    .flex p#salespage {
+        width: 500px;
+        background-color: red;
+        color: black;
+        font-size: 25px;
+    }
+
+    section p#salespage1 {
+        width: 500px;
+        background-color: green;
+        color: black;
+        font-size: 25px;
+    }
+
+    section p#salespage2 {
+        width: 500px;
+        background-color: gray;
+        color: black;
+        font-size: 25px;
+    }
+
+
+    .sales {
+        position: relative;
+        left: 0px;
+        padding: 0px;
+        margin: 0px;
+        font-family: sans-serif;
+        text-shadow:0px 0px 1px rgba(0,0,0,0.2);
+        list-style: none;
+        top: 70px;
+        height: 150px;
+    }
+
+    .sales > div {
+        position: relative;
+        background: rgba(0,0,0,0.2);
+        width: 1550px;
+        height: 350px;
+        padding: 20px;
+        margin-top: 2px;
+        left: -938px;
+        transition: left 500ms;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    div.openSesame {
+        left:-50px;
+    }
+
+    /*=============SERVICE PAGE LAYOUT================*/
+
+
+
+    /*--------------TABLE LAYOUT------------------*/
+
+    #servicetable table {
+        width: 600px;
+    }
+
+
+    /*=============TOUR PAGE LAYOUT================*/
+
+    #tours {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #tour1, #tour2 {
+        border: 1px solid black;
+    }
+
+    /*=============EVENT PAGE LAYOUT================*/
+
+    #eventtour {
+        display: flex;
+        justify-content: space-around;
+    }
+
+}

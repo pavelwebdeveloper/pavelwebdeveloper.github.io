@@ -1,0 +1,131 @@
+@media only screen and (min-width: 64em) {
+
+    #header {
+        font-size: 45px;
+    }
+
+    /*=============HOME PAGE LAYOUT================*/
+
+    /*-------------MAIN SECTION LAYOUT-------------*/
+
+    main figure {
+        margin: 0 0 .2rem 2%;
+
+    }
+    main figure img {
+        width:1200px;
+        margin-left: -20px;
+        overflow: hidden;
+    }
+
+
+    #homepagearticles, #homepagesales, #homepageservices, #homepageadventuretours {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    #homepageregistrationimages {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    #homepageimages {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    #registerBtn {
+        margin: 50px auto;
+    }
+
+    /*=============SALES PAGE LAYOUT================*/
+
+    /*-------------MAIN SECTION LAYOUT-------------*/
+
+
+    #mainsales {
+        position: relative;
+        height: 1200px;
+    }
+
+    #table table {
+        width: 600px;
+    }
+
+    .flex div, p {
+        margin: 5px;
+    }
+
+    .flex p {
+        color: black;
+        margin: 5px;
+    }
+
+
+    .sales {
+        position: relative;
+        left: 0px;
+        padding: 0px;
+        margin: 0px;
+        font-family: sans-serif;
+        text-shadow:0px 0px 1px rgba(0,0,0,0.2);
+        list-style: none;
+        top: 70px;
+        height: 150px;
+    }
+
+    .sales > div {
+        position: relative;
+        background: rgba(0,0,0,0.2);
+        width: 2100px;
+        height: 300px;
+        padding: 20px;
+        margin-top: 2px;
+        left: -1608px;
+        transition: left 500ms;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    div.openSesame {
+        left:-40px;
+    }
+
+
+    .flex p#salespage {
+        width: 500px;
+        background-color: red;
+        color: black;
+        font-size: 30px;
+    }
+
+    section p#salespage1 {
+        width: 500px;
+        background-color: green;
+        color: black;
+        font-size: 30px;
+    }
+
+    section p#salespage2 {
+        width: 500px;
+        background-color: gray;
+        color: black;
+        font-size: 30px;
+    }
+
+    /*=============SERVICE PAGE LAYOUT================*/
+
+
+
+    /*--------------TABLE LAYOUT------------------*/
+
+    #servicetable table {
+        width: 1000px;
+    }
+
+
+}

@@ -1,0 +1,42 @@
+
+{
+
+"services": [
+        {
+            "item": "1",
+            "service": "Safety service",
+            "price": "35$"
+        },
+        {
+            "item": "2",
+            "service": "General service",
+            "price": "50$"
+        },
+    {
+        "item": "3",
+        "service": "Overhaul service",
+        "price": "70$"
+    },
+    {
+        "item": "4",
+        "service": "Overhaul service",
+        "price": "70$"
+    },
+    {
+        "item": "5",
+        "service": "Overhaul service",
+        "price": "70$"
+    },
+    {
+        "item": "6",
+        "service": "Full package rigid",
+        "price": "99$"
+    },
+    {
+        "item": "7",
+        "service": "Full package suspension",
+        "price": "125$"
+    }
+]
+
+}

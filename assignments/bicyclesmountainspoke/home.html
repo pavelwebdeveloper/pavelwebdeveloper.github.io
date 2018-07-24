@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Mountain Spoke Company Store">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mountain Spoke Company</title>
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/small.css" rel="stylesheet">
+        <link href="css/medium.css" rel="stylesheet">
+        <link href="css/large.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Carter+One|Hind|Noto+Sans" rel="stylesheet">
+        <script
+                src="https://code.jquery.com/jquery-3.3.1.js"
+                integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                crossorigin="anonymous">
+        </script>
+    </head>
+
+    <body>
+
+        <header>
+            <div id="header1" includefile="header.html"></div>
+            <div>
+                <button id="smallmenu" onclick="toggleMenu()">&#9776; MENU</button>
+                <nav>
+                    <ul id="primaryNav" class="hide">
+                        <li class="active"><a href="home.html">Home</a></li>
+                        <li><a href="adventuretours.html">Adventure tours</a></li>
+                        <li><a href="event.html">Event</a></li>
+                        <li><a href="sales.html">Sales</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <figure>
+                <img src="images/mountain-biking-in-utah90.jpg" alt="mountain bicyclist riding on a bicycle" sizes="100vw" srcset="images/mountain-biking-in-utah90-400.jpg 400w, images/mountain-biking-in-utah90-600.jpg 600w, images/mountain-biking-in-utah90-800.jpg 800w, images/mountain-biking-in-utah90.jpg 1028w">
+            </figure>
+            <h1>The Mountain Spoke bicycles sales, services and adventure tours.</h1>
+            <section id="homepagearticles">
+                <article id="homepagesales">
+                    <section>
+                        <h2>The Mountain Spoke bicycles sales.</h2>
+                        <p>Come and visit our store. You will find all kinds of bicycles here for any preference.</p>
+                    </section>
+                    <section>
+                        <img src="/assignments/bicyclesmountainspoke/images/bicyclesforsale.jpg" alt="biclycles">
+                    </section>
+                </article>
+                <article id="homepageservices">
+                    <section>
+                        <h2>The Mountain Spoke services.</h2>
+                        <p>We can take care of any problen that you can have with your bicycle.</p>
+                    </section>
+                    <section>
+                        <img src="/assignments/bicyclesmountainspoke/images/bicyclesservice.jpg" alt="bicycle service and repair">
+                    </section>
+                </article>
+            </section>
+            <section id="homepageregistrationimages">
+                <section id="homepageadventuretours">
+                    <article>
+                        <h2>The Mountain Spoke adventure tours.</h2>
+                        <p>If you are ready for a real adventure then we invite you to participate in our adventure tours.</p>
+                    </article>
+                    <div>
+                        <button id="registerBtn">Register for an adventure tour
+                        </button>
+                    </div>
+                </section>
+                <section id="homepageimages">
+                    <img id="homepageimages1" src="/assignments/bicyclesmountainspoke/images/bike-mountain-mountain-biking-trail-163491.jpeg" alt="bicycle service and repair">
+                    <img id="homepageimages2" src="/assignments/bicyclesmountainspoke/images/cyclists-trail-bike-clouds-163407.jpeg" alt="bicycle service and repair">
+                    <img id="homepageimages3" src="/assignments/bicyclesmountainspoke/images/pexels-photo-90454.jpeg" alt="bicycle service and repair">
+                </section>
+            </section>
+        </main>
+
+        <footer>
+            <div includefile="upperfooter.html">
+            </div>
+            <div id="footer">
+                <span includefile="lowerfooter.html">
+                </span>
+            </div>
+        </footer>
+
+
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/include.js"></script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+{
+
+    "bicycles": [
+        {
+            "product": "Rocky Mountain Instinct 950 Bike",
+            "modelyear": "2017",
+            "ridingtype": "Trail",
+            "wheelsize": "29",
+            "framematerial": "Aluminum"
+        },
+        {
+            "product": "2019 Pivot Trail 429 Pro XT/XTR 1X",
+            "modelyear": "2019",
+            "ridingtype": "Trail",
+            "wheelsize": "29, 27.5+",
+            "framematerial": "Carbon Fiber"
+        },
+        {
+            "product": "Rocky Mountain Altitude Alloy 50 Bike",
+            "modelyear": "2018",
+            "ridingtype": "Trail",
+            "wheelsize": "27.5 (650b)",
+            "framematerial": "Aluminum"
+        }
+    ]
+
+}

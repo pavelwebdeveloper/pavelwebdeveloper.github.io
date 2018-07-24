@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Mountain Spoke Company Store">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mountain Spoke Company</title>
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/small.css" rel="stylesheet">
+        <link href="css/medium.css" rel="stylesheet">
+        <link href="css/large.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Carter+One|Hind|Noto+Sans" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"
+                integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                crossorigin="anonymous"></script>
+        <script>
+            $(function(){
+                // All jQuery code goes here
+                $('.sales > div').hover(function(){
+                    // This code executes when the mouse pointer is over the list item
+
+                    $(this).addClass('openSesame');
+
+                }, function(){
+                    // This code executes when the mouse pointer leaves the list item
+
+                    $(this).removeClass('openSesame');
+
+                })
+            })
+        </script>
+    </head>
+
+    <body>
+
+        <header>
+            <div id="header1" includefile="header.html"></div>
+            <div>
+                <button id="smallmenu" onclick="toggleMenu()">&#9776; MENU</button>
+                <nav>
+                    <ul id="primaryNav" class="hide">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="adventuretours.html">Adventure tours</a></li>
+                        <li><a href="event.html">Event</a></li>
+                        <li class="active"><a href="sales.html">Sales</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="mainsales">
+
+            <h1>The Mountain Spoke bicycles sales.</h1>
+
+            <h2>These are the bicycles we sell.</h2>
+
+            <section id="salestable" class="sales">
+
+            </section>
+        </main>
+
+        <footer>
+            <div includefile="upperfooter.html">
+            </div>
+            <div id="footer">
+                <span includefile="lowerfooter.html">
+                </span>
+            </div>
+        </footer>
+
+
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/include.js"></script>
+
+<script>
+    var section = document.getElementById('salestable');
+    var requestURL = 'data/bicyclesdata.json';
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+        var salesData = request.response;
+        console.log(salesData);
+        showTable(salesData);
+    }
+    function showTable(jsonObj) {
+        var table = jsonObj['bicycles'];
+
+        for (var i = 0; i < table.length; i++) {
+
+        var myDiv1 = document.createElement('div');
+
+
+            myDiv1.setAttribute("class", "flex");
+
+            section.appendChild(myDiv1);
+
+        var myDiv2 = document.createElement('div');
+
+            myDiv1.appendChild(myDiv2);
+
+            if (i==0){
+                var x = document.createElement("IMG");
+                x.setAttribute("src", "images/pivot_trail.jpg");
+
+                x.setAttribute("alt", "The Town of Franklin");
+                /* x.setAttribute("id", [i]);*/
+                myDiv2.appendChild(x);
+
+
+            } else if (i==1) {
+                var x = document.createElement("IMG");
+                x.setAttribute("src", "images/rocky_mountain_altitude_alloy.jpg");
+
+                x.setAttribute("alt", "The Town of Greenville");
+                /* x.setAttribute("id", [i]);*/
+                myDiv2.appendChild(x);
+
+
+            } else {
+                var x = document.createElement("IMG");
+                x.setAttribute("src", "images/rocky_mountain_instinct.jpg");
+
+                x.setAttribute("alt", "The Town of Springfield");
+                /* x.setAttribute("id", [i]);*/
+                myDiv2.appendChild(x);
+
+
+            }
+        var myPara = document.createElement('p');
+
+        myDiv1.appendChild(myPara);
+
+            var myTable = document.createElement('table');
+            myPara.appendChild(myTable);
+
+            var myTbody = document.createElement('tbody');
+            myTable.appendChild(myTbody);
+
+
+        var myTr1 = document.createElement('tr');
+
+            myTbody.appendChild(myTr1);
+
+        var myTd1 = document.createElement('td');
+        var myTd2 = document.createElement('td');
+
+        myTd1.textContent = 'Product';
+            myTd2.textContent = table[i].product;
+
+
+            myTr1.appendChild(myTd1);
+
+            myTr1.appendChild(myTd2);
+
+            var myTr2 = document.createElement('tr');
+
+            myTbody.appendChild(myTr2);
+
+            var myTd3 = document.createElement('td');
+            var myTd4 = document.createElement('td');
+
+            myTd3.textContent = 'Model Year';
+            myTd4.textContent = table[i].modelyear;
+
+
+            myTr2.appendChild(myTd3);
+
+            myTr2.appendChild(myTd4);
+
+            var myTr3 = document.createElement('tr');
+
+            myTbody.appendChild(myTr3);
+
+            var myTd5 = document.createElement('td');
+            var myTd6 = document.createElement('td');
+
+            myTd5.textContent = 'Riding type';
+            myTd6.textContent = table[i].ridingtype;
+
+
+            myTr3.appendChild(myTd5);
+
+            myTr3.appendChild(myTd6);
+
+            var myTr4 = document.createElement('tr');
+
+            myTbody.appendChild(myTr4);
+
+            var myTd7 = document.createElement('td');
+            var myTd8 = document.createElement('td');
+
+            myTd7.textContent = 'Wheel Size';
+            myTd8.textContent = table[i].wheelsize;
+
+
+            myTr4.appendChild(myTd7);
+
+            myTr4.appendChild(myTd8);
+
+            var myTr5 = document.createElement('tr');
+
+            myTbody.appendChild(myTr5);
+
+            var myTd9 = document.createElement('td');
+            var myTd10 = document.createElement('td');
+
+            myTd9.textContent = 'Frame Material';
+            myTd10.textContent = table[i].framematerial;
+
+
+            myTr5.appendChild(myTd9);
+
+            myTr5.appendChild(myTd10);
+
+            var myDiv3 = document.createElement('div');
+
+            myDiv1.appendChild(myDiv3);
+
+
+            if (i==0){
+                var y = document.createElement('p');
+                y.setAttribute("id", "salespage");
+
+                y.textContent = 'Rocky Mountain Instinct 950 Bike';
+
+
+                myDiv3.appendChild(y);
+
+
+            } else if (i==1) {
+                var y = document.createElement('p');
+                y.setAttribute("id", "salespage1");
+
+
+                y.textContent = '2019 Pivot Trail 429 Pro XT/XTR 1X';
+
+
+                myDiv3.appendChild(y);
+
+
+            } else {
+                var y = document.createElement('p');
+                y.setAttribute("id", "salespage2");
+
+                y.textContent = 'Rocky Mountain Altitude Alloy 50 Bike';
+
+
+                myDiv3.appendChild(y);
+
+            }
+        }
+
+
+
+
+       /* "product": "2019 Pivot Trail 429 Pro XT/XTR 1X",
+            "modelyear": "2019",
+                "riding type": "Trail",
+                    "wheel size": "29, 27.5+",
+                        "frame material": "Carbon Fiber"*/
+
+    }
+</script>
+        <!--
+<script>
+var section = document.getElementById('lowersection');
+var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+request.onload = function() {
+var townData = request.response;
+console.log(townData);
+showTowns(townData);
+}
+function showTowns(jsonObj) {
+var towns = jsonObj['towns'];
+
+
+for (var i = 0; i < towns.length; i++) {
+if (i === 2) { continue; }
+var myDiv = document.createElement('div');
+if (i==0 || i==3) {
+myDiv.setAttribute("id", "divleft");
+} /*else {
+myDiv.setAttribute("id", "divright");
+}*/
+var myArticle = document.createElement('article');
+var myH2 = document.createElement('h2');
+var myPara1 = document.createElement('p');
+var myPara2 = document.createElement('p');
+var myPara3 = document.createElement('p');
+var myPara4 = document.createElement('p');
+
+
+myH2.textContent = towns[i].name;
+myPara1.textContent = 'Motto: ' + towns[i].motto;
+myPara2.textContent = 'Year founded: ' + towns[i].yearFounded;
+myPara3.textContent = 'Population: ' + towns[i].currentPopulation;
+myPara4.textContent = 'Annual Rainfall: ' + towns[i].averageRainfall;
+
+
+myArticle.appendChild(myH2);
+
+myArticle.appendChild(myPara1);
+
+myArticle.appendChild(myPara2);
+
+myArticle.appendChild(myPara3);
+
+myArticle.appendChild(myPara4);
+
+myDiv.appendChild(myArticle);
+
+if (i==0){
+var x = document.createElement("IMG");
+x.setAttribute("src", "images/franklin.jpeg");
+
+x.setAttribute("alt", "The Town of Franklin");
+/* x.setAttribute("id", [i]);*/
+myDiv.appendChild(x);
+
+
+} else if (i==1) {
+var x = document.createElement("IMG");
+x.setAttribute("src", "images/greenville.jpeg");
+
+x.setAttribute("alt", "The Town of Greenville");
+/* x.setAttribute("id", [i]);*/
+myDiv.appendChild(x);
+
+
+} else {
+var x = document.createElement("IMG");
+x.setAttribute("src", "images/springfield.jpeg");
+
+x.setAttribute("alt", "The Town of Springfield");
+/* x.setAttribute("id", [i]);*/
+myDiv.appendChild(x);
+
+
+}
+
+section.appendChild(myDiv);
+}
+
+}
+</script>
+-->
+    </body>
+</html>
