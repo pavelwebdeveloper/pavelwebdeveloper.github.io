@@ -35,6 +35,10 @@ header, nav, main, footer { /* the comma between the selectors means apply the f
     margin: 5px;
 }
 
+header button {
+    text-align: left;
+}
+
 /*-----------FOOTER LAYOUT-------------------------*/
 
 body p, h3, a {
