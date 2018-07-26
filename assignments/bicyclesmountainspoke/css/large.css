@@ -4,6 +4,11 @@
         font-size: 45px;
     }
 
+    #header1 {
+        display: flex;
+        flex-flow: row-reverse;
+    }
+
     /*=============HOME PAGE LAYOUT================*/
 
     /*-------------MAIN SECTION LAYOUT-------------*/
@@ -24,6 +29,14 @@
         flex-flow: row nowrap;
     }
 
+    #homepagesales, #homepageservices {
+        justify-content: space-between;
+    }
+
+    #homepageadventuretours div {
+        padding: 10px;
+    }
+
     #homepageregistrationimages {
         display: flex;
         flex-flow: column wrap;
@@ -32,6 +45,24 @@
     #homepageimages {
         display: flex;
         flex-flow: row nowrap;
+    }
+
+    #homepagesales section {
+        width: 50%;
+        padding: 10px;
+    }
+
+    #homepageservices section {
+        width: 50%;
+        padding: 10px;
+    }
+
+    #homepagesales img {
+        margin: 0;
+    }
+
+    #homepageservices img {
+        margin: 0;
     }
 
     #registerBtn {

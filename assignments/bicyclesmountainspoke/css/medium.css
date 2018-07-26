@@ -4,9 +4,7 @@
 
     /*-------------HEADER SECTION LAYOUT-------------*/
 
-    header {
-        display: flex;
-        flex-flow: row nowrap;
+    #header1 {
         justify-content: space-around;
     }
 
@@ -53,7 +51,7 @@
     #homepagearticles, #homepageregistrationimages {
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     #homepageimages {
@@ -64,10 +62,43 @@
         justify-content: space-around;
     }
 
+    #homepageadventuretours div {
+        padding: 50px 20px;
+    }
+
     #homepageimages1, #homepageimages2, #homepageimages3 {
         flex: 1;
         max-width: 400px;
         max-height: 300px;
+    }
+
+    #homepagesales, #homepageservices {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        border: 1px black solid;
+        margin: 10px;
+        width: 50%;
+    }
+
+    #homepagesales img {
+        margin: 10%;
+    }
+
+    #homepageservices img {
+        margin: 10%;
+    }
+
+    #homepageadventuretours {
+        border: 1px black solid;
+    }
+
+    #homepagesales section {
+        padding: 0;
+    }
+
+    #homepageservices section {
+        padding: 0;
     }
 
 
@@ -76,15 +107,6 @@
     /*-------------MAIN SECTION LAYOUT-------------*/
 
 
-    #homepagesales, #homepageservices {
-        border: 1px black solid;
-        margin: 10px;
-        width: 50%;
-    }
-
-    #homepageadventuretours {
-        border: 1px black solid;
-    }
 
     #mainsales {
         position: relative;

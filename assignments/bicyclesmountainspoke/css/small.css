@@ -145,13 +145,21 @@ main figure img {
 
 #homepagesales img {
     margin: auto;
+    width: 275px;
     height: 168px;
 }
 
 #homepageservices img {
     margin: auto;
-    height: 168px;
 
+}
+
+#homepagesales section {
+    padding: 20px;
+}
+
+#homepageservices section {
+    padding: 20px;
 }
 
 #homepagesales p {
@@ -169,6 +177,9 @@ main figure img {
     text-align: justify;
 }
 
+#homepageadventuretours div {
+    padding: 20px;
+}
 
 
 #homepageimages {
