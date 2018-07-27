@@ -307,6 +307,7 @@ tr:nth-child(even) {
 .flex {
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 
