@@ -50,6 +50,11 @@
     #homepageimages {
         display: flex;
         flex-flow: row nowrap;
+        margin-top: 20px;
+    }
+
+    #homepageimages img {
+        padding: 0 20px;
     }
 
     #homepagesales section {

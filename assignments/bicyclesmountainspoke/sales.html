@@ -16,15 +16,19 @@
         <script>
             $(function(){
                 // All jQuery code goes here
-                $('.sales > div').hover(function(){
+                $('.sales > div').click(function(){
                     // This code executes when the mouse pointer is over the list item
 
-                    $(this).addClass('openSesame');
+                 //   $(this).addClass('openSesame');
 
-                }, function(){
+               // }, function(){
                     // This code executes when the mouse pointer leaves the list item
 
-                    $(this).removeClass('openSesame');
+                 //   $(this).removeClass('openSesame');
+
+                   // $(this).toggleClass('openSesame');
+
+                    $(this).addClass('openSesame').siblings().removeClass('openSesame');
 
                 })
             })
