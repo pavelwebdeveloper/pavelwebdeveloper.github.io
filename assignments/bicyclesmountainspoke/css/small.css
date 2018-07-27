@@ -149,13 +149,14 @@ main figure img {
 
 #homepagesales img {
     margin: auto;
-    width: 275px;
-    height: 168px;
+    max-width: 275px;
+    max-height: 168px;
 }
 
 #homepageservices img {
     margin: auto;
-
+    max-width: 275px;
+    max-height: 168px;
 }
 
 #homepagesales section {
