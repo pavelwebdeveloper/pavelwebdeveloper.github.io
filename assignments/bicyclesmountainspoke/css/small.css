@@ -192,7 +192,7 @@ main figure img {
 #homepageimages {
     display: flex;
     flex-flow: column wrap;
-    margin-top: 20px;
+    margin: 20px 30px;
 }
 
 
