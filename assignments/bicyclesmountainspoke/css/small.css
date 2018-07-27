@@ -148,15 +148,17 @@ main figure img {
 }
 
 #homepagesales img {
+    align-self: center;
     margin: auto;
-    max-width: 275px;
-    max-height: 168px;
+    max-width: 255px;
+    max-height: 148px;
 }
 
 #homepageservices img {
+    align-self: center;
     margin: auto;
-    max-width: 275px;
-    max-height: 168px;
+    max-width: 255px;
+    max-height: 148px;
 }
 
 #homepagesales section {
