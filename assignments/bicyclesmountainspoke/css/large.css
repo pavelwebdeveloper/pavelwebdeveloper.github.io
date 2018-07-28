@@ -89,42 +89,28 @@
         height: 1200px;
     }
 
-    #table table {
+    #salestable table {
         width: 600px;
-    }
-
-    .flex div, p {
-        margin: 5px;
-    }
-
-    .flex p {
-        color: black;
-        margin: 5px;
-    }
-
-
-    .sales {
-        position: relative;
-        left: 0px;
-        padding: 0px;
-        margin: 0px;
-        font-family: sans-serif;
-        text-shadow:0px 0px 1px rgba(0,0,0,0.2);
-        list-style: none;
-        top: 70px;
-        height: 150px;
     }
 
     .sales > div {
         position: relative;
-        background: rgba(0,0,0,0.2);
-        width: 2100px;
+        width: 2800px;
         height: 300px;
         padding: 20px;
         margin-top: 2px;
         left: -1608px;
         transition: left 500ms;
     }
+
+    .sales div div.bicyclename {
+        width: 1000px;
+    }
+
+    .salespage {
+        font-size: 55px;
+    }
+
 
     .flex {
         display: flex;
@@ -137,7 +123,7 @@
     }
 
 
-    .flex p#salespage {
+    /*.flex p#salespage {
         width: 500px;
         background-color: red;
         color: black;
@@ -156,7 +142,7 @@
         background-color: gray;
         color: black;
         font-size: 30px;
-    }
+    }*/
 
     /*=============SERVICE PAGE LAYOUT================*/
 

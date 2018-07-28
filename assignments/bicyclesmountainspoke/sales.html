@@ -9,7 +9,7 @@
         <link href="css/small.css" rel="stylesheet">
         <link href="css/medium.css" rel="stylesheet">
         <link href="css/large.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Carter+One|Hind|Noto+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Carter+One|Hind|Noto+Sans|Faster+One" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.3.1.js"
                 integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
                 crossorigin="anonymous"></script>
@@ -88,7 +88,7 @@
 
             if (i==0){
                 var x = document.createElement("IMG");
-                x.setAttribute("src", "images/pivot_trail.jpg");
+                x.setAttribute("src", "images/rocky_mountain_instinct.jpg");
 
                 x.setAttribute("alt", "The Town of Franklin");
                 /* x.setAttribute("id", [i]);*/
@@ -97,7 +97,7 @@
 
             } else if (i==1) {
                 var x = document.createElement("IMG");
-                x.setAttribute("src", "images/rocky_mountain_altitude_alloy.jpg");
+                x.setAttribute("src", "images/pivot_trail.jpg");
 
                 x.setAttribute("alt", "The Town of Greenville");
                 /* x.setAttribute("id", [i]);*/
@@ -106,7 +106,7 @@
 
             } else {
                 var x = document.createElement("IMG");
-                x.setAttribute("src", "images/rocky_mountain_instinct.jpg");
+                x.setAttribute("src", "images/rocky_mountain_altitude_alloy.jpg");
 
                 x.setAttribute("alt", "The Town of Springfield");
                 /* x.setAttribute("id", [i]);*/
@@ -202,12 +202,15 @@
 
             var myDiv3 = document.createElement('div');
 
+            myDiv3.setAttribute("class", "bicyclename");
+
+
             myDiv1.appendChild(myDiv3);
 
 
             if (i==0){
                 var y = document.createElement('p');
-                y.setAttribute("id", "salespage");
+                y.setAttribute("class", "salespage");
 
                 y.textContent = 'Rocky Mountain Instinct 950 Bike';
 
@@ -217,7 +220,7 @@
 
             } else if (i==1) {
                 var y = document.createElement('p');
-                y.setAttribute("id", "salespage1");
+                y.setAttribute("class", "salespage");
 
 
                 y.textContent = '2019 Pivot Trail 429 Pro XT/XTR 1X';
@@ -228,7 +231,7 @@
 
             } else {
                 var y = document.createElement('p');
-                y.setAttribute("id", "salespage2");
+                y.setAttribute("class", "salespage");
 
                 y.textContent = 'Rocky Mountain Altitude Alloy 50 Bike';
 
