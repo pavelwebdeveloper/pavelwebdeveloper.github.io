@@ -173,7 +173,7 @@
     }
 
 
-    div.openSesame {
+    div.slideEffect {
         left:-50px;
     }
 
@@ -205,5 +205,22 @@
         display: flex;
         justify-content: space-around;
     }
+
+    /*=============CONTACT PAGE LAYOUT================*/
+
+    #googlemap {
+        width: 505px;
+        height: 305px;
+        overflow: auto;
+        cursor: pointer;
+    }
+
+    #googlemap img {
+        width: 500px;
+        height: 300px;
+        border: 2px solid #D4DBDB;
+        align-self: center;
+    }
+
 
 }

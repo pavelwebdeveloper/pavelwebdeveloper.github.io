@@ -132,7 +132,7 @@
     }
 
 
-    div.openSesame {
+    div.slideEffect {
         left:-40px;
     }
 
@@ -167,6 +167,8 @@
     #servicetable table {
         width: 1000px;
     }
+
+    /*=============CONTACT PAGE LAYOUT================*/
 
 
 }

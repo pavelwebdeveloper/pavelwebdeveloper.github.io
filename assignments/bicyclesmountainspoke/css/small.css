@@ -311,7 +311,7 @@ tr:nth-child(even) {
 }
 
 
-div.openSesame {
+div.slideEffect {
     left:0px;
 }
 
@@ -411,6 +411,23 @@ form label.top input:required:valid {
     width: 325px;
     height: 324px;
 }
+
+/*=============CONTACT PAGE LAYOUT================*/
+
+
+#googlemap {
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+   cursor: pointer;
+    margin: auto;
+}
+
+#googlemap img {
+    width: 100%;
+    border: 2px solid #D4DBDB;
+}
+
 
 /*-------------OVERVIEW PAGE LAYOUT-------------*/
 

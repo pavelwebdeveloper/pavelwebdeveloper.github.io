@@ -15,6 +15,13 @@
                 integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
                 crossorigin="anonymous">
         </script>
+        <script>
+            $(function() {
+                $('#googlemap').click(function(){
+                    $(this).html('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2787.9314410354586!2d-111.09290618494214!3d45.6722766275568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5345459ab72cb6df%3A0xbb98968f9648ea88!2zMzk1MCBWYWxsZXkgQ29tbW9ucyBEciwgQm96ZW1hbiwgTVQgNTk3MTgsINCh0KjQkA!5e0!3m2!1sru!2sua!4v1532657694226" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>')
+                                      })
+            })
+        </script>
     </head>
 
     <body>
@@ -43,8 +50,7 @@
                 <img id="storm" src="images/storm.jpeg" alt="Storm">
                 <p>Our store and office are located at the following address: 3950 Valley Commons Drive Bozeman, MT.</p>
                 <p>Our phone: (801)555-1234</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2787.9314410354586!2d-111.09290618494214!3d45.6722766275568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5345459ab72cb6df%3A0xbb98968f9648ea88!2zMzk1MCBWYWxsZXkgQ29tbW9ucyBEciwgQm96ZW1hbiwgTVQgNTk3MTgsINCh0KjQkA!5e0!3m2!1sru!2sua!4v1532657694226" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
+                <div id="googlemap"><img src="/assignments/bicyclesmountainspoke/images/googlemapaddress.png" alt="Google map showing the address: 3950 Valley Commons Drive Bozeman, MT"></div>
 
             <form action="thankyou.html" method="get">
                 <fieldset>

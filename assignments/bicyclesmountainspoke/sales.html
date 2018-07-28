@@ -13,26 +13,6 @@
         <script src="https://code.jquery.com/jquery-3.3.1.js"
                 integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
                 crossorigin="anonymous"></script>
-        <script>
-            $(function(){
-                // All jQuery code goes here
-                $('.sales > div').click(function(){
-                    // This code executes when the mouse pointer is over the list item
-
-                 //   $(this).addClass('openSesame');
-
-               // }, function(){
-                    // This code executes when the mouse pointer leaves the list item
-
-                 //   $(this).removeClass('openSesame');
-
-                   // $(this).toggleClass('openSesame');
-
-                    $(this).addClass('openSesame').siblings().removeClass('openSesame');
-
-                })
-            })
-        </script>
     </head>
 
     <body>
@@ -258,103 +238,16 @@
             }
         }
 
-
-
-
-       /* "product": "2019 Pivot Trail 429 Pro XT/XTR 1X",
-            "modelyear": "2019",
-                "riding type": "Trail",
-                    "wheel size": "29, 27.5+",
-                        "frame material": "Carbon Fiber"*/
-
     }
 </script>
-        <!--
-<script>
-var section = document.getElementById('lowersection');
-var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
-request.onload = function() {
-var townData = request.response;
-console.log(townData);
-showTowns(townData);
-}
-function showTowns(jsonObj) {
-var towns = jsonObj['towns'];
+        <script>
+            $(function(){
+                $('.sales > div').click(function(){
 
+                    $(this).addClass('slideEffect').siblings().removeClass('slideEffect');
 
-for (var i = 0; i < towns.length; i++) {
-if (i === 2) { continue; }
-var myDiv = document.createElement('div');
-if (i==0 || i==3) {
-myDiv.setAttribute("id", "divleft");
-} /*else {
-myDiv.setAttribute("id", "divright");
-}*/
-var myArticle = document.createElement('article');
-var myH2 = document.createElement('h2');
-var myPara1 = document.createElement('p');
-var myPara2 = document.createElement('p');
-var myPara3 = document.createElement('p');
-var myPara4 = document.createElement('p');
-
-
-myH2.textContent = towns[i].name;
-myPara1.textContent = 'Motto: ' + towns[i].motto;
-myPara2.textContent = 'Year founded: ' + towns[i].yearFounded;
-myPara3.textContent = 'Population: ' + towns[i].currentPopulation;
-myPara4.textContent = 'Annual Rainfall: ' + towns[i].averageRainfall;
-
-
-myArticle.appendChild(myH2);
-
-myArticle.appendChild(myPara1);
-
-myArticle.appendChild(myPara2);
-
-myArticle.appendChild(myPara3);
-
-myArticle.appendChild(myPara4);
-
-myDiv.appendChild(myArticle);
-
-if (i==0){
-var x = document.createElement("IMG");
-x.setAttribute("src", "images/franklin.jpeg");
-
-x.setAttribute("alt", "The Town of Franklin");
-/* x.setAttribute("id", [i]);*/
-myDiv.appendChild(x);
-
-
-} else if (i==1) {
-var x = document.createElement("IMG");
-x.setAttribute("src", "images/greenville.jpeg");
-
-x.setAttribute("alt", "The Town of Greenville");
-/* x.setAttribute("id", [i]);*/
-myDiv.appendChild(x);
-
-
-} else {
-var x = document.createElement("IMG");
-x.setAttribute("src", "images/springfield.jpeg");
-
-x.setAttribute("alt", "The Town of Springfield");
-/* x.setAttribute("id", [i]);*/
-myDiv.appendChild(x);
-
-
-}
-
-section.appendChild(myDiv);
-}
-
-}
-</script>
--->
+                })
+            })
+        </script>
     </body>
 </html>
