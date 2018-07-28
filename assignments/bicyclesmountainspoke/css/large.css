@@ -38,6 +38,11 @@
         justify-content: space-between;
     }
 
+    #homepageadventuretours article {
+        width: 50%;
+        margin-top: 5px;
+    }
+
     #homepageadventuretours div {
         padding: 10px;
     }

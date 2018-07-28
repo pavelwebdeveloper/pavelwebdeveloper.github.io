@@ -61,10 +61,16 @@
 
     #homepageimages {
         margin-top: 5px;
+        margin-right: 5px;
     }
 
     #homepageadventuretours {
         justify-content: space-around;
+    }
+
+
+    #homepageadventuretours article {
+        margin-top: 50px;
     }
 
     #homepageadventuretours div {
@@ -92,10 +98,6 @@
 
     #homepageservices img {
         margin: 10%;
-    }
-
-    #homepageadventuretours {
-        border: 1px black solid;
     }
 
     #homepagesales section {
