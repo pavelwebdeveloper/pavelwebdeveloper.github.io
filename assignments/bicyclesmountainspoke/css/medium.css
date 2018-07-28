@@ -4,17 +4,22 @@
 
     /*-------------HEADER SECTION LAYOUT-------------*/
 
+    #logo {
+        width: 200px;
+    }
+
     #header1 {
         justify-content: space-around;
     }
 
     #header {
-        font-size: 35px;
+        font-size: 45px;
     }
 
     #header1 div {
         margin: 15px;
     }
+
 
     header nav ul {
         display: flex;

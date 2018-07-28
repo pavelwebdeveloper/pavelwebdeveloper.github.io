@@ -25,6 +25,16 @@ header, nav, main, footer { /* the comma between the selectors means apply the f
     display: none;
 }
 
+#logo {
+    width: 150px;
+}
+
+#header {
+    font-family: 'Carter One', cursive, "PT Serif";
+    color: #FC0012;
+    font-size: 30px;
+}
+
 #header1 {
     display: flex;
     flex-direction: row-reverse;
@@ -82,13 +92,6 @@ footer p {
 
 /*--------------HEADER LAYOUT------------------*/
 
-
-
-#header {
-    font-family: 'Carter One', cursive, "PT Serif";
-    color: #FC0012;
-    font-size: 25px;
-}
 
 header ul {
     list-style-type: none;
