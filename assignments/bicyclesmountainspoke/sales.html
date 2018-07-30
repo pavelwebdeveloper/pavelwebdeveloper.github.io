@@ -17,12 +17,17 @@
         </script>
         <script>
             $(function(){
-                $('#salestable > div').load(function(){
+                $('#salestable').load(function(){
 
-                    $(this).removeClass('slideEffect').siblings().removeClass('slideEffect');
+                    $(this).addClass('slide');
+
+                } (function()
+                   $(this).removeClass('slide');
 
                 })
             })
+        </script>
+        <script>
             $(function(){
                 $('#salestable > div').click(function(){
 
