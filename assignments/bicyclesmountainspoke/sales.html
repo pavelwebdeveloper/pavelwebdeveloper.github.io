@@ -59,197 +59,196 @@
 
         <script src="scripts/hamburger.js"></script>
         <script src="scripts/include.js"></script>
+        <script>
+            var section = document.getElementById('salestable');
+            var requestURL = 'data/bicyclesdata.json';
+            var request = new XMLHttpRequest();
+            request.open('GET', requestURL);
+            request.responseType = 'json';
+            request.send();
+            request.onload = function() {
+                var salesData = request.response;
+                console.log(salesData);
+                showTable(salesData);
+            }
+            function showTable(jsonObj) {
+                var table = jsonObj['bicycles'];
 
-<script>
-    var section = document.getElementById('salestable');
-    var requestURL = 'data/bicyclesdata.json';
-    var request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-    request.responseType = 'json';
-    request.send();
-    request.onload = function() {
-        var salesData = request.response;
-        console.log(salesData);
-        showTable(salesData);
-    }
-    function showTable(jsonObj) {
-        var table = jsonObj['bicycles'];
+                for (var i = 0; i < table.length; i++) {
 
-        for (var i = 0; i < table.length; i++) {
-
-        var myDiv1 = document.createElement('div');
-
-
-            myDiv1.setAttribute("class", "flex");
-
-            section.appendChild(myDiv1);
-
-        var myDiv2 = document.createElement('div');
-
-            myDiv1.appendChild(myDiv2);
-
-            if (i==0){
-                var x = document.createElement("IMG");
-                x.setAttribute("src", "images/rocky_mountain_instinct.jpg");
-
-                x.setAttribute("alt", "The Town of Franklin");
-                /* x.setAttribute("id", [i]);*/
-                myDiv2.appendChild(x);
+                var myDiv1 = document.createElement('div');
 
 
-            } else if (i==1) {
-                var x = document.createElement("IMG");
-                x.setAttribute("src", "images/pivot_trail.jpg");
+                    myDiv1.setAttribute("class", "flex");
 
-                x.setAttribute("alt", "The Town of Greenville");
-                /* x.setAttribute("id", [i]);*/
-                myDiv2.appendChild(x);
+                    section.appendChild(myDiv1);
+
+                var myDiv2 = document.createElement('div');
+
+                    myDiv1.appendChild(myDiv2);
+
+                    if (i==0){
+                        var x = document.createElement("IMG");
+                        x.setAttribute("src", "images/rocky_mountain_instinct.jpg");
+
+                        x.setAttribute("alt", "The Town of Franklin");
+                        /* x.setAttribute("id", [i]);*/
+                        myDiv2.appendChild(x);
 
 
-            } else {
-                var x = document.createElement("IMG");
-                x.setAttribute("src", "images/rocky_mountain_altitude_alloy.jpg");
+                    } else if (i==1) {
+                        var x = document.createElement("IMG");
+                        x.setAttribute("src", "images/pivot_trail.jpg");
 
-                x.setAttribute("alt", "The Town of Springfield");
-                /* x.setAttribute("id", [i]);*/
-                myDiv2.appendChild(x);
+                        x.setAttribute("alt", "The Town of Greenville");
+                        /* x.setAttribute("id", [i]);*/
+                        myDiv2.appendChild(x);
 
+
+                    } else {
+                        var x = document.createElement("IMG");
+                        x.setAttribute("src", "images/rocky_mountain_altitude_alloy.jpg");
+
+                        x.setAttribute("alt", "The Town of Springfield");
+                        /* x.setAttribute("id", [i]);*/
+                        myDiv2.appendChild(x);
+
+
+                    }
+                var myPara = document.createElement('p');
+
+                myDiv1.appendChild(myPara);
+
+                    var myTable = document.createElement('table');
+                    myPara.appendChild(myTable);
+
+                    var myTbody = document.createElement('tbody');
+                    myTable.appendChild(myTbody);
+
+
+                var myTr1 = document.createElement('tr');
+
+                    myTbody.appendChild(myTr1);
+
+                var myTd1 = document.createElement('td');
+                var myTd2 = document.createElement('td');
+
+                myTd1.textContent = 'Product';
+                    myTd2.textContent = table[i].product;
+
+
+                    myTr1.appendChild(myTd1);
+
+                    myTr1.appendChild(myTd2);
+
+                    var myTr2 = document.createElement('tr');
+
+                    myTbody.appendChild(myTr2);
+
+                    var myTd3 = document.createElement('td');
+                    var myTd4 = document.createElement('td');
+
+                    myTd3.textContent = 'Model Year';
+                    myTd4.textContent = table[i].modelyear;
+
+
+                    myTr2.appendChild(myTd3);
+
+                    myTr2.appendChild(myTd4);
+
+                    var myTr3 = document.createElement('tr');
+
+                    myTbody.appendChild(myTr3);
+
+                    var myTd5 = document.createElement('td');
+                    var myTd6 = document.createElement('td');
+
+                    myTd5.textContent = 'Riding type';
+                    myTd6.textContent = table[i].ridingtype;
+
+
+                    myTr3.appendChild(myTd5);
+
+                    myTr3.appendChild(myTd6);
+
+                    var myTr4 = document.createElement('tr');
+
+                    myTbody.appendChild(myTr4);
+
+                    var myTd7 = document.createElement('td');
+                    var myTd8 = document.createElement('td');
+
+                    myTd7.textContent = 'Wheel Size';
+                    myTd8.textContent = table[i].wheelsize;
+
+
+                    myTr4.appendChild(myTd7);
+
+                    myTr4.appendChild(myTd8);
+
+                    var myTr5 = document.createElement('tr');
+
+                    myTbody.appendChild(myTr5);
+
+                    var myTd9 = document.createElement('td');
+                    var myTd10 = document.createElement('td');
+
+                    myTd9.textContent = 'Frame Material';
+                    myTd10.textContent = table[i].framematerial;
+
+
+                    myTr5.appendChild(myTd9);
+
+                    myTr5.appendChild(myTd10);
+
+                    var myDiv3 = document.createElement('div');
+
+                    myDiv3.setAttribute("class", "bicyclename");
+
+
+                    myDiv1.appendChild(myDiv3);
+
+
+                    if (i==0){
+                        var y = document.createElement('p');
+                        y.setAttribute("class", "salespage");
+
+                        y.textContent = 'Rocky Mountain Instinct 950 Bike';
+
+
+                        myDiv3.appendChild(y);
+
+
+                    } else if (i==1) {
+                        var y = document.createElement('p');
+                        y.setAttribute("class", "salespage");
+
+
+                        y.textContent = '2019 Pivot Trail 429 Pro XT/XTR 1X';
+
+
+                        myDiv3.appendChild(y);
+
+
+                    } else {
+                        var y = document.createElement('p');
+                        y.setAttribute("class", "salespage");
+
+                        y.textContent = 'Rocky Mountain Altitude Alloy 50 Bike';
+
+
+                        myDiv3.appendChild(y);
+
+                    }
+                }
 
             }
-        var myPara = document.createElement('p');
-
-        myDiv1.appendChild(myPara);
-
-            var myTable = document.createElement('table');
-            myPara.appendChild(myTable);
-
-            var myTbody = document.createElement('tbody');
-            myTable.appendChild(myTbody);
-
-
-        var myTr1 = document.createElement('tr');
-
-            myTbody.appendChild(myTr1);
-
-        var myTd1 = document.createElement('td');
-        var myTd2 = document.createElement('td');
-
-        myTd1.textContent = 'Product';
-            myTd2.textContent = table[i].product;
-
-
-            myTr1.appendChild(myTd1);
-
-            myTr1.appendChild(myTd2);
-
-            var myTr2 = document.createElement('tr');
-
-            myTbody.appendChild(myTr2);
-
-            var myTd3 = document.createElement('td');
-            var myTd4 = document.createElement('td');
-
-            myTd3.textContent = 'Model Year';
-            myTd4.textContent = table[i].modelyear;
-
-
-            myTr2.appendChild(myTd3);
-
-            myTr2.appendChild(myTd4);
-
-            var myTr3 = document.createElement('tr');
-
-            myTbody.appendChild(myTr3);
-
-            var myTd5 = document.createElement('td');
-            var myTd6 = document.createElement('td');
-
-            myTd5.textContent = 'Riding type';
-            myTd6.textContent = table[i].ridingtype;
-
-
-            myTr3.appendChild(myTd5);
-
-            myTr3.appendChild(myTd6);
-
-            var myTr4 = document.createElement('tr');
-
-            myTbody.appendChild(myTr4);
-
-            var myTd7 = document.createElement('td');
-            var myTd8 = document.createElement('td');
-
-            myTd7.textContent = 'Wheel Size';
-            myTd8.textContent = table[i].wheelsize;
-
-
-            myTr4.appendChild(myTd7);
-
-            myTr4.appendChild(myTd8);
-
-            var myTr5 = document.createElement('tr');
-
-            myTbody.appendChild(myTr5);
-
-            var myTd9 = document.createElement('td');
-            var myTd10 = document.createElement('td');
-
-            myTd9.textContent = 'Frame Material';
-            myTd10.textContent = table[i].framematerial;
-
-
-            myTr5.appendChild(myTd9);
-
-            myTr5.appendChild(myTd10);
-
-            var myDiv3 = document.createElement('div');
-
-            myDiv3.setAttribute("class", "bicyclename");
-
-
-            myDiv1.appendChild(myDiv3);
-
-
-            if (i==0){
-                var y = document.createElement('p');
-                y.setAttribute("class", "salespage");
-
-                y.textContent = 'Rocky Mountain Instinct 950 Bike';
-
-
-                myDiv3.appendChild(y);
-
-
-            } else if (i==1) {
-                var y = document.createElement('p');
-                y.setAttribute("class", "salespage");
-
-
-                y.textContent = '2019 Pivot Trail 429 Pro XT/XTR 1X';
-
-
-                myDiv3.appendChild(y);
-
-
-            } else {
-                var y = document.createElement('p');
-                y.setAttribute("class", "salespage");
-
-                y.textContent = 'Rocky Mountain Altitude Alloy 50 Bike';
-
-
-                myDiv3.appendChild(y);
-
-            }
-        }
-
-    }
-</script>
+        </script>
         <script>
             $(function(){
                 $('#salestable > div').click(function(){
 
-                    $(this).addClass('slideEffect').siblings().removeClass('slideEffect');
+                    $(this).toggleClass('slideEffect').siblings().removeClass('slideEffect');
 
                 })
             })
