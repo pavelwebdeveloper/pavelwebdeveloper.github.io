@@ -17,6 +17,13 @@
         </script>
         <script>
             $(function(){
+                $('#salestable > div').load(function(){
+
+                    $(this).removeClass('slideEffect').siblings().removeClass('slideEffect');
+
+                })
+            })
+            $(function(){
                 $('#salestable > div').click(function(){
 
                     $(this).toggleClass('slideEffect').siblings().removeClass('slideEffect');
