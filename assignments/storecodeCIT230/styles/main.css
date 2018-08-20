@@ -16,11 +16,10 @@ h1 {
     color: antiquewhite;
 }
 
-#projects {
-    font-size: 1.7rem;
+h2 {
+    font-size: 1.2rem;
     text-align: center;
     border-bottom: 1px solid #bbb;
-    color: #000;
 }
 
 header, main, footer {
@@ -44,11 +43,7 @@ header, footer, footer a {
 main img {
     width: 250px;
     height: auto;
-}
-
-section {
-    display: flex;
-    flex-flow: column nowrap;
+    float: right;
 }
 
 footer {
