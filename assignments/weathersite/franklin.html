@@ -139,7 +139,7 @@
         <script src="scripts/weatherfranklin.js"></script>
         <script>
             var section = document.getElementById('section');
-            var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+            var requestURL = 'data/townsdata.json';
             var request = new XMLHttpRequest();
             request.open('GET', requestURL);
             request.responseType = 'json';
@@ -154,19 +154,17 @@
 
                 var myArticle = document.createElement('article');
                 var myH2 = document.createElement('h2');
-                var myPara1 = document.createElement('p');
                 var myPara2 = document.createElement('p');
                 var myPara3 = document.createElement('p');
                 var myPara4 = document.createElement('p');
-                var myPara5 = document.createElement('p');
-                var myList = document.createElement('ul');
+                /*var myPara5 = document.createElement('p');
+                var myList = document.createElement('ul');*/
 
                 myH2.textContent = towns[0].name;
-                myPara1.textContent = 'Motto: ' + towns[0].motto;
                 myPara2.textContent = 'Year founded: ' + towns[0].yearFounded;
                 myPara3.textContent = 'Population: ' + towns[0].currentPopulation;
                 myPara4.textContent = 'Annual Rainfall: ' + towns[0].averageRainfall;
-                myPara5.textContent = 'Town Events:';
+               /* myPara5.textContent = 'Town Events:';
 
                 var townEvents = towns[0].events;
                 for (var i = 0; i < townEvents.length; i++) {
@@ -174,11 +172,9 @@
                     listItem.textContent = townEvents[i];
 
                     myList.appendChild(listItem);
-                }
+                }*/
 
                 myArticle.appendChild(myH2);
-
-                myArticle.appendChild(myPara1);
 
                 myArticle.appendChild(myPara2);
 
@@ -186,9 +182,9 @@
 
                 myArticle.appendChild(myPara4);
 
-                myArticle.appendChild(myPara5);
+                /*myArticle.appendChild(myPara5);*/
 
-                myArticle.appendChild(myList);
+                /*myArticle.appendChild(myList);*/
 
                 section.appendChild(myArticle);
 

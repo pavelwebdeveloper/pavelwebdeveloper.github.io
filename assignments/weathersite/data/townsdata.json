@@ -1,0 +1,24 @@
+{
+
+    "towns": [
+        {
+            "name": "Franklin",
+            "yearFounded": "1876",
+            "currentPopulation": "58790",
+            "averageRainfall": "70"
+        },
+        {
+            "name": "Greenville",
+            "yearFounded": "1902",
+            "currentPopulation": "78670",
+            "averageRainfall": "75"
+        },
+        {
+            "name": "Springfield",
+            "yearFounded": "1890",
+            "currentPopulation": "40520",
+            "averageRainfall": "60"
+        }
+    ]
+
+}
