@@ -158,6 +158,10 @@
         margin: 10px;
     }
 
+    #section article {
+        padding: 30px;
+    }
+
     section.forecast {
         display: block;
     }  /* show the 10-day forecast with the medium view and up */
@@ -205,6 +209,42 @@
 
     #grid figcaption {
         text-align: center;
+    }
+
+
+    /*--------------TABLE LAYOUT------------------*/
+
+    table {
+        margin: auto;
+        box-shadow: 8px 8px 10px grey;
+    }
+
+    table, th, td {
+        border: 1px solid #aaa;
+        padding: 8px;
+        border-collapse: collapse;
+        text-align: center;
+        font-family: Noto Sans, sans-serif;
+    }
+
+    th {
+        background-color: #4253BA;
+        color: white;
+        font-size: 25px;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #e7ffed;
+    }
+
+    tr:nth-child(even) {
+        background-color: #628ca6;
+        color: white;
+    }
+
+    .bluecolor {
+        background-color: #628ca6;
+        color: white;
     }
 
 
