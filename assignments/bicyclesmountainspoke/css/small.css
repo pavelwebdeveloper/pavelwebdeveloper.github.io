@@ -390,6 +390,7 @@ form input.submitBtn {
     margin: 0 0 2rem 3%;
     width: 100%;
     max-width: 19rem;
+    cursor: pointer;
 }
 
 form label.top input:required {
