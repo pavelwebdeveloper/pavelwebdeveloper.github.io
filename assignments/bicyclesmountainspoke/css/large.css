@@ -91,8 +91,7 @@
 
     #mainsales {
         position: relative;
-        /*height: 1200px;*/
-        height: 2000px;
+        height: 1200px;
     }
 
     #salestable table {

@@ -17,7 +17,7 @@
         <script>
             $(function(){
                 $('#salestable').css('opacity', 1);
-                $('.sales > div.flex').click(function(){
+                $('.sales > div.flex').on('click',function(){
                     $(this).toggleClass('slideEffect').siblings().removeClass('slideEffect');
                 });
             })
@@ -52,10 +52,10 @@
 
         <main id="mainsales">
 
-            <section class="sales">
+            <!--<section class="sales">
                 <div class="flex"></div>
                 <div class="flex"></div>
-            </section>
+            </section>-->
 
             <h1>The Mountain Spoke bicycles sales.</h1>
 
@@ -262,16 +262,5 @@
                 }
             }
         </script>
-        <!--<script>
-            $( document ).ready(function() {
-                $(function(){
-                    $('#salestable > div').click(function(){
-
-                        $(this).toggleClass('slideEffect').siblings().removeClass('slideEffect');*/
-
-                    })
-                })
-            });
-        </script>-->
     </body>
 </html>
