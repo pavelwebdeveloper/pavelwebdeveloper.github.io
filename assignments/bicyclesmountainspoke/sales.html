@@ -16,6 +16,7 @@
                 crossorigin="anonymous">
         </script>
         <script>
+            var do_on_load = function(){
             $(function(){
                 $('#salestable > div').click(function(){
 
@@ -23,6 +24,8 @@
 
                 })
             })
+            }
+            $(document).ready(do_on_load)
         </script>
     </head>
 
@@ -250,11 +253,6 @@
 
                     }
                 }
-            }
-        </script>
-        <script>
-            function myFunction() {
-                location.reload();
             }
         </script>
     </body>
