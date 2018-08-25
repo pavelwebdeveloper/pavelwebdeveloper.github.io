@@ -9,23 +9,25 @@
         <link href="css/small.css" rel="stylesheet">
         <link href="css/medium.css" rel="stylesheet">
         <link href="css/large.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Carter+One|Hind|Noto+Sans" rel="stylesheet">
-        <!--<link href="https://fonts.googleapis.com/css?family=Carter+One|Hind|Noto+Sans|Faster+One" rel="stylesheet">-->
+        <link href="https://fonts.googleapis.com/css?family=Carter+One|Hind|Noto+Sans|Faster+One" rel="stylesheet">
         <script
                 src="https://code.jquery.com/jquery-3.3.1.js"
                 integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
                 crossorigin="anonymous"></script>
         <script>
             $(function(){
-                $('#salestable').css('opacity', 0.2);
+                $('#salestable').css('opacity', 1);
+                $('.sales > div.flex').click(function(){
+                    $(this).toggleClass('slideEffect').siblings().removeClass('slideEffect');
+                });
             })
-            $(function(){
+            /*$(function(){
                 $('#salestable > div').click(function(){
 
                     $(this).toggleClass('slideEffect').siblings().removeClass('slideEffect');
 
                 });
-            })
+            })*/
         </script>
     </head>
 
