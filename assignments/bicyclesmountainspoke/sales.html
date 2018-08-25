@@ -19,6 +19,13 @@
             $(function(){
             $('#primaryNav').css('opacity', 0.4);
             })
+            $(function(){
+                $('#salestable > div').click(function(){
+
+                    $(this).toggleClass('slideEffect').siblings().removeClass('slideEffect');
+
+                });
+            })
         </script>
     </head>
 
@@ -248,17 +255,16 @@
                 }
             }
         </script>
-        <script>
+        <!--<script>
             $( document ).ready(function() {
                 $(function(){
                     $('#salestable > div').click(function(){
 
-                        $(this).toggleClass('slideEffect');
-                            /*.siblings().removeClass('slideEffect');*/
+                        $(this).toggleClass('slideEffect').siblings().removeClass('slideEffect');*/
 
                     })
                 })
             });
-        </script>
+        </script>-->
     </body>
 </html>
