@@ -16,8 +16,7 @@
                 crossorigin="anonymous"></script>
         <script>
             $(function(){
-                $('#salestable').css('opacity', 1);
-                $('.sales > div.flex').on('click',function(){
+                $('#salestable').on('click','.flex',function(){
                     $(this).toggleClass('slideEffect').siblings().removeClass('slideEffect');
                 });
             })
