@@ -55,8 +55,8 @@
             <form action="thankyou.html" method="get">
                 <fieldset>
                     <legend>Contact Us</legend>
-                    <label class="top">Full name* <input type="text" name="fname" pattern="[A-Z a-z]{5,}"  required></label>
-                    <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                    <label class="top">Full name* <input type="text" name="fname" pattern="[A-Za-z]{2,}"  required></label>
+                    <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" pattern="[a-z0-9]+@[a-z0-9]+\.[a-z]{2,}$" required></label>
                     <label class="top">Comments
                         <textarea name="message" placeholder="Please, input the additional infromation here"></textarea>
                     </label>
