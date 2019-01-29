@@ -41,6 +41,8 @@
     }
 
     main #lowersection div article {
+        border: none;
+        box-shadow: none;
         width: 85%;
     }
 
@@ -49,8 +51,6 @@
     }
 
     main #lowersection div article p {
-        border: none;
-        box-shadow: none;
         text-align: left;
     }
 
