@@ -41,9 +41,17 @@
     }
 
     main #lowersection div article {
+        width: 85%;
+    }
+
+    main #lowersection div article h2 {
+        text-align: center;
+    }
+
+    main #lowersection div article p {
         border: none;
         box-shadow: none;
-        text-align: center;
+        text-align: left;
     }
 
     /*GRID LAYOUT*/

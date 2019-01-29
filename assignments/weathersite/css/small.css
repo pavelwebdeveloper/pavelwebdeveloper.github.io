@@ -184,6 +184,10 @@ main #lowersection div img {
     text-align: center;
 }
 
+main #lowersection article p {
+    text-align: center;
+}
+
 main article p {
     text-align: center;
 }
