@@ -131,6 +131,12 @@
         width: 30%;
     }
 
+    main #lowersection article {
+        width: 50%;
+        margin: 30px;
+        padding: 20px;
+    }
+
     /*-----------------LAYOUT FOR FRANKLIN AND GRID PAGES-----------------*/
 
     main {
