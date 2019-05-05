@@ -20,7 +20,8 @@ h1 {
     font-size: 1.7rem;
     text-align: center;
     border-bottom: 1px solid #bbb;
-    color: #000;
+    color: 	#FFFFFF;
+    text-shadow: 1px 1px 2px black, 0 0 20px blue, 0 0 5px darkblue;
 }
 
 header, main, footer {
