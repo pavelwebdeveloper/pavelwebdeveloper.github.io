@@ -4,7 +4,7 @@
 /* * is a wildcard referring to all elements. */
 * { margin: 0; box-sizing: border-box; }
 
-#newPortfolioWebsite {
+.newPortfolioWebsite {
     margin: 40px 25px;
     padding: 40px 0;
 }
