@@ -4,6 +4,15 @@
 /* * is a wildcard referring to all elements. */
 * { margin: 0; box-sizing: border-box; }
 
+#newPortfolioWebsite {
+    margin: 40px 25px;
+    padding: 40px 0;
+}
+
+a:hover {
+    color: green;
+}
+
 body {
     font-size: 16px;
     line-height: 32px;
