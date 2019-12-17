@@ -5,8 +5,8 @@ weatherForecastRequest.send();
 weatherForecastRequest.onload =  function () {
     let weatherForecastData = JSON.parse(weatherForecastRequest.responseText);
     console.log(weatherForecastData);
-
-    document.getElementById('date0').innerHTML = weatherForecastData.list[0].dt_txt;
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    document.getElementById('date0').innerHTML = days[weatherForecastData.list[0].dt_txt.getDay()];
     /*
     /*
     document.getElementById('currentweatherdescription').innerHTML = weatherData.weather[0].description;
