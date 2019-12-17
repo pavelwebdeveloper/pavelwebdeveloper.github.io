@@ -6,7 +6,7 @@ weatherForecastRequest.onload =  function () {
     let weatherForecastData = JSON.parse(weatherForecastRequest.responseText);
     console.log(weatherForecastData);
 
-    document.getElementById('date0').innerHTML = weatherForecastData.list[0].main.temp;
+    document.getElementById('date0').innerHTML = weatherForecastData.list[0].dt_txt;
     /*
     document.getElementById('currentweatherdescription').innerHTML = weatherData.weather[0].description;
     document.getElementById('hightemp').innerHTML = weatherData.main.temp_max;
