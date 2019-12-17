@@ -8,6 +8,7 @@ weatherForecastRequest.onload =  function () {
 
     document.getElementById('date0').innerHTML = weatherForecastData.list[0].dt_txt;
     /*
+    /*
     document.getElementById('currentweatherdescription').innerHTML = weatherData.weather[0].description;
     document.getElementById('hightemp').innerHTML = weatherData.main.temp_max;
     document.getElementById('lowtemp').innerHTML = weatherData.main.temp_min;
