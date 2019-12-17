@@ -1,5 +1,5 @@
 let weatherForcastRequest = new XMLHttpRequest();
-var apiURL = '//api.openweathermap.org/data/2.5/forecast/hourly?id=4156209&APPID=2876382801a396dd5a17e61eabd083ff&units=imperial';
+var apiURL = '//api.openweathermap.org/data/2.5/forecast?id=4156209&APPID=2876382801a396dd5a17e61eabd083ff&units=imperial';
 weatherForcastRequest.open('GET', apiURL, true);
 weatherForcastRequest.send();
 weatherForcastRequest.onload =  function () {
