@@ -19,6 +19,7 @@ weatherForecastRequest.onload =  function () {
     n[10] = "T";
     n.push("Z");
     dateString = n.toString("");
+        console.log(dateString);
     var date = new Date(dateString);
         console.log(date);
 
