@@ -27,8 +27,18 @@ weatherForecastRequest.onload =  function () {
 
 
         hours = date.getUTCHours();
+        if(hours<10){
+            hours = "0" + hours;
+        }
+
         minutes = date.getUTCMinutes();
+        if(minutes<10){
+            minutes = "0" + minutes;
+        }
         seconds = date.getUTCSeconds();
+        if(seconds<10){
+            seconds = "0" + seconds;
+        }
 
     //document.getElementById('date0').innerHTML = weatherForecastData.list[0].dt;
     document.getElementById("day" + i).innerHTML = days[date.getDay()];
