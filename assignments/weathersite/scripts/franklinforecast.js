@@ -10,17 +10,25 @@ weatherForecastRequest.onload =  function () {
     var hours = 0;
     var minutes = 0;
     var seconds = 0;
+    var dString = '';
+    var dateString = '';
     for(let i = 0; i<9; i++){
-    var d = new Date(weatherForecastData.list[i].dt);
+    var dString = weatherForecastData.list[i].dt_txt;
+    var n = d.split("");
+    n[10] = "T";
+    n.push("Z");
+    dateString = n.toString();
+    var date = new Date(dateString);
 
-    hours = d.getHours();
-    minutes = d.getMinutes();
-    seconds = d.getSeconds();
+
+    hours = date.getHours();
+    minutes = date.getMinutes();
+    seconds = date.getSeconds();
 
     //document.getElementById('date0').innerHTML = weatherForecastData.list[0].dt;
-    document.getElementById("day" + i).innerHTML = days[d.getDay()];
-    document.getElementById("date" + i).innerHTML = d.getDate();
-    document.getElementById('month' + i).innerHTML = months[d.getMonth()];
+    document.getElementById("day" + i).innerHTML = days[date.getDay()];
+    document.getElementById("date" + i).innerHTML = date.getDate();
+    document.getElementById('month' + i).innerHTML = months[date.getMonth()];
     document.getElementById('time' + i).innerHTML = hours + ":" + minutes + ":" + seconds;
     }
     /*
