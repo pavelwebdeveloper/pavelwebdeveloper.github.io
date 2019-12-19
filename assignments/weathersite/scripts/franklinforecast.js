@@ -15,10 +15,12 @@ weatherForecastRequest.onload =  function () {
     for(let i = 0; i<9; i++){
     var dString = weatherForecastData.list[i].dt_txt;
     var n = dString.split("");
+        console.log(n);
     n[10] = "T";
     n.push("Z");
     dateString = n.toString();
     var date = new Date(dateString);
+        console.log(date);
 
 
     hours = date.getHours();
