@@ -5,7 +5,18 @@ weatherForecastRequest.send();
 weatherForecastRequest.onload =  function () {
     let weatherForecastData = JSON.parse(weatherForecastRequest.responseText);
     console.log(weatherForecastData);
-    document.getElementById('date0').innerHTML = weatherForecastData.list[0].dt_txt;
+    var d = new Date(weatherForecastData.list[0].dt);
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var hours = d.getHours();
+    var minutes = d.getMinutes();
+    var seconds = d.getSeconds();
+
+    //document.getElementById('date0').innerHTML = weatherForecastData.list[0].dt;
+    document.getElementById("day0").innerHTML = days[d.getDay()];
+    document.getElementById("date0").innerHTML = d.getDate();
+    document.getElementById('month0').innerHTML = months[d.getMonth()];
+    document.getElementById('time0').innerHTML = hours + ":" + minutes + ":" + seconds;
     /*
     document.getElementById('currentweatherdescription').innerHTML = weatherData.weather[0].description;
     document.getElementById('hightemp').innerHTML = weatherData.main.temp_max;
