@@ -35,6 +35,7 @@ weatherForecastRequest.onload =  function () {
     document.getElementById("date" + i).innerHTML = date.getDate();
     document.getElementById('month' + i).innerHTML = months[date.getMonth()];
     document.getElementById('time' + i).innerHTML = hours + ":" + minutes + ":" + seconds;
+        dateString = '';
     }
     /*
     document.getElementById('currentweatherdescription').innerHTML = weatherData.weather[0].description;
