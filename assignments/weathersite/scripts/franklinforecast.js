@@ -10,7 +10,7 @@ weatherForecastRequest.onload =  function () {
     var hours = 0;
     var minutes = 0;
     var seconds = 0;
-    for(let i = 0; i<3; i++){
+    for(let i = 0; i<9; i++){
     var d = new Date(weatherForecastData.list[i].dt);
 
     hours = d.getHours();
