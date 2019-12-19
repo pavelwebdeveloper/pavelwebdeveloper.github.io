@@ -14,7 +14,7 @@ weatherForecastRequest.onload =  function () {
     var dateString = '';
     for(let i = 0; i<9; i++){
     var dString = weatherForecastData.list[i].dt_txt;
-    var n = d.split("");
+    var n = dString.split("");
     n[10] = "T";
     n.push("Z");
     dateString = n.toString();
