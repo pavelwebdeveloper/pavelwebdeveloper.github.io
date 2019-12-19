@@ -26,9 +26,9 @@ weatherForecastRequest.onload =  function () {
         console.log(date);
 
 
-    hours = date.getHours();
-    minutes = date.getMinutes();
-    seconds = date.getSeconds();
+        hours = date.getUTCHours();
+        minutes = date.getUTCMinutes();
+        seconds = date.getUTCSeconds();
 
     //document.getElementById('date0').innerHTML = weatherForecastData.list[0].dt;
     document.getElementById("day" + i).innerHTML = days[date.getDay()];
