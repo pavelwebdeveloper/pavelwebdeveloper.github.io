@@ -12,8 +12,12 @@ weatherForecastRequest.onload =  function () {
     var seconds = 0;
     var dString = '';
     var dateString = '';
+    var tempMin = 0;
+    var tempMax = 0;
     for(let i = 0; i<40; i++){
     var dString = weatherForecastData.list[i].dt_txt;
+        tempMin = weatherForecastData.main.temp_min;
+        tempMax = weatherForecastData.main.temp_max;
     var n = dString.split("");
         console.log(n);
     n[10] = "T";
@@ -46,6 +50,8 @@ weatherForecastRequest.onload =  function () {
     document.getElementById('month' + i).innerHTML = months[date.getMonth()];
     document.getElementById('time' + i).innerHTML = hours + ":" + minutes + ":" + seconds;
         dateString = '';
+        document.getElementById("tempMin" + i).innerHTML = tempMin;
+        document.getElementById("tempMax" + i).innerHTML = tempMax;
     }
     /*
     document.getElementById('currentweatherdescription').innerHTML = weatherData.weather[0].description;
