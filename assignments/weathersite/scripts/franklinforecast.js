@@ -27,6 +27,8 @@ weatherForecastRequest.onload =  function () {
         console.log(n);
         console.log(tempMin);
         console.log(tempMax);
+        console.log(iconcode);
+        console.log(icon_path);
     n[10] = "T";
     n.push("Z");
         for(let j=0;j<n.length;j++){
