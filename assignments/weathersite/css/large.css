@@ -54,6 +54,10 @@
         text-align: left;
     }
 
+    .tableDivider {
+        background-color: #008000;
+    }
+
     /*GRID LAYOUT*/
 
     #grid {
