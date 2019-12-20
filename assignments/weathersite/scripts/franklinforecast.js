@@ -12,7 +12,7 @@ weatherForecastRequest.onload =  function () {
     var seconds = 0;
     var dString = '';
     var dateString = '';
-    for(let i = 0; i<18; i++){
+    for(let i = 0; i<40; i++){
     var dString = weatherForecastData.list[i].dt_txt;
     var n = dString.split("");
         console.log(n);
