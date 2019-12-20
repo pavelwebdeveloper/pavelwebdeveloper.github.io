@@ -16,8 +16,8 @@ weatherForecastRequest.onload =  function () {
     var tempMax = 0;
     for(let i = 0; i<40; i++){
     var dString = weatherForecastData.list[i].dt_txt;
-        tempMin = weatherForecastData.main.temp_min;
-        tempMax = weatherForecastData.main.temp_max;
+        tempMin = weatherForecastData.list[i].main.temp_min;
+        tempMax = weatherForecastData.list[i].main.temp_max;
     var n = dString.split("");
         console.log(n);
     n[10] = "T";
