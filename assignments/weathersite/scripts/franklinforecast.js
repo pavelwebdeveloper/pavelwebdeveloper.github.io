@@ -21,7 +21,7 @@ weatherForecastRequest.onload =  function () {
     var dString = weatherForecastData.list[i].dt_txt;
         tempMin = weatherForecastData.list[i].main.temp_min;
         tempMax = weatherForecastData.list[i].main.temp_max;
-        iconcode = weatherData.list[i].weather[0].icon;
+        iconcode = weatherForecastData.list[i].weather[0].icon;
         icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
     var n = dString.split("");
         console.log(n);
