@@ -26,16 +26,16 @@ weatherForecastRequest.onload =  function () {
         console.log(date);
 
 
-        hours = date.getUTCHours();
+        hours = date.getHours();
         if(hours<10){
             hours = "0" + hours;
         }
 
-        minutes = date.getUTCMinutes();
+        minutes = date.getMinutes();
         if(minutes<10){
             minutes = "0" + minutes;
         }
-        seconds = date.getUTCSeconds();
+        seconds = date.getSeconds();
         if(seconds<10){
             seconds = "0" + seconds;
         }
