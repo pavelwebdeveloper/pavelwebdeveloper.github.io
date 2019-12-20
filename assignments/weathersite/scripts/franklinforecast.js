@@ -14,10 +14,15 @@ weatherForecastRequest.onload =  function () {
     var dateString = '';
     var tempMin = 0;
     var tempMax = 0;
+    var iconcode = 0;
+    var icon_path = '';
+
     for(let i = 0; i<40; i++){
     var dString = weatherForecastData.list[i].dt_txt;
         tempMin = weatherForecastData.list[i].main.temp_min;
         tempMax = weatherForecastData.list[i].main.temp_max;
+        iconcode = weatherData.list[i].weather.icon;
+        icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
     var n = dString.split("");
         console.log(n);
         console.log(tempMin);
@@ -54,6 +59,7 @@ weatherForecastRequest.onload =  function () {
         dateString = '';
         document.getElementById("tempMin" + i).innerHTML = tempMin;
         document.getElementById("tempMax" + i).innerHTML = tempMax;
+        document.getElementById('weather_icon' + i).src = icon_path;
     }
     /*
     document.getElementById('currentweatherdescription').innerHTML = weatherData.weather[0].description;
