@@ -17,6 +17,7 @@ weatherForecastRequest.onload =  function () {
     var iconcode = 0;
     var icon_path = '';
     var weatherDescription = '';
+    var windSpeed = '';
 
     for(let i = 0; i<40; i++){
     var dString = weatherForecastData.list[i].dt_txt;
@@ -25,6 +26,7 @@ weatherForecastRequest.onload =  function () {
         iconcode = weatherForecastData.list[i].weather[0].icon;
         icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
         weatherDescription = weatherForecastData.list[i].weather[0].description;
+        windSpeed = weatherForecastData.list[i].wind.speed;
     var n = dString.split("");
         console.log(n);
         console.log(tempMin);
@@ -66,6 +68,7 @@ weatherForecastRequest.onload =  function () {
         document.getElementById("tempMax" + i).innerHTML = tempMax;
         document.getElementById('weather_icon' + i).src = icon_path;
         document.getElementById('weatherDescription' + i).innerHTML = weatherDescription;
+        document.getElementById('windSpeed' + i).innerHTML = windSpeed;
     }
     /*
     document.getElementById('currentweatherdescription').innerHTML = weatherData.weather[0].description;
