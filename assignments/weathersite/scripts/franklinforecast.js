@@ -16,6 +16,7 @@ weatherForecastRequest.onload =  function () {
     var tempMax = 0;
     var iconcode = 0;
     var icon_path = '';
+    var weatherDescription = '';
 
     for(let i = 0; i<40; i++){
     var dString = weatherForecastData.list[i].dt_txt;
@@ -23,6 +24,7 @@ weatherForecastRequest.onload =  function () {
         tempMax = weatherForecastData.list[i].main.temp_max;
         iconcode = weatherForecastData.list[i].weather[0].icon;
         icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
+        weatherDescription = weatherForecastData.list[i].weather[0].decription;
     var n = dString.split("");
         console.log(n);
         console.log(tempMin);
@@ -62,6 +64,7 @@ weatherForecastRequest.onload =  function () {
         document.getElementById("tempMin" + i).innerHTML = tempMin;
         document.getElementById("tempMax" + i).innerHTML = tempMax;
         document.getElementById('weather_icon' + i).src = icon_path;
+        document.getElementById('month' + i).innerHTML = weatherDescription;
     }
     /*
     document.getElementById('currentweatherdescription').innerHTML = weatherData.weather[0].description;
