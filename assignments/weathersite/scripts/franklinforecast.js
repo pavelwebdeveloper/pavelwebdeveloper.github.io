@@ -24,13 +24,14 @@ weatherForecastRequest.onload =  function () {
         tempMax = weatherForecastData.list[i].main.temp_max;
         iconcode = weatherForecastData.list[i].weather[0].icon;
         icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
-        weatherDescription = weatherForecastData.list[i].weather[0].decription;
+        weatherDescription = weatherForecastData.list[i].weather[0].description;
     var n = dString.split("");
         console.log(n);
         console.log(tempMin);
         console.log(tempMax);
         console.log(iconcode);
         console.log(icon_path);
+        console.log(weatherDescription);
     n[10] = "T";
     n.push("Z");
         for(let j=0;j<n.length;j++){
