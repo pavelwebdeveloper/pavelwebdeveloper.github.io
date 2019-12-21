@@ -64,7 +64,7 @@ weatherForecastRequest.onload =  function () {
         document.getElementById("tempMin" + i).innerHTML = tempMin;
         document.getElementById("tempMax" + i).innerHTML = tempMax;
         document.getElementById('weather_icon' + i).src = icon_path;
-        document.getElementById('month' + i).innerHTML = weatherDescription;
+        document.getElementById('weatherDescription' + i).innerHTML = weatherDescription;
     }
     /*
     document.getElementById('currentweatherdescription').innerHTML = weatherData.weather[0].description;
