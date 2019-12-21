@@ -10,6 +10,7 @@
         <link href="css/medium.css" rel="stylesheet">
         <link href="css/large.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -85,33 +86,307 @@
                 <table>
                     <thead>
                         <tr>
-                            <th colspan="10">10-Day Forecast</th>
+                            <th colspan="8">5-Day Forecast</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
+                            <td><span id="day0"></span><br><span class="forecastDate" id="date0"></span><br><span id="month0"></span><br><span id="time0"></span></td>
+                            <td><span id="day1"></span><br><span class="forecastDate" id="date1"></span><br><span id="month1"></span><br><span id="time1"></span></td>
+                            <td><span id="day2"></span><br><span class="forecastDate" id="date2"></span><br><span id="month2"></span><br><span id="time2"></span></td>
+                            <td><span id="day3"></span><br><span class="forecastDate" id="date3"></span><br><span id="month3"></span><br><span id="time3"></span></td>
+                            <td><span id="day4"></span><br><span class="forecastDate" id="date4"></span><br><span id="month4"></span><br><span id="time4"></span></td>
+                            <td><span id="day5"></span><br><span class="forecastDate" id="date5"></span><br><span id="month5"></span><br><span id="time5"></span></td>
+                            <td><span id="day6"></span><br><span class="forecastDate" id="date6"></span><br><span id="month6"></span><br><span id="time6"></span></td>
+                            <td><span id="day7"></span><br><span class="forecastDate" id="date7"></span><br><span id="month7"></span><br><span id="time7"></span></td>
+
+
                         </tr>
                         <tr>
-                            <td>89&deg;F</td>
-                            <td>87&deg;F</td>
-                            <td>78&deg;F</td>
-                            <td>75&deg;F</td>
-                            <td>72&deg;F</td>
-                            <td>72&deg;F</td>
-                            <td>79&deg;F</td>
-                            <td>83&deg;F</td>
-                            <td>85&deg;F</td>
-                            <td>89&deg;F</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin0"></span>&deg;<span>   </span><span id="tempMax0"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin1"></span>&deg;<span>   </span><span id="tempMax1"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin2"></span>&deg;<span>   </span><span id="tempMax2"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin3"></span>&deg;<span>   </span><span id="tempMax3"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin4"></span>&deg;<span>   </span><span id="tempMax4"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin5"></span>&deg;<span>   </span><span id="tempMax5"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin6"></span>&deg;<span>   </span><span id="tempMax6"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin7"></span>&deg;<span>   </span><span id="tempMax7"></span>&deg;</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon0"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon1"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon2"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon3"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon4"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon5"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon6"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon7"></td>
+                        </tr>
+                        <tr>
+                            <td>Weather description: <span id="weatherDescription0"></span></td>
+                            <td>Weather description: <span id="weatherDescription1"></span></td>
+                            <td>Weather description: <span id="weatherDescription2"></span></td>
+                            <td>Weather description: <span id="weatherDescription3"></span></td>
+                            <td>Weather description: <span id="weatherDescription4"></span></td>
+                            <td>Weather description: <span id="weatherDescription5"></span></td>
+                            <td>Weather description: <span id="weatherDescription6"></span></td>
+                            <td>Weather description: <span id="weatherDescription7"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Wind speed: <span id="windSpeed0"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed1"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed2"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed3"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed4"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed5"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed6"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed7"></span> mph</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="8" class="tableDivider"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span id="day8"></span><br><span class="forecastDate" id="date8"></span><br><span id="month8"></span><br><span id="time8"></span></td>
+                            <td><span id="day9"></span><br><span class="forecastDate" id="date9"></span><br><span id="month9"></span><br><span id="time9"></span></td>
+                            <td><span id="day10"></span><br><span class="forecastDate" id="date10"></span><br><span id="month10"></span><br><span id="time10"></span></td>
+                            <td><span id="day11"></span><br><span class="forecastDate" id="date11"></span><br><span id="month11"></span><br><span id="time11"></span></td>
+                            <td><span id="day12"></span><br><span class="forecastDate" id="date12"></span><br><span id="month12"></span><br><span id="time12"></span></td>
+                            <td><span id="day13"></span><br><span class="forecastDate" id="date13"></span><br><span id="month13"></span><br><span id="time13"></span></td>
+                            <td><span id="day14"></span><br><span class="forecastDate" id="date14"></span><br><span id="month14"></span><br><span id="time14"></span></td>
+                            <td><span id="day15"></span><br><span class="forecastDate" id="date15"></span><br><span id="month15"></span><br><span id="time15"></span></td>
+
+                        </tr>
+                        <tr>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin8"></span>&deg;<span>   </span><span id="tempMax8"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin9"></span>&deg;<span>   </span><span id="tempMax9"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin10"></span>&deg;<span>   </span><span id="tempMax10"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin11"></span>&deg;<span>   </span><span id="tempMax11"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin12"></span>&deg;<span>   </span><span id="tempMax12"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin13"></span>&deg;<span>   </span><span id="tempMax13"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin14"></span>&deg;<span>   </span><span id="tempMax14"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin15"></span>&deg;<span>   </span><span id="tempMax15"></span>&deg;</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon8"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon9"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon10"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon11"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon12"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon13"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon14"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon15"></td>
+                        </tr>
+                        <tr>
+                            <td>Weather description: <span id="weatherDescription8"></span></td>
+                            <td>Weather description: <span id="weatherDescription9"></span></td>
+                            <td>Weather description: <span id="weatherDescription10"></span></td>
+                            <td>Weather description: <span id="weatherDescription11"></span></td>
+                            <td>Weather description: <span id="weatherDescription12"></span></td>
+                            <td>Weather description: <span id="weatherDescription13"></span></td>
+                            <td>Weather description: <span id="weatherDescription14"></span></td>
+                            <td>Weather description: <span id="weatherDescription15"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Wind speed: <span id="windSpeed8"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed9"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed10"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed11"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed12"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed13"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed14"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed15"></span> mph</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="8" class="tableDivider"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span id="day16"></span><br><span class="forecastDate" id="date16"></span><br><span id="month16"></span><br><span id="time16"></span></td>
+                            <td><span id="day17"></span><br><span class="forecastDate" id="date17"></span><br><span id="month17"></span><br><span id="time17"></span></td>
+                            <td><span id="day18"></span><br><span class="forecastDate" id="date18"></span><br><span id="month18"></span><br><span id="time18"></span></td>
+                            <td><span id="day19"></span><br><span class="forecastDate" id="date19"></span><br><span id="month19"></span><br><span id="time19"></span></td>
+                            <td><span id="day20"></span><br><span class="forecastDate" id="date20"></span><br><span id="month20"></span><br><span id="time20"></span></td>
+                            <td><span id="day21"></span><br><span class="forecastDate" id="date21"></span><br><span id="month21"></span><br><span id="time21"></span></td>
+                            <td><span id="day22"></span><br><span class="forecastDate" id="date22"></span><br><span id="month22"></span><br><span id="time22"></span></td>
+                            <td><span id="day23"></span><br><span class="forecastDate" id="date23"></span><br><span id="month23"></span><br><span id="time23"></span></td>
+
+
+                        </tr>
+                        <tr>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin16"></span>&deg;<span>   </span><span id="tempMax16"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin17"></span>&deg;<span>   </span><span id="tempMax17"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin18"></span>&deg;<span>   </span><span id="tempMax18"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin19"></span>&deg;<span>   </span><span id="tempMax19"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin20"></span>&deg;<span>   </span><span id="tempMax20"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin21"></span>&deg;<span>   </span><span id="tempMax21"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin22"></span>&deg;<span>   </span><span id="tempMax22"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin23"></span>&deg;<span>   </span><span id="tempMax23"></span>&deg;</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon16"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon17"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon18"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon19"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon20"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon21"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon22"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon23"></td>
+                        </tr>
+                        <tr>
+                            <td>Weather description: <span id="weatherDescription16"></span></td>
+                            <td>Weather description: <span id="weatherDescription17"></span></td>
+                            <td>Weather description: <span id="weatherDescription18"></span></td>
+                            <td>Weather description: <span id="weatherDescription19"></span></td>
+                            <td>Weather description: <span id="weatherDescription20"></span></td>
+                            <td>Weather description: <span id="weatherDescription21"></span></td>
+                            <td>Weather description: <span id="weatherDescription22"></span></td>
+                            <td>Weather description: <span id="weatherDescription23"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Wind speed: <span id="windSpeed16"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed17"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed18"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed19"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed20"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed21"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed22"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed23"></span> mph</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="8" class="tableDivider"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span id="day24"></span><br><span class="forecastDate" id="date24"></span><br><span id="month24"></span><br><span id="time24"></span></td>
+                            <td><span id="day25"></span><br><span class="forecastDate" id="date25"></span><br><span id="month25"></span><br><span id="time25"></span></td>
+                            <td><span id="day26"></span><br><span class="forecastDate" id="date26"></span><br><span id="month26"></span><br><span id="time26"></span></td>
+                            <td><span id="day27"></span><br><span class="forecastDate" id="date27"></span><br><span id="month27"></span><br><span id="time27"></span></td>
+                            <td><span id="day28"></span><br><span class="forecastDate" id="date28"></span><br><span id="month28"></span><br><span id="time28"></span></td>
+                            <td><span id="day29"></span><br><span class="forecastDate" id="date29"></span><br><span id="month29"></span><br><span id="time29"></span></td>
+                            <td><span id="day30"></span><br><span class="forecastDate" id="date30"></span><br><span id="month30"></span><br><span id="time30"></span></td>
+                            <td><span id="day31"></span><br><span class="forecastDate" id="date31"></span><br><span id="month31"></span><br><span id="time31"></span></td>
+
+                        </tr>
+                        <tr>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin24"></span>&deg;<span>   </span><span id="tempMax24"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin25"></span>&deg;<span>   </span><span id="tempMax25"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin26"></span>&deg;<span>   </span><span id="tempMax26"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin27"></span>&deg;<span>   </span><span id="tempMax27"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin28"></span>&deg;<span>   </span><span id="tempMax28"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin29"></span>&deg;<span>   </span><span id="tempMax29"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin30"></span>&deg;<span>   </span><span id="tempMax30"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin31"></span>&deg;<span>   </span><span id="tempMax31"></span>&deg;</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon24"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon25"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon26"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon27"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon28"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon29"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon30"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon31"></td>
+                        </tr>
+                        <tr>
+                            <td>Weather description: <span id="weatherDescription24"></span></td>
+                            <td>Weather description: <span id="weatherDescription25"></span></td>
+                            <td>Weather description: <span id="weatherDescription26"></span></td>
+                            <td>Weather description: <span id="weatherDescription27"></span></td>
+                            <td>Weather description: <span id="weatherDescription28"></span></td>
+                            <td>Weather description: <span id="weatherDescription29"></span></td>
+                            <td>Weather description: <span id="weatherDescription30"></span></td>
+                            <td>Weather description: <span id="weatherDescription31"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Wind speed: <span id="windSpeed24"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed25"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed26"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed27"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed28"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed29"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed30"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed31"></span> mph</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="8" class="tableDivider"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span id="day32"></span><br><span class="forecastDate" id="date32"></span><br><span id="month32"></span><br><span id="time32"></span></td>
+                            <td><span id="day33"></span><br><span class="forecastDate" id="date33"></span><br><span id="month33"></span><br><span id="time33"></span></td>
+                            <td><span id="day34"></span><br><span class="forecastDate" id="date34"></span><br><span id="month34"></span><br><span id="time34"></span></td>
+                            <td><span id="day35"></span><br><span class="forecastDate" id="date35"></span><br><span id="month35"></span><br><span id="time35"></span></td>
+                            <td><span id="day36"></span><br><span class="forecastDate" id="date36"></span><br><span id="month36"></span><br><span id="time36"></span></td>
+                            <td><span id="day37"></span><br><span class="forecastDate" id="date37"></span><br><span id="month37"></span><br><span id="time37"></span></td>
+                            <td><span id="day38"></span><br><span class="forecastDate" id="date38"></span><br><span id="month38"></span><br><span id="time38"></span></td>
+                            <td><span id="day39"></span><br><span class="forecastDate" id="date39"></span><br><span id="month39"></span><br><span id="time39"></span></td>
+
+                        </tr>
+                        <tr>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin32"></span>&deg;<span>   </span><span id="tempMax32"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin33"></span>&deg;<span>   </span><span id="tempMax33"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin34"></span>&deg;<span>   </span><span id="tempMax34"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin35"></span>&deg;<span>   </span><span id="tempMax35"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin36"></span>&deg;<span>   </span><span id="tempMax36"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin37"></span>&deg;<span>   </span><span id="tempMax37"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin38"></span>&deg;<span>   </span><span id="tempMax38"></span>&deg;</td>
+                            <td><span>min</span><span>     </span><span>max</span><br><span id="tempMin39"></span>&deg;<span>   </span><span id="tempMax39"></span>&deg;</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon32"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon33"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon34"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon35"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon36"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon37"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon38"></td>
+                            <td><img src="images/placeholder.png" alt="forecast weather" id="weather_icon39"></td>
+                        </tr>
+                        <tr>
+                            <td>Weather description: <span id="weatherDescription32"></span></td>
+                            <td>Weather description: <span id="weatherDescription33"></span></td>
+                            <td>Weather description: <span id="weatherDescription34"></span></td>
+                            <td>Weather description: <span id="weatherDescription35"></span></td>
+                            <td>Weather description: <span id="weatherDescription36"></span></td>
+                            <td>Weather description: <span id="weatherDescription37"></span></td>
+                            <td>Weather description: <span id="weatherDescription38"></span></td>
+                            <td>Weather description: <span id="weatherDescription39"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Wind speed: <span id="windSpeed32"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed33"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed34"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed35"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed36"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed37"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed38"></span> mph</td>
+                            <td>Wind speed: <span id="windSpeed39"></span> mph</td>
                         </tr>
                     </tbody>
                 </table>
@@ -142,6 +417,7 @@
         <script src="scripts/currentdate.js"></script>
         <script src="scripts/windchill.js"></script>
         <script src="scripts/weatherspringfield.js"></script>
+        <script src="scripts/springfieldforecast.js"></script>
         <script>
             var section = document.getElementById('section');
             var requestURL = 'data/townsdata.json';
