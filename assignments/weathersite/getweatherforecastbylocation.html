@@ -2,9 +2,9 @@
 <html lang="en-us">
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="Springfield Weather Page">
+        <meta name="description" content="Franklin Weather Page">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Springfield Weather Page</title>
+        <title>Franklin Weather Page</title>
         <link href="css/normalize.css" rel="stylesheet">
         <link href="css/small.css" rel="stylesheet">
         <link href="css/medium.css" rel="stylesheet">
@@ -24,10 +24,10 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="franklin.html">Franklin</a></li>
                 <li><a href="greenville.html">Greenville</a></li>
-                <li class="active"><a href="springfield.html">Springfield</a></li>
+                <li><a href="springfield.html">Springfield</a></li>
                 <li><a href="stormcenter.html">Storm Center</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="getweatherforecastbylocation.html">Location Forecast</a></li>
+                <li class="active"><a href="">Get weather</a></li>
             </ul>
         </nav>
 
@@ -36,10 +36,10 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="franklin.html">Franklin</a></li>
                 <li><a href="greenville.html">Greenville</a></li>
-                <li class="active"><a href="springfield.html">Springfield</a></li>
+                <li><a href="springfield.html">Springfield</a></li>
                 <li><a href="stormcenter.html">Storm Center</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="getweatherforecastbylocation.html">Location Forecast</a></li>
+                <li class="active"><a href="">Get weather</a></li>
             </ul>
         </nav>
 
@@ -61,7 +61,13 @@
                 <img src="images/franklin-original.jpg" alt="Mountaines with the sky and the Sun above them" sizes="100vw" srcset="images/franklin-original400.jpg 400w, images/franklin-original600.jpg 600w, images/franklin-original800.jpg 800w, images/franklin-original1028.jpg 1028w">
             </figure>
 
-            <h1>Springfield town</h1>
+            <form>
+                Enter name: <input type="text" id="jsLocationNameForData">
+                <input type="button" onclick="myFunction()" value="Submit">
+              </form>
+			  
+
+            <h1 id="jsLocationName"></h1>
 
             <div id="flex">
                 <section class="middlesection">
@@ -419,9 +425,8 @@
         <script src="scripts/include.js"></script>
         <script src="scripts/currentyear.js"></script>
         <script src="scripts/currentdate.js"></script>
-        <script src="scripts/windchill.js"></script>
-        <script src="scripts/weatherspringfield.js"></script>
-        <script src="scripts/springfieldforecast.js"></script>
+        <script src="scripts/weatherfranklin.js"></script>
+        <script src="scripts/getweatherdatabylocation.js"></script>
         <script>
             var section = document.getElementById('section');
             var requestURL = 'data/townsdata.json';
@@ -445,13 +450,13 @@
                 /*var myPara5 = document.createElement('p');
                 var myList = document.createElement('ul');*/
 
-                myH2.textContent = towns[2].name;
-                myPara2.textContent = 'Year founded: ' + towns[2].yearFounded;
-                myPara3.textContent = 'Population: ' + towns[2].currentPopulation;
-                myPara4.textContent = 'Annual Rainfall: ' + towns[2].averageRainfall;
-                /*myPara5.textContent = 'Town Events:';
+                myH2.textContent = towns[0].name;
+                myPara2.textContent = 'Year founded: ' + towns[0].yearFounded;
+                myPara3.textContent = 'Population: ' + towns[0].currentPopulation;
+                myPara4.textContent = 'Annual Rainfall: ' + towns[0].averageRainfall;
+               /* myPara5.textContent = 'Town Events:';
 
-                var townEvents = towns[3].events;
+                var townEvents = towns[0].events;
                 for (var i = 0; i < townEvents.length; i++) {
                     var listItem = document.createElement('li');
                     listItem.textContent = townEvents[i];
@@ -467,9 +472,9 @@
 
                 myArticle.appendChild(myPara4);
 
-               /* myArticle.appendChild(myPara5);
+                /*myArticle.appendChild(myPara5);*/
 
-                myArticle.appendChild(myList);*/
+                /*myArticle.appendChild(myList);*/
 
                 section.appendChild(myArticle);
 
