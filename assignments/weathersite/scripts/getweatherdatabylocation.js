@@ -16,7 +16,7 @@ function myFunction() {
   }
 
   function getLocationCoordinates(){
-        apiURL = 'http://api.openweathermap.org/geo/1.0/direct?q=' + nameValue + '&limit=5&appid=2876382801a396dd5a17e61eabd083ff';
+        apiURL = 'http://api.openweathermap.org/geo/1.0/direct?q=' + nameValue + '&limit=5&appid={API key}';
         weatherForecastRequest.open('GET', apiURL, true);
         weatherForecastRequest.send();
         weatherForecastRequest.onload =  function () {
@@ -34,7 +34,7 @@ function myFunction() {
   }
 
   function getWeatherDataByLocationCoordinates(){
-    apiURL = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=2876382801a396dd5a17e61eabd083ff';
+    apiURL = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid={API key}';
     weatherForecastRequest.open('GET', apiURL, true);
         weatherForecastRequest.send();
         weatherForecastRequest.onload =  function () {
