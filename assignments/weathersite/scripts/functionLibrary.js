@@ -1,7 +1,7 @@
 
 function getLocationCoordinates(locationName, withoutForecast = false){
     
-    apiURLForLocationDataRequest = 'http://api.openweathermap.org/geo/1.0/direct?q=' + locationName + '&limit={API key}';
+    apiURLForLocationDataRequest = 'http://api.openweathermap.org/geo/1.0/direct?q=' + locationName + '&limit=2876382801a396dd5a17e61eabd083ff&units=imperial';
         locationDataRequest.open('GET', apiURLForLocationDataRequest, true);
         locationDataRequest.send();
         locationDataRequest.onload =  function () {
