@@ -1,47 +1,50 @@
-let weatherForecastRequest = new XMLHttpRequest();
+var locationDataRequest = new XMLHttpRequest();
+var weatherForecastRequest = new XMLHttpRequest();
+var currentWeatherDataRequest = new XMLHttpRequest();
 
-var apiURL;
+var apiURLForLocationDataRequest;
+var apiURLForWeatherForecastRequest;
+var apiURLForCurrentWeatherDataRequest;
+
+var locationData;
+var weatherForecastData;
 
 var nameValue;
-
 var lat;
 var lon;
+//var coordinates = [];
 
-function myFunction() {
+
+function displayWeatherData() {
+  
     alert("The form was submitted");
     nameValue = document.getElementById("jsLocationNameForData").value;
     document.getElementById("jsLocationName").innerHTML = nameValue;
-    getLocationCoordinates();
+    getLocationCoordinates(nameValue);
+    document.getElementById("js-locationInfo").innerHTML = '';
     
+    //displayCurrentWeather();
+    
+    //getWeatherForecastByLocationCoordinates();
   }
 
-  function getLocationCoordinates(){
-        apiURL = 'http://api.openweathermap.org/geo/1.0/direct?q=' + nameValue + '&limit=5&appid=2876382801a396dd5a17e61eabd083ff';
-        weatherForecastRequest.open('GET', apiURL, true);
-        weatherForecastRequest.send();
-        weatherForecastRequest.onload =  function () {
-        let weatherForecastData = JSON.parse(weatherForecastRequest.responseText);
-        console.log("newWeatherForecastData!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        console.log(weatherForecastData[0]);
-        console.log(weatherForecastData[0].lat);
-        console.log(weatherForecastData[0].lon);
-        lat = weatherForecastData[0].lat;
-        lon = weatherForecastData[0].lon;
-        console.log("newWeatherForecastData$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-        getWeatherDataByLocationCoordinates();
-        }
-        
-  }
+  
 
-  function getWeatherDataByLocationCoordinates(){
-    apiURL = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=2876382801a396dd5a17e61eabd083ff';
-    weatherForecastRequest.open('GET', apiURL, true);
+  function getWeatherForecastByLocationCoordinates(){
+    
+    apiURLForWeatherForecastRequest = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=2876382801a396dd5a17e61eabd083ff&units=imperial';
+    weatherForecastRequest.open('GET', apiURLForWeatherForecastRequest, true);
         weatherForecastRequest.send();
         weatherForecastRequest.onload =  function () {
-        let weatherForecastData = JSON.parse(weatherForecastRequest.responseText);
+        weatherForecastData = JSON.parse(weatherForecastRequest.responseText);
         console.log("newWeatherForecastData**************************************************************************************");
         console.log(weatherForecastData);
-        
+        console.log(locationData);
         console.log("newWeatherForecastData§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§");
+        displayCurrentWeather();
+        
+        //showLocationInfo(locationData[0], document.getElementById("js-locationInfo"));
   }
 }
+
+ 

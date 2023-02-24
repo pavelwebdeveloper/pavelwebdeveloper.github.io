@@ -63,7 +63,7 @@
 
             <form>
                 Enter name: <input type="text" id="jsLocationNameForData">
-                <input type="button" onclick="myFunction()" value="Submit">
+                <input type="button" onclick="displayWeatherData()" value="Submit">
               </form>
 			  
 
@@ -73,18 +73,18 @@
                 <section class="middlesection">
                     <h2>Today's Weather</h2>
                     <ul>
-                        <li>Current temperature: <span id="maintemp"></span>&deg; F</li>
-                        <li>Max temp: <span id="hightemp"></span>&deg; F</li>
-                        <li>Min temp: <span id="lowtemp"></span>&deg; F</li>
+                        <li>Current temperature: <span id="js-mainTempFahrenheit"></span>&deg; F / <span id="js-mainTempCelsius"></span>&deg; C</li>
+                        <li>Max temp: <span id="js-maxTempFahrenheit"></span>&deg; F / <span id="js-maxTempCelsius"></span>&deg; C</li>
+                        <li>Min temp: <span id="js-minTempFahrenheit"></span>&deg; F / <span id="js-minTempCelsius"></span>&deg; C</li>
                         <li>Chance of Precipitation: 0%</li>
-                        <li>Wind Speed: <span id="wind"></span> mph</li>
-                        <li>Wind chill: <span id="windchill"></span>&deg;</li>
-                        <li>Current weather description: <span id="currentweatherdescription"></span></li>
-                        <img src="images/placeholder.png" alt="current weather" id="weather_icon">
+                        <li>Wind Speed: <span id="js-windSpeed"></span> mph</li>
+                        <li>Wind chill: <span id="js-windChill"></span>&deg;</li>
+                        <li>Current weather description: <span id="js-currentWeatherDescription"></span></li>
+                        <img src="images/placeholder.png" alt="current weather" id="js-weather_icon">
                     </ul>
                 </section>
 
-                <section id="section">
+                <section id="js-locationInfo">
 
                 </section>
             </div>
@@ -425,7 +425,7 @@
         <script src="scripts/include.js"></script>
         <script src="scripts/currentyear.js"></script>
         <script src="scripts/currentdate.js"></script>
-        <script src="scripts/weatherfranklin.js"></script>
+        <script src="scripts/functionLibrary.js"></script>
         <script src="scripts/getweatherdatabylocation.js"></script>
         <script>
             var section = document.getElementById('section');
@@ -437,9 +437,9 @@
             request.onload = function() {
                 var townData = request.response;
                 console.log(townData);
-                showTowns(townData);
+                //showTowns(townData);
             }
-            function showTowns(jsonObj) {
+            /*function showTowns(jsonObj) {
                 var towns = jsonObj['towns'];
 
                 var myArticle = document.createElement('article');
@@ -450,7 +450,7 @@
                 /*var myPara5 = document.createElement('p');
                 var myList = document.createElement('ul');*/
 
-                myH2.textContent = towns[0].name;
+                /*myH2.textContent = towns[0].name;
                 myPara2.textContent = 'Year founded: ' + towns[0].yearFounded;
                 myPara3.textContent = 'Population: ' + towns[0].currentPopulation;
                 myPara4.textContent = 'Annual Rainfall: ' + towns[0].averageRainfall;
@@ -464,7 +464,7 @@
                     myList.appendChild(listItem);
                 }*/
 
-                myArticle.appendChild(myH2);
+                /*myArticle.appendChild(myH2);
 
                 myArticle.appendChild(myPara2);
 
@@ -476,9 +476,9 @@
 
                 /*myArticle.appendChild(myList);*/
 
-                section.appendChild(myArticle);
+                /*section.appendChild(myArticle);
 
-            }
+            }*/
         </script>
     </body>
 </html>
