@@ -1,7 +1,7 @@
 
 function getLocationCoordinates(locationName, withoutForecast = false){
     
-    apiURLForLocationDataRequest = 'http://api.openweathermap.org/geo/1.0/direct?q=' + locationName + '&limit=2876382801a396dd5a17e61eabd083ff&units=imperial';
+    apiURLForLocationDataRequest = 'http://api.openweathermap.org/geo/1.0/direct?q=' + locationName + '&limit=5&appid=2876382801a396dd5a17e61eabd083ff';
         locationDataRequest.open('GET', apiURLForLocationDataRequest, true);
         locationDataRequest.send();
         locationDataRequest.onload =  function () {
@@ -44,7 +44,8 @@ function displayCurrentWeather(){
             document.getElementById('js-maxTempCelsius').innerHTML = convertFahrenheitToCelsius(weatherForecastData.list[0].main.temp_max);
             document.getElementById('js-minTempFahrenheit').innerHTML = weatherForecastData.list[0].main.temp_min.toFixed(0);
             document.getElementById('js-minTempCelsius').innerHTML = convertFahrenheitToCelsius(weatherForecastData.list[0].main.temp_min);
-            document.getElementById('js-windSpeed').innerHTML = weatherForecastData.list[0].wind.speed;
+            document.getElementById('js-windSpeedMph').innerHTML = weatherForecastData.list[0].wind.speed;
+            document.getElementById('js-windSpeedKmph').innerHTML = convertMphToKmph(weatherForecastData.list[0].wind.speed);
   
             var iconcode = weatherForecastData.list[0].weather[0].icon;
             var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
@@ -66,9 +67,21 @@ function displayCurrentWeather(){
       return tempInCelsius.toFixed(0);
    }
 
+   function convertMphToKmph(mphSpeed){
 
-function showLocationInfo(locationData, element) {
-    
+    let kmphSpeed = mphSpeed * 1.609344;
+    // INSIDE convertMphToKmph function
+    console.log("INSIDE convertMphToKmph function ////////////////////////////////////////");
+    console.log(mphSpeed);
+    console.log(kmphSpeed);
+    return kmphSpeed.toFixed(0);
+ }
+
+
+function showLocationInfo(weatherForecastData, element) {
+    // INSIDE showLocationInfo function
+    console.log("INSIDE showLocationInfo function ))))))))))))))))))))))))))))))))))))))");
+    console.log(weatherForecastData);
 
     var myArticle = document.createElement('article');
     var myH2 = document.createElement('h2');
