@@ -1,13 +1,16 @@
 var locationDataRequest = new XMLHttpRequest();
 var weatherForecastRequest = new XMLHttpRequest();
 var currentWeatherDataRequest = new XMLHttpRequest();
+var weatherOnMarsRequest = new XMLHttpRequest();
 
 var apiURLForLocationDataRequest;
 var apiURLForWeatherForecastRequest;
 var apiURLForCurrentWeatherDataRequest;
+var apiURLForWeatherOnMars;
 
 var locationData;
 var weatherForecastData;
+var weatherOnMarsData;
 
 var nameValue;
 var lat;
@@ -45,6 +48,7 @@ function displayWeatherData() {
         
         //showLocationInfo(weatherForecastData, document.getElementById("js-locationInfo"));
         showForecast(weatherForecastData);
+        weatherOnMars();
   }
 }
 

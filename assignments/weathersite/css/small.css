@@ -347,3 +347,9 @@ footer p {
     background-color: #D1C4CF;
     text-align: center;
 }
+
+
+#spaceImage{
+    max-width: 50%;
+    height: auto;
+}

@@ -120,3 +120,37 @@ function showLocationInfo(weatherForecastData, element) {
     element.appendChild(myArticle);
 
 }
+
+
+function weatherOnMars(){
+  apiURLForWeatherOnMars = 'https://api.nasa.gov/planetary/apod?api_key=0egd1x0LXz5zySlcg3r29Oy41ltagnCjLBMIy0vQ';
+  weatherOnMarsRequest.open('GET', apiURLForWeatherOnMars, true);
+  weatherOnMarsRequest.send();
+  weatherOnMarsRequest.onload =  function () {
+    weatherOnMarsData = JSON.parse(weatherOnMarsRequest.responseText);
+        console.log("weatherOnMarsData?????????????????????????????????????????????????");
+        console.log(weatherOnMarsData);    
+        
+        console.log("UUUUUUUUUUUUUUUUUUUUUUUUU");
+        console.log(weatherOnMarsData);
+        var h2ForApod = document.createElement('h2');
+        h2ForApod.textContent = weatherOnMarsData.title;
+        var divForApod = document.createElement('div');
+        divForApod.setAttribute("id", "divForApod");
+        var paraForApod = document.createElement('p');
+        paraForApod.setAttribute("id", "paraForApod");
+        paraForApod.textContent = weatherOnMarsData.explanation;
+        const img = document.createElement("img");
+        img.setAttribute("id", "spaceImage");
+        img.src = weatherOnMarsData.hdurl;
+        
+        document.getElementById("js-apod").appendChild(h2ForApod);
+        divForApod.appendChild(img);
+        divForApod.appendChild(paraForApod);
+        document.getElementById("js-apod").appendChild(divForApod);
+        }
+
+        
+
+        
+}

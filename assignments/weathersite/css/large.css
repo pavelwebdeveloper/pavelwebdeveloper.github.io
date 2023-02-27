@@ -115,4 +115,19 @@
         margin: 150px 20px;
         text-align: center;
     }
+
+    #js-apod{
+        text-align: center;
+    }
+
+    #divForApod{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    #paraForApod{
+        padding: 3em;
+        align-self: center;
+    }
 }
