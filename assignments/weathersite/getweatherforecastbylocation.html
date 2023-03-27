@@ -62,12 +62,12 @@
             </figure>
 
             <form>
-                Enter name: <input type="text" id="jsLocationNameForData">
+                Enter name: <input type="text" id="js-locationNameForData">
                 <input type="button" onclick="displayWeatherData()" value="Submit">
               </form>
 			  
-
-            <h1 id="jsLocationName"></h1>
+            <div id="js-geolocationMessage"></div>
+            
 
             <div id="flex">
                 <section class="middlesection">
@@ -420,6 +420,7 @@
         <script src="scripts/currentdate.js"></script>
         <script src="scripts/functionLibrary.js"></script>
         <script src="scripts/getweatherdatabylocation.js"></script>
+        <script src="scripts/geolocationAPI.js"></script>
         <script>
             var section = document.getElementById('section');
             var requestURL = 'data/townsdata.json';

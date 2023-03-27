@@ -19,7 +19,8 @@ function getLocationCoordinates(locationName, withoutForecast = false){
         //console.log(coordinates[1]);
         console.log("newWeatherForecastData$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
         if(withoutForecast){
-          displayCurrentWeather();
+          //displayCurrentWeather();
+          
         } else {
           getWeatherForecastByLocationCoordinates();
         }
@@ -37,6 +38,7 @@ function displayCurrentWeather(){
           currentWeatherData = JSON.parse(currentWeatherDataRequest.responseText);
           console.log("-------------------------------------------------");
     console.log(weatherForecastData);
+    //document.getElementById('js-locationName').innerHTML = weatherForecastData.city.name;
             document.getElementById('js-mainTempFahrenheit').innerHTML = weatherForecastData.list[0].main.temp.toFixed(0);
             document.getElementById('js-mainTempCelsius').innerHTML = convertFahrenheitToCelsius(weatherForecastData.list[0].main.temp);
             document.getElementById('js-currentWeatherDescription').innerHTML = weatherForecastData.list[0].weather[0].description;
@@ -60,6 +62,20 @@ function displayCurrentWeather(){
             f = Math.round(f);
             document.getElementById("js-windChill").innerHTML = f;
    }
+  }
+
+  function getCurrentWeather(){
+    let apiURLForgetCurrentWeatherRequest = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=2876382801a396dd5a17e61eabd083ff&units=imperial';
+
+    let getCurrentWeatherRequest = new XMLHttpRequest();
+
+    let weatherData;
+    getCurrentWeatherRequest.open('GET', apiURLForgetCurrentWeatherRequest, true);
+    getCurrentWeatherRequest.send();
+    getCurrentWeatherRequest.onload =  function () {
+     weatherData = JSON.parse(getCurrentWeatherRequest.responseText);
+    }
+    return weatherData;
   }
   
    function convertFahrenheitToCelsius(tempInFahrenheit){
@@ -122,27 +138,28 @@ function showLocationInfo(weatherForecastData, element) {
 }
 
 
-function weatherOnMars(){
-  apiURLForWeatherOnMars = 'https://api.nasa.gov/planetary/apod?api_key=0egd1x0LXz5zySlcg3r29Oy41ltagnCjLBMIy0vQ';
-  weatherOnMarsRequest.open('GET', apiURLForWeatherOnMars, true);
-  weatherOnMarsRequest.send();
-  weatherOnMarsRequest.onload =  function () {
-    weatherOnMarsData = JSON.parse(weatherOnMarsRequest.responseText);
-        console.log("weatherOnMarsData?????????????????????????????????????????????????");
-        console.log(weatherOnMarsData);    
+function getAPODfromNASA(){
+  document.getElementById("js-apod").innerHTML = "";
+  apiURLForAPODfromNASA = 'https://api.nasa.gov/planetary/apod?api_key=0egd1x0LXz5zySlcg3r29Oy41ltagnCjLBMIy0vQ';
+  APODfromNASARequest.open('GET', apiURLForAPODfromNASA, true);
+  APODfromNASARequest.send();
+  APODfromNASARequest.onload =  function () {
+    APODfromNASAData = JSON.parse(APODfromNASARequest.responseText);
+        console.log("APODfromNASAData?????????????????????????????????????????????????");
+        console.log(APODfromNASAData);    
         
         console.log("UUUUUUUUUUUUUUUUUUUUUUUUU");
-        console.log(weatherOnMarsData);
+        console.log(APODfromNASAData);
         var h2ForApod = document.createElement('h2');
-        h2ForApod.textContent = weatherOnMarsData.title;
+        h2ForApod.textContent = APODfromNASAData.title;
         var divForApod = document.createElement('div');
         divForApod.setAttribute("id", "divForApod");
         var paraForApod = document.createElement('p');
         paraForApod.setAttribute("id", "paraForApod");
-        paraForApod.textContent = weatherOnMarsData.explanation;
+        paraForApod.textContent = APODfromNASAData.explanation;
         const img = document.createElement("img");
         img.setAttribute("id", "spaceImage");
-        img.src = weatherOnMarsData.hdurl;
+        img.src = APODfromNASAData.hdurl;
         
         document.getElementById("js-apod").appendChild(h2ForApod);
         divForApod.appendChild(img);

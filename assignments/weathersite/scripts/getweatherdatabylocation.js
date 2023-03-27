@@ -1,16 +1,16 @@
 var locationDataRequest = new XMLHttpRequest();
 var weatherForecastRequest = new XMLHttpRequest();
 var currentWeatherDataRequest = new XMLHttpRequest();
-var weatherOnMarsRequest = new XMLHttpRequest();
+var APODfromNASARequest = new XMLHttpRequest();
 
 var apiURLForLocationDataRequest;
 var apiURLForWeatherForecastRequest;
 var apiURLForCurrentWeatherDataRequest;
-var apiURLForWeatherOnMars;
+var apiURLForAPODfromNASA;
 
 var locationData;
 var weatherForecastData;
-var weatherOnMarsData;
+var APODfromNASAData;
 
 var nameValue;
 var lat;
@@ -21,8 +21,8 @@ var lon;
 function displayWeatherData() {
   
     alert("The form was submitted");
-    nameValue = document.getElementById("jsLocationNameForData").value;
-    document.getElementById("jsLocationName").innerHTML = nameValue;
+    nameValue = document.getElementById("js-locationNameForData").value;
+    //document.getElementById("js-locationName").innerHTML = nameValue;
     getLocationCoordinates(nameValue);
     document.getElementById("js-locationInfo").innerHTML = '';
     
@@ -34,7 +34,11 @@ function displayWeatherData() {
   
 
   function getWeatherForecastByLocationCoordinates(){
-    
+    console.log("LATITUDEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+        console.log(lat);
+        console.log("LONGITUDEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+        console.log(lon);
+        
     apiURLForWeatherForecastRequest = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=2876382801a396dd5a17e61eabd083ff&units=imperial';
     weatherForecastRequest.open('GET', apiURLForWeatherForecastRequest, true);
         weatherForecastRequest.send();
@@ -48,7 +52,7 @@ function displayWeatherData() {
         
         //showLocationInfo(weatherForecastData, document.getElementById("js-locationInfo"));
         showForecast(weatherForecastData);
-        weatherOnMars();
+        getAPODfromNASA();
   }
 }
 
