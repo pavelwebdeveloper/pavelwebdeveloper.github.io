@@ -1,6 +1,31 @@
 
-function getLocationCoordinates(locationName, withoutForecast = false){
+
+function getData(url){
+
+  return fetch(url)
+    .then( function(response) {
+        if (!response.ok) {
+            throw Error(response.statusText);
+        } else {  
+            //console.log("RESPONSE!!!!!!!!!!!!!!!!!!!"); 
+            //console.log(response.json()); 
+            return response.json();
+            
+        }
+    } )
+    //.then(data => console.log(data)) // transforms the JSON data into a JavaScript object or throws an error
+    //.then( data => console.log(Object.entries(data)) )
+    .catch( function(error) {
+        console.log('There was an error:', error);
+    })
+    }
+
+
+/*function getLocationCoordinates(locationName, withoutForecast = false){
     
+  console.log("Here is location name info inside function getLocationCoordinates");
+  console.log(locationName);
+
     apiURLForLocationDataRequest = 'http://api.openweathermap.org/geo/1.0/direct?q=' + locationName + '&limit=5&appid=2876382801a396dd5a17e61eabd083ff';
         locationDataRequest.open('GET', apiURLForLocationDataRequest, true);
         locationDataRequest.send();
@@ -20,14 +45,63 @@ function getLocationCoordinates(locationName, withoutForecast = false){
         console.log("newWeatherForecastData$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
         if(withoutForecast){
           //displayCurrentWeather();
-          
+          getCurrentWeather();
         } else {
           getWeatherForecastByLocationCoordinates();
         }
         
         }
         
-  }
+  }*/
+
+
+  async function getLocationCoordinates(locationName, withoutForecast = false){
+    
+    console.log("Here is location name info inside function getLocationCoordinates");
+    console.log(locationName);
+  
+    await getData('http://api.openweathermap.org/geo/1.0/direct?q=' + locationName + '&limit=5&appid=2876382801a396dd5a17e61eabd083ff').then(data => { 
+      //this._recipes = data.meals;
+      console.log("Here is location data inside function getData inside function getLocationCoordinates");
+    console.log(data);
+
+    console.log("newWeatherForecastData!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+          console.log(data);
+          
+          lat = data[0].lat;
+          lon = data[0].lon;
+          //coordinates[0] = locationData[0].lat;
+          //coordinates[1] = locationData[0].lon;
+          console.log(lat);
+          console.log(lon);
+          //console.log(coordinates[0]);
+          //console.log(coordinates[1]);
+          console.log("newWeatherForecastData$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+          if(withoutForecast){
+            //displayCurrentWeather();
+            //getCurrentWeather();
+
+            console.log("Here is one city data");
+            getCurrentWeather();
+
+
+
+          
+
+          
+
+
+          } else {
+            getWeatherForecastByLocationCoordinates();
+          }
+  
+    });
+
+          
+          
+          
+          
+    }
 
 function displayCurrentWeather(){
   
@@ -57,6 +131,10 @@ function displayCurrentWeather(){
             var lt = weatherForecastData.list[0].main.temp_min;
             var s = weatherForecastData.list[0].wind.speed;
             /* colculating the average temperature between the high and the low predictions */
+
+
+
+            
             var t = (ht + lt) / 2;
             var f = 35.74 + 0.6215 * t - 35.75 * Math.pow(s, 0.16) + 0.4275 * t *  Math.pow(s, 0.16);
             f = Math.round(f);
@@ -64,19 +142,52 @@ function displayCurrentWeather(){
    }
   }
 
-  function getCurrentWeather(){
-    let apiURLForgetCurrentWeatherRequest = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=2876382801a396dd5a17e61eabd083ff&units=imperial';
+  /*function getCurrentWeather(){
+
+    console.log("Here is lat info inside function getCurrentWeather");
+console.log(lat);
+console.log("Here is lon info inside function getCurrentWeather");
+console.log(lon);
+    let apiURLForGetCurrentWeatherRequest = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=2876382801a396dd5a17e61eabd083ff&units=imperial';
 
     let getCurrentWeatherRequest = new XMLHttpRequest();
 
     let weatherData;
-    getCurrentWeatherRequest.open('GET', apiURLForgetCurrentWeatherRequest, true);
+    getCurrentWeatherRequest.open('GET', apiURLForGetCurrentWeatherRequest, true);
     getCurrentWeatherRequest.send();
     getCurrentWeatherRequest.onload =  function () {
      weatherData = JSON.parse(getCurrentWeatherRequest.responseText);
     }
     return weatherData;
+  }*/
+
+  async function getCurrentWeather(){
+
+    console.log("Here is lat info inside function getCurrentWeather");
+console.log(lat);
+console.log("Here is lon info inside function getCurrentWeather");
+console.log(lon);
+await getData('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=2876382801a396dd5a17e61eabd083ff&units=imperial').then(data => { 
+  //this._recipes = data.meals;
+  console.log("Here is location data inside function getData inside function getCurrentWeather");
+console.log(data);
+
+console.log("currentWeatherData!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+      console.log(data);
+
+
+      weatherDataForCities.push(data);
+
+      console.log("Here is the cities data");
+          console.log(weatherDataForCities);
+      
+      return data;
+
+    });
+    
   }
+
+
   
    function convertFahrenheitToCelsius(tempInFahrenheit){
       tempInCelsius = (tempInFahrenheit - 32) * (5/9);

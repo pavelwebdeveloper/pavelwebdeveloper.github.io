@@ -1,7 +1,3 @@
-var weatherDataForCities = [];
-
-
-var cityNames = ["London", "Sidney", "San Francisco"];
 
 /*
 for(let i=0; i <= cityNames; i++){
@@ -18,10 +14,16 @@ for(let i=0; i <= cityNames; i++){
     weatherDataForCities.push(getCurrentWeather());
  */  
 
-    getLocationCoordinates(cityNames[0], true);
+    for(let i=0; i<=cityNames.length;i++){
+    getLocationCoordinates(cityNames[i], true);
+    }
 
-    console.log("Here is one city data");
-console.log(getCurrentWeather());
 
-console.log("Here is the cities data");
-console.log(weatherDataForCities);
+    
+
+    
+
+
+    /*console.log("Here is one city data");
+console.log(getCurrentWeather());*/
+

@@ -82,7 +82,7 @@
         <script src="scripts/include.js"></script>
         <script src="scripts/currentyear.js"></script>
         <script src="scripts/currentdate.js"></script>
-        <script src="scripts/getweatherdatabylocation.js"></script>
+        <script src="scripts/variables.js"></script>
         <script src="scripts/functionLibrary.js"></script>
         <script src="scripts/weatherDataForHomePage.js"></script>
         <script>
@@ -95,10 +95,10 @@
             request.onload = function() {
                 var townData = request.response;
                 console.log(townData);
-                //showTowns(townData);
+                showTowns(weatherDataForCities);
             }
-            function showTowns(jsonObj) {
-                var towns = jsonObj['towns'];
+            function showTowns(towns) {
+                //var towns = jsonObj['towns'];
 
 
                 for (var i = 0; i < towns.length; i++) {
