@@ -362,7 +362,7 @@ function showTowns(towns, sectionElement) {
           imgElement2.setAttribute("src", "images/london.jpg");
           myDiv.appendChild(imgElement2);
       } else if(towns[i].name == "San Francisco"){
-          imgElement2.setAttribute("src", "images/san_Francisco.jpg");
+          imgElement2.setAttribute("src", "images/san_francisco.jpg");
           myDiv.appendChild(imgElement2);
       } else if(towns[i].name == "Sydney"){
           imgElement2.setAttribute("src", "images/sydney.jpg");
