@@ -1,3 +1,16 @@
+@media only screen and (min-width: 30.5em) {
+
+    /*--------------------LAYOUT FOR HOME PAGE-------------------------*/
+
+    .weather_icon{
+        min-width: 40%;
+        max-width: 50%;
+    }
+
+}
+
+
+
 @media only screen and (min-width: 37.5em) {
 
     /* Only CSS write declarations that need to be changed. Do not duplicated declarations that are already established in the main.css */
@@ -135,6 +148,13 @@
         width: 50%;
         margin: 30px;
         padding: 20px;
+    }
+
+    /*--------------------LAYOUT FOR HOME PAGE-------------------------*/
+
+    .weather_icon{
+        min-width: 20%;
+        max-width: 80%;
     }
 
     /*-----------------LAYOUT FOR FRANKLIN AND GRID PAGES-----------------*/

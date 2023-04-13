@@ -207,6 +207,23 @@ console.log("currentWeatherData!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     return kmphSpeed.toFixed(0);
  }
 
+ function calculateWindChill(ht, lt, s){
+        /* Input:
+      * Processing: colculation of windchil according the the formula f = 35.74 + 0.6215 t - 35.75 s0.16 + 0.4275 t s0.16
+      * Output: future value
+      */
+
+      
+
+      /* colculating the average temperature between the high and the low predictions */
+      var t = (ht + lt) / 2;
+
+      /* compute and display the wind chill temperature */
+      var f = 35.74 + 0.6215 * t - 35.75 * Math.pow(s, 0.16) + 0.4275 * t *  Math.pow(s, 0.16);
+      f = Math.round(f);
+      return f;
+ }
+
 
 function showLocationInfo(weatherForecastData, element) {
     // INSIDE showLocationInfo function
@@ -301,43 +318,50 @@ function showTowns(towns, sectionElement) {
       } /*else {
           myDiv.setAttribute("id", "divright");
       }*/
+
+      
+
       let myUlist = document.createElement('ul');
       
-      createRepeatingListItem(myUlist, "Current temperature: ", "&deg; F / ", "&deg; C", towns[i].main.temp);
-      createRepeatingListItem(myUlist, "Max temp: ", "&deg; F / ", "&deg; C", towns[i].main.temp_max);
-      createRepeatingListItem(myUlist, "Min temp: ", "&deg; F / ", "&deg; C", towns[i].main.temp_min);
+      createRepeatingListItem(myUlist, "Current temperature: ", "&deg; F / ", "&deg; C", towns[i]);
+      createRepeatingListItem(myUlist, "Max temp: ", "&deg; F / ", "&deg; C", towns[i]);
+      createRepeatingListItem(myUlist, "Min temp: ", "&deg; F / ", "&deg; C", towns[i]);
 
-      let myListItem = document.createElement('li');
+      /*let myListItem = document.createElement('li');
       myListItem.textContent = "Chance of Precipitation: 0%";
-      myUlist.appendChild(myListItem);
+      myUlist.appendChild(myListItem);*/
 
-      createRepeatingListItem(myUlist, "Wind Speed: ", " mph / ", " kmph", towns[i].wind.speed);
+      createRepeatingListItem(myUlist, "Wind Speed: ", " mph / ", " kmph", towns[i]);
 
-      createRepeatingListItem(myUlist, "Wind chill: ", "&deg;", "", towns[i].wind.speed);
+      //createRepeatingListItem(myUlist, "Wind chill: ", "", "", towns[i]);
 
-      createRepeatingListItem(myUlist, "Current weather description: ", "", "", towns[i].weather[0].description);
+      createRepeatingListItem(myUlist, "Current weather description: ", "", "", towns[i]);
 
       let imgElement1 = document.createElement('img');
 
       let iconcode = towns[i].weather[0].icon;
       let icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
       imgElement1.setAttribute("src", icon_path);
+      imgElement1.setAttribute("class", "weather_icon");
       myUlist.appendChild(imgElement1);
 
-
+      
 
       let imgElement2 = document.createElement('img');
       if(towns[i].name == "London"){
-          imgElement2.setAttribute("src", "images/London.png");
+          imgElement2.setAttribute("src", "images/london.jpg");
           myDiv.appendChild(imgElement2);
       } else if(towns[i].name == "San Francisco"){
-          imgElement2.setAttribute("src", "images/San_Francisco.png");
+          imgElement2.setAttribute("src", "images/san_Francisco.jpg");
           myDiv.appendChild(imgElement2);
       } else if(towns[i].name == "Sydney"){
-          imgElement2.setAttribute("src", "images/Sydney.png");
+          imgElement2.setAttribute("src", "images/sydney.jpg");
           myDiv.appendChild(imgElement2);
       }
 
+      let myH2 = document.createElement("h2");
+      myH2.textContent = towns[i].name;
+      myDiv.appendChild(myH2);
 
       /*var myArticle = document.createElement('article');
       var myH2 = document.createElement('h2');
@@ -391,6 +415,8 @@ function showTowns(towns, sectionElement) {
 
       }*/
 
+      myUlist.style.textAlign = "left";
+
       myDiv.appendChild(myUlist);
 
 
@@ -399,7 +425,7 @@ function showTowns(towns, sectionElement) {
 
 }
 
-function createRepeatingListItem(UListElement, itemText1, itemText2, itemText3, temp){
+function createRepeatingListItem(UListElement, itemText1, itemText2, itemText3, cityData){
 
       let myListItem = document.createElement('li');
 
@@ -410,14 +436,18 @@ function createRepeatingListItem(UListElement, itemText1, itemText2, itemText3, 
 
       let mySpan2 = document.createElement('span');
       //mySpan2.setAttribute("id", "js-mainTempFahrenheit" + i);
-      mySpan2.textContent = temp;
+      if(itemText1 != "Current weather description: "){
+        mySpan2.textContent = calculateWindChill(cityData.main.temp_max, cityData.main.temp_min, cityData.wind.speed);
+      } else {
+        mySpan2.textContent = cityData.weather[0].description;
+      }
 
       myListItem.appendChild(mySpan2);
 
       if(itemText1 != "Current weather description: "){
 
       let mySpan3 = document.createElement('span');
-      mySpan3.textContent = itemText2;
+      mySpan3.innerHTML = itemText2;
 
       myListItem.appendChild(mySpan3);
 
@@ -427,12 +457,16 @@ function createRepeatingListItem(UListElement, itemText1, itemText2, itemText3, 
 
       let mySpan4 = document.createElement('span');
       //mySpan4.setAttribute("id", "js-mainTempCelsius" + i);
-      mySpan4.textContent = convertFahrenheitToCelsius(temp);
+      if(itemText1 != "Wind Speed: "){
+        mySpan4.textContent = convertFahrenheitToCelsius(cityData.main.temp);
+      } else {
+        mySpan4.textContent = convertMphToKmph(cityData.wind.speed);
+      }
 
       myListItem.appendChild(mySpan4);
 
       let mySpan5 = document.createElement('span');
-      mySpan5.textContent = itemText3;
+      mySpan5.innerHTML = itemText3;
 
       myListItem.appendChild(mySpan5);
 
