@@ -61,9 +61,9 @@ function getData(url){
     console.log(locationName);
 
     if (location.protocol === 'http:') {
-      let openWeatherUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=';
+      var openWeatherUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=';
     } else {
-      let openWeatherUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=';
+      var openWeatherUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=';
     }
 
     console.log("Here is URL URL URLLLLLLLLLLLLLLLL");
