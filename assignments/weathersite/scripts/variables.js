@@ -17,6 +17,8 @@ var lat;
 var lon;
 
 
+
+
 var weatherDataForCities = [];
 
 

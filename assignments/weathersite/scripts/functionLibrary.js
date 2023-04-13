@@ -59,8 +59,14 @@ function getData(url){
     
     console.log("Here is location name info inside function getLocationCoordinates");
     console.log(locationName);
+
+    if (location.protocol === 'http:') {
+      let openWeatherUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=';
+    } else {
+      let openWeatherUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=';
+    }
   
-    await getData('http://api.openweathermap.org/geo/1.0/direct?q=' + locationName + '&limit=5&appid=2876382801a396dd5a17e61eabd083ff').then(data => { 
+    await getData(openWeatherUrl + locationName + '&limit=5&appid=2876382801a396dd5a17e61eabd083ff').then(data => { 
       //this._recipes = data.meals;
       console.log("Here is location data inside function getData inside function getLocationCoordinates");
     console.log(data);
