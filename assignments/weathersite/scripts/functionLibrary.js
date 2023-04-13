@@ -360,12 +360,15 @@ function showTowns(towns, sectionElement) {
       let imgElement2 = document.createElement('img');
       if(towns[i].name == "London"){
           imgElement2.setAttribute("src", "images/london.jpg");
+          imgElement2.setAttribute("class", "homePageCityImage");
           myDiv.appendChild(imgElement2);
       } else if(towns[i].name == "San Francisco"){
           imgElement2.setAttribute("src", "images/san_francisco.jpg");
+          imgElement2.setAttribute("class", "homePageCityImage");
           myDiv.appendChild(imgElement2);
       } else if(towns[i].name == "Sydney"){
           imgElement2.setAttribute("src", "images/sydney.jpg");
+          imgElement2.setAttribute("class", "homePageCityImage");
           myDiv.appendChild(imgElement2);
       }
 
