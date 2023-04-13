@@ -315,7 +315,7 @@ function showTowns(towns, sectionElement) {
 
       createRepeatingListItem(myUlist, "Wind chill: ", "&deg;", "", towns[i].wind.speed);
 
-      createRepeatingListItem(myUlist, "Current weather description: ", "", "", towns[i].weather.description);
+      createRepeatingListItem(myUlist, "Current weather description: ", "", "", towns[i].weather[0].description);
 
       let imgElement1 = document.createElement('img');
 
