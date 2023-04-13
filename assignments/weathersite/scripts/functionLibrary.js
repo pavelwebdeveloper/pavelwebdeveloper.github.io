@@ -84,8 +84,12 @@ function getData(url){
             console.log("Here is one city data");
             getCurrentWeather();
 
+            
 
+            console.log("Here is the cities data inside function getLocationCoordinates");
+          console.log(weatherDataForCities);
 
+            
           
 
           
@@ -95,12 +99,7 @@ function getData(url){
             getWeatherForecastByLocationCoordinates();
           }
   
-    });
-
-          
-          
-          
-          
+      });          
     }
 
 function displayCurrentWeather(){
@@ -178,10 +177,14 @@ console.log("currentWeatherData!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
       weatherDataForCities.push(data);
 
-      console.log("Here is the cities data");
+      console.log("Here is the cities data inside function getCurrentWeather");
           console.log(weatherDataForCities);
-      
-      return data;
+
+          var section = document.getElementById('lowersection');
+
+          section.innerHTML = "";
+
+          showTowns(weatherDataForCities, section);
 
     });
     
@@ -276,9 +279,164 @@ function getAPODfromNASA(){
         divForApod.appendChild(img);
         divForApod.appendChild(paraForApod);
         document.getElementById("js-apod").appendChild(divForApod);
-        }
+        }        
+}
 
-        
 
-        
+function showTowns(towns, sectionElement) {
+  //var towns = jsonObj['towns'];
+
+  console.log("Inside showTowns function ///////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
+
+  console.log(towns);
+
+  console.log(towns.length);
+
+
+  for (let i = 0; i < towns.length; i++) {
+      /*if (i === 2) { continue; }*/
+      let myDiv = document.createElement('div');
+      if (i==0 || i==2) {
+          myDiv.setAttribute("id", "divleft");
+      } /*else {
+          myDiv.setAttribute("id", "divright");
+      }*/
+      let myUlist = document.createElement('ul');
+      
+      createRepeatingListItem(myUlist, "Current temperature: ", "&deg; F / ", "&deg; C", towns[i].main.temp);
+      createRepeatingListItem(myUlist, "Max temp: ", "&deg; F / ", "&deg; C", towns[i].main.temp_max);
+      createRepeatingListItem(myUlist, "Min temp: ", "&deg; F / ", "&deg; C", towns[i].main.temp_min);
+
+      let myListItem = document.createElement('li');
+      myListItem.textContent = "Chance of Precipitation: 0%";
+      myUlist.appendChild(myListItem);
+
+      createRepeatingListItem(myUlist, "Wind Speed: ", " mph / ", " kmph", towns[i].wind.speed);
+
+      createRepeatingListItem(myUlist, "Wind chill: ", "&deg;", "", towns[i].wind.speed);
+
+      createRepeatingListItem(myUlist, "Current weather description: ", "", "", towns[i].weather.description);
+
+      let imgElement1 = document.createElement('img');
+
+      let iconcode = towns[i].weather[0].icon;
+      let icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
+      imgElement1.setAttribute("src", icon_path);
+      myUlist.appendChild(imgElement1);
+
+
+
+      let imgElement2 = document.createElement('img');
+      if(towns[i].name == "London"){
+          imgElement2.setAttribute("src", "images/London.png");
+          myDiv.appendChild(imgElement2);
+      } else if(towns[i].name == "San Francisco"){
+          imgElement2.setAttribute("src", "images/San_Francisco.png");
+          myDiv.appendChild(imgElement2);
+      } else if(towns[i].name == "Sydney"){
+          imgElement2.setAttribute("src", "images/Sydney.png");
+          myDiv.appendChild(imgElement2);
+      }
+
+
+      /*var myArticle = document.createElement('article');
+      var myH2 = document.createElement('h2');
+      var myPara2 = document.createElement('p');
+      var myPara3 = document.createElement('p');
+      var myPara4 = document.createElement('p');
+
+
+      myH2.textContent = towns[i].name;
+      myPara2.textContent = 'Year founded: ' + towns[i].yearFounded;
+      myPara3.textContent = 'Population: ' + towns[i].currentPopulation;
+      myPara4.textContent = 'Annual Rainfall: ' + towns[i].averageRainfall;
+
+
+      myArticle.appendChild(myH2);
+
+      myArticle.appendChild(myPara2);
+
+      myArticle.appendChild(myPara3);
+
+      myArticle.appendChild(myPara4);
+
+      myDiv.appendChild(myArticle);
+
+      if (i==0){
+          var x = document.createElement("IMG");
+          x.setAttribute("src", "images/franklin.jpeg");
+
+          x.setAttribute("alt", "The Town of Franklin");
+         /* x.setAttribute("id", [i]);*/
+          /*myDiv.appendChild(x);
+
+
+      } else if (i==1) {
+          var x = document.createElement("IMG");
+          x.setAttribute("src", "images/greenville.jpeg");
+
+          x.setAttribute("alt", "The Town of Greenville");
+          /* x.setAttribute("id", [i]);*/
+          /*myDiv.appendChild(x);
+
+
+      } else {
+          var x = document.createElement("IMG");
+          x.setAttribute("src", "images/springfield.jpeg");
+
+          x.setAttribute("alt", "The Town of Springfield");
+          /* x.setAttribute("id", [i]);*/
+          /*myDiv.appendChild(x);
+
+
+      }*/
+
+      myDiv.appendChild(myUlist);
+
+
+      sectionElement.appendChild(myDiv);
+  }
+
+}
+
+function createRepeatingListItem(UListElement, itemText1, itemText2, itemText3, temp){
+
+      let myListItem = document.createElement('li');
+
+      let mySpan1 = document.createElement('span');
+      mySpan1.textContent = itemText1;
+
+      myListItem.appendChild(mySpan1);
+
+      let mySpan2 = document.createElement('span');
+      //mySpan2.setAttribute("id", "js-mainTempFahrenheit" + i);
+      mySpan2.textContent = temp;
+
+      myListItem.appendChild(mySpan2);
+
+      if(itemText1 != "Current weather description: "){
+
+      let mySpan3 = document.createElement('span');
+      mySpan3.textContent = itemText2;
+
+      myListItem.appendChild(mySpan3);
+
+      }
+
+      if(itemText1 != "Wind chill: " && itemText1 != "Current weather description: "){
+
+      let mySpan4 = document.createElement('span');
+      //mySpan4.setAttribute("id", "js-mainTempCelsius" + i);
+      mySpan4.textContent = convertFahrenheitToCelsius(temp);
+
+      myListItem.appendChild(mySpan4);
+
+      let mySpan5 = document.createElement('span');
+      mySpan5.textContent = itemText3;
+
+      myListItem.appendChild(mySpan5);
+
+      }
+
+      UListElement.appendChild(myListItem);
 }

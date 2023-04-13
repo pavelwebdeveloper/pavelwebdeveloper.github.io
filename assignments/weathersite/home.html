@@ -86,7 +86,7 @@
         <script src="scripts/functionLibrary.js"></script>
         <script src="scripts/weatherDataForHomePage.js"></script>
         <script>
-           var section = document.getElementById('lowersection');
+           /*var section = document.getElementById('lowersection');
             var requestURL = 'data/townsdata.json';
             var request = new XMLHttpRequest();
             request.open('GET', requestURL);
@@ -96,75 +96,8 @@
                 var townData = request.response;
                 console.log(townData);
                 showTowns(weatherDataForCities);
-            }
-            function showTowns(towns) {
-                //var towns = jsonObj['towns'];
-
-
-                for (var i = 0; i < towns.length; i++) {
-                    /*if (i === 2) { continue; }*/
-                    var myDiv = document.createElement('div');
-                    if (i==0 || i==2) {
-                        myDiv.setAttribute("id", "divleft");
-                    } /*else {
-                        myDiv.setAttribute("id", "divright");
-                    }*/
-                    var myArticle = document.createElement('article');
-                    var myH2 = document.createElement('h2');
-                    var myPara2 = document.createElement('p');
-                    var myPara3 = document.createElement('p');
-                    var myPara4 = document.createElement('p');
-
-
-                    myH2.textContent = towns[i].name;
-                    myPara2.textContent = 'Year founded: ' + towns[i].yearFounded;
-                    myPara3.textContent = 'Population: ' + towns[i].currentPopulation;
-                    myPara4.textContent = 'Annual Rainfall: ' + towns[i].averageRainfall;
-
-
-                    myArticle.appendChild(myH2);
-
-                    myArticle.appendChild(myPara2);
-
-                    myArticle.appendChild(myPara3);
-
-                    myArticle.appendChild(myPara4);
-
-                    myDiv.appendChild(myArticle);
-
-                    if (i==0){
-                        var x = document.createElement("IMG");
-                        x.setAttribute("src", "images/franklin.jpeg");
-
-                        x.setAttribute("alt", "The Town of Franklin");
-                       /* x.setAttribute("id", [i]);*/
-                        myDiv.appendChild(x);
-
-
-                    } else if (i==1) {
-                        var x = document.createElement("IMG");
-                        x.setAttribute("src", "images/greenville.jpeg");
-
-                        x.setAttribute("alt", "The Town of Greenville");
-                        /* x.setAttribute("id", [i]);*/
-                        myDiv.appendChild(x);
-
-
-                    } else {
-                        var x = document.createElement("IMG");
-                        x.setAttribute("src", "images/springfield.jpeg");
-
-                        x.setAttribute("alt", "The Town of Springfield");
-                        /* x.setAttribute("id", [i]);*/
-                        myDiv.appendChild(x);
-
-
-                    }
-
-                    section.appendChild(myDiv);
-                }
-
-            }
+            }*/
+            
         </script>
         
         
