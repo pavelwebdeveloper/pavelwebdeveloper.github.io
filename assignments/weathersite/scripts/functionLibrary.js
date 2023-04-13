@@ -65,6 +65,10 @@ function getData(url){
     } else {
       let openWeatherUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=';
     }
+
+    console.log("Here is URL URL URLLLLLLLLLLLLLLLL");
+    console.log(openWeatherUrl + locationName + '&limit=5&appid=2876382801a396dd5a17e61eabd083ff');
+
   
     await getData(openWeatherUrl + locationName + '&limit=5&appid=2876382801a396dd5a17e61eabd083ff').then(data => { 
       //this._recipes = data.meals;
