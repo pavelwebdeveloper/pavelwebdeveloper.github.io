@@ -22,4 +22,4 @@ var lon;
 var weatherDataForCities = [];
 
 
-var cityNames = ["London", "Sidney", "San Francisco"];
+var cityNames = ["London", "Sydney", "San Francisco"];
