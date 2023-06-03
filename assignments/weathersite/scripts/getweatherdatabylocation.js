@@ -33,7 +33,7 @@ function displayWeatherData() {
         console.log("LONGITUDEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
         console.log(lon);
         
-    apiURLForWeatherForecastRequest = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=2876382801a396dd5a17e61eabd083ff&units=imperial';
+    apiURLForWeatherForecastRequest = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=2876382801a396dd5a17e61eabd083ff&units=imperial';
     weatherForecastRequest.open('GET', apiURLForWeatherForecastRequest, true);
         weatherForecastRequest.send();
         weatherForecastRequest.onload =  function () {
