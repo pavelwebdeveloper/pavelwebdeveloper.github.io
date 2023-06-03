@@ -198,6 +198,17 @@ main article li {
     max-height: 17em;
 }
 
+/*--------------------LAYOUT FOR WEATHER PAGE-------------------------*/
+
+#h2ForApod{
+    text-align: center;
+}
+
+#divForImageInsideApod{
+    text-align: center;
+}
+
+
 /*--------------------LAYOUT FOR FRANKLIN PAGE-------------------------*/
 
 

@@ -7,8 +7,18 @@ function displayWeatherData() {
     alert("The form was submitted");
     nameValue = document.getElementById("js-locationNameForData").value;
     //document.getElementById("js-locationName").innerHTML = nameValue;
+    document.getElementById('js-geolocationNameIfGeolocationDenied').innerHTML = "";
+    if(nameValue.match(/[A-Za-z]{3,}[\s\\-]{1}/)){
+        document.getElementById("js-locationNameForData").style.borderColor = "black";
+        document.getElementById("js-message").innerHTML = "";
+    document.getElementById('js-geolocationNameIfGeolocationDenied').innerHTML = " for " + nameValue;
     getLocationCoordinates(nameValue);
     document.getElementById("js-locationInfo").innerHTML = '';
+    } else {
+        document.getElementById("js-locationNameForData").style.borderColor = "red";
+        document.getElementById("js-message").innerHTML = "Please, input a valid city name";
+        document.getElementById("js-message").style.color = "red";
+    }
     
     //displayCurrentWeather();
     

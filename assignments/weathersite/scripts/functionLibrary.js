@@ -131,6 +131,7 @@ function displayCurrentWeather(){
             document.getElementById('js-minTempCelsius').innerHTML = convertFahrenheitToCelsius(weatherForecastData.list[0].main.temp_min);
             document.getElementById('js-windSpeedMph').innerHTML = weatherForecastData.list[0].wind.speed;
             document.getElementById('js-windSpeedKmph').innerHTML = convertMphToKmph(weatherForecastData.list[0].wind.speed);
+            document.getElementById('js-humidity').innerHTML = weatherForecastData.list[0].main.humidity;
   
             var iconcode = weatherForecastData.list[0].weather[0].icon;
             var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
@@ -147,7 +148,8 @@ function displayCurrentWeather(){
             var t = (ht + lt) / 2;
             var f = 35.74 + 0.6215 * t - 35.75 * Math.pow(s, 0.16) + 0.4275 * t *  Math.pow(s, 0.16);
             f = Math.round(f);
-            document.getElementById("js-windChill").innerHTML = f;
+            document.getElementById("js-windChillFahrenheit").innerHTML = f;
+            document.getElementById("js-windChillCelsius").innerHTML = convertFahrenheitToCelsius(f);;
    }
   }
 
@@ -292,6 +294,7 @@ function getAPODfromNASA(){
         console.log("UUUUUUUUUUUUUUUUUUUUUUUUU");
         console.log(APODfromNASAData);
         var h2ForApod = document.createElement('h2');
+        h2ForApod.setAttribute("id", "h2ForApod");
         h2ForApod.textContent = APODfromNASAData.title;
         var divForApod = document.createElement('div');
         divForApod.setAttribute("id", "divForApod");
@@ -301,9 +304,13 @@ function getAPODfromNASA(){
         const img = document.createElement("img");
         img.setAttribute("id", "spaceImage");
         img.src = APODfromNASAData.hdurl;
+
+        var divForImageInsideApod = document.createElement('div');
+        divForImageInsideApod.setAttribute("id", "divForImageInsideApod");
+        divForImageInsideApod.appendChild(img);
         
         document.getElementById("js-apod").appendChild(h2ForApod);
-        divForApod.appendChild(img);
+        divForApod.appendChild(divForImageInsideApod);
         divForApod.appendChild(paraForApod);
         document.getElementById("js-apod").appendChild(divForApod);
         }        

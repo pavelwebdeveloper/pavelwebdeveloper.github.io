@@ -28,7 +28,10 @@ function setPositionAndShowWeather(position) {
 function showError(error) {
   switch(error.code) {
     case error.PERMISSION_DENIED:
-        geolocationMessageElement.innerHTML = "You denied the request for Geolocation."
+        //geolocationMessageElement.innerHTML = "You denied the request for Geolocation.";
+        document.getElementById('js-geolocationNameIfGeolocationDenied').innerHTML = " for Ottawa";
+        getLocationCoordinates("Ottawa");
+        getWeatherForecastByLocationCoordinates();
       break;
     case error.POSITION_UNAVAILABLE:
         geolocationMessageElement.innerHTML = "Location information is unavailable."

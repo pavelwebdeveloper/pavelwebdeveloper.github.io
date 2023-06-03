@@ -22,24 +22,18 @@
             <button onclick="toggleMenu()">&#9776; MENU</button>
             <ul id="primaryNav" class="hide">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="franklin.html">Franklin</a></li>
-                <li><a href="greenville.html">Greenville</a></li>
-                <li><a href="springfield.html">Springfield</a></li>
+                <li class="active"><a href="getweatherforecastbylocation.html">Forecast</a></li>
                 <li><a href="stormcenter.html">Storm Center</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li class="active"><a href="">Get weather</a></li>
             </ul>
         </nav>
 
         <nav class="bigger">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="franklin.html">Franklin</a></li>
-                <li><a href="greenville.html">Greenville</a></li>
-                <li><a href="springfield.html">Springfield</a></li>
+                <li class="active"><a href="getweatherforecastbylocation.html">Forecast</a></li>
                 <li><a href="stormcenter.html">Storm Center</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li class="active"><a href="">Get weather</a></li>
             </ul>
         </nav>
 
@@ -62,23 +56,23 @@
             </figure>
 
             <form>
-                Enter name: <input type="text" id="js-locationNameForData">
-                <input type="button" onclick="displayWeatherData()" value="Submit">
+                Enter city name: <input type="text" id="js-locationNameForData" required pattern="[A-Za-z\s\p{Pd}]{3,}">
+                <input onclick="displayWeatherData()" value="get weather info" type="button">
               </form>
 			  
-            <div id="js-geolocationMessage"></div>
+            <div id="js-message"></div>
             
 
             <div id="flex">
                 <section class="middlesection">
-                    <h2>Today's Weather</h2>
+                    <h2>Today's Weather <span id="js-geolocationNameIfGeolocationDenied"></span></h2>
                     <ul>
                         <li>Current temperature: <span id="js-mainTempFahrenheit"></span>&deg; F / <span id="js-mainTempCelsius"></span>&deg; C</li>
                         <li>Max temp: <span id="js-maxTempFahrenheit"></span>&deg; F / <span id="js-maxTempCelsius"></span>&deg; C</li>
                         <li>Min temp: <span id="js-minTempFahrenheit"></span>&deg; F / <span id="js-minTempCelsius"></span>&deg; C</li>
-                        <li>Chance of Precipitation: 0%</li>
                         <li>Wind Speed: <span id="js-windSpeedMph"></span> mph / <span id="js-windSpeedKmph"></span> kmph</li>
-                        <li>Wind chill: <span id="js-windChill"></span>&deg;</li>
+                        <li>Wind chill: <span id="js-windChillFahrenheit"></span>&deg; F / <span id="js-windChillCelsius"></span>&deg; C</li>
+                        <li>Humidity: <span id="js-humidity"></span> %</li>
                         <li>Current weather description: <span id="js-currentWeatherDescription"></span></li>
                         <img src="images/placeholder.png" alt="current weather" id="js-weather_icon">
                     </ul>
