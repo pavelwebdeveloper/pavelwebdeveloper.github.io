@@ -373,14 +373,19 @@ function showTowns(towns, sectionElement) {
           imgElement2.setAttribute("src", "images/san_francisco.jpg");
           imgElement2.setAttribute("class", "homePageCityImage");
           myDiv.appendChild(imgElement2);
-      } else if(towns[i].name == "Sydney"){
+      } else if(towns[i].name == "Sydney" || towns[i].name == "Haymarket"){
           imgElement2.setAttribute("src", "images/sydney.jpg");
           imgElement2.setAttribute("class", "homePageCityImage");
           myDiv.appendChild(imgElement2);
       }
 
       let myH2 = document.createElement("h2");
-      myH2.textContent = towns[i].name;
+      
+      if(towns[i].name == "Haymarket"){
+        myH2.textContent = "Sydney";
+      } else {
+        myH2.textContent = towns[i].name;
+      }
       myDiv.appendChild(myH2);
 
       /*var myArticle = document.createElement('article');
