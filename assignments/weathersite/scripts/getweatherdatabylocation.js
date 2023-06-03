@@ -8,7 +8,7 @@ function displayWeatherData() {
     nameValue = document.getElementById("js-locationNameForData").value;
     //document.getElementById("js-locationName").innerHTML = nameValue;
     document.getElementById('js-geolocationNameIfGeolocationDenied').innerHTML = "";
-    if(nameValue.match(/[A-Za-z]{3,}[\s\\-]{1}/)){
+    if(nameValue.match(/[A-Za-z\s-]/)){
         document.getElementById("js-locationNameForData").style.borderColor = "black";
         document.getElementById("js-message").innerHTML = "";
     document.getElementById('js-geolocationNameIfGeolocationDenied').innerHTML = " for " + nameValue;
