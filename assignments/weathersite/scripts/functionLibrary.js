@@ -330,6 +330,7 @@ function showTowns(towns, sectionElement) {
   for (let i = 0; i < towns.length; i++) {
       /*if (i === 2) { continue; }*/
       let myDiv = document.createElement('div');
+      myDiv.setAttribute("class", "city-div-flex");
       if (i==0 || i==2) {
           myDiv.setAttribute("id", "divleft");
       } /*else {
@@ -352,7 +353,7 @@ function showTowns(towns, sectionElement) {
 
       //createRepeatingListItem(myUlist, "Wind chill: ", "", "", towns[i]);
 
-      createRepeatingListItem(myUlist, "Current weather description: ", "", "", towns[i]);
+      createRepeatingListItem(myUlist, "Description: ", "", "", towns[i]);
 
       let imgElement1 = document.createElement('img');
 
@@ -455,13 +456,14 @@ function createRepeatingListItem(UListElement, itemText1, itemText2, itemText3, 
       let myListItem = document.createElement('li');
 
       let mySpan1 = document.createElement('span');
+      mySpan1.setAttribute("class", "list-item-name");
       mySpan1.textContent = itemText1;
 
       myListItem.appendChild(mySpan1);
 
       let mySpan2 = document.createElement('span');
       //mySpan2.setAttribute("id", "js-mainTempFahrenheit" + i);
-      if(itemText1 != "Current weather description: "){
+      if(itemText1 != "Description: "){
         mySpan2.textContent = calculateWindChill(cityData.main.temp_max, cityData.main.temp_min, cityData.wind.speed);
       } else {
         mySpan2.textContent = cityData.weather[0].description;
@@ -469,7 +471,7 @@ function createRepeatingListItem(UListElement, itemText1, itemText2, itemText3, 
 
       myListItem.appendChild(mySpan2);
 
-      if(itemText1 != "Current weather description: "){
+      if(itemText1 != "Description: "){
 
       let mySpan3 = document.createElement('span');
       mySpan3.innerHTML = itemText2;
@@ -478,7 +480,7 @@ function createRepeatingListItem(UListElement, itemText1, itemText2, itemText3, 
 
       }
 
-      if(itemText1 != "Wind chill: " && itemText1 != "Current weather description: "){
+      if(itemText1 != "Wind chill: " && itemText1 != "Description: "){
 
       let mySpan4 = document.createElement('span');
       //mySpan4.setAttribute("id", "js-mainTempCelsius" + i);
