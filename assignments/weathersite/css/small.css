@@ -194,10 +194,10 @@ main article li {
     max-width: 50%;
 }
 
-.homePageCityImage{
+/*.homePageCityImage{
     flex: 2 0 23em;
     max-height: 17em;
-}
+}*/
 
 .list-item-name{
     font-weight: bold;
