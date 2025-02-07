@@ -355,6 +355,8 @@ function showTowns(towns, sectionElement) {
 
       createRepeatingListItem(myUlist, "Description: ", "", "", towns[i]);
 
+      let myListItem = document.createElement('li');
+
       let imgElement1 = document.createElement('img');
 
       let iconcode = towns[i].weather[0].icon;
@@ -362,7 +364,9 @@ function showTowns(towns, sectionElement) {
       imgElement1.setAttribute("src", icon_path);
       imgElement1.setAttribute("alt", towns[i].weather[0].description);
       imgElement1.setAttribute("class", "weather_icon");
-      myUlist.appendChild(imgElement1);
+      myListItem.appendChild(imgElement1);
+      myListItem.style.listStyleType = "none";
+      myUlist.appendChild(myListItem);
 
       
 
