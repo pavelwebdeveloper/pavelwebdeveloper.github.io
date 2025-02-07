@@ -360,6 +360,7 @@ function showTowns(towns, sectionElement) {
       let iconcode = towns[i].weather[0].icon;
       let icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
       imgElement1.setAttribute("src", icon_path);
+      imgElement1.setAttribute("alt", towns[i].weather[0].description);
       imgElement1.setAttribute("class", "weather_icon");
       myUlist.appendChild(imgElement1);
 
@@ -368,14 +369,17 @@ function showTowns(towns, sectionElement) {
       let imgElement2 = document.createElement('img');
       if(towns[i].name == "London"){
           imgElement2.setAttribute("src", "images/london.jpg");
+          imgElement2.setAttribute("alt", "London City");
           imgElement2.setAttribute("class", "homePageCityImage");
           myDiv.appendChild(imgElement2);
       } else if(towns[i].name == "San Francisco"){
           imgElement2.setAttribute("src", "images/san_francisco.jpg");
+          imgElement2.setAttribute("alt", "San Francisco City");
           imgElement2.setAttribute("class", "homePageCityImage");
           myDiv.appendChild(imgElement2);
       } else if(towns[i].name == "Sydney" || towns[i].name == "Haymarket"){
           imgElement2.setAttribute("src", "images/sydney.jpg");
+          imgElement2.setAttribute("alt", "Sydney City");
           imgElement2.setAttribute("class", "homePageCityImage");
           myDiv.appendChild(imgElement2);
       }
